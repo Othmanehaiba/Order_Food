@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "name": "Pizza Margherita",
+    "category": "Plat",
+    "description": "Pizza traditionnelle avec sauce tomate, mozzarella et basilic frais.",
+    "price": 8.99,
+    "image": "https://example.com/images/pizza-margherita.jpg",
+    "size": ["S", "M", "L", "XL"],
+    "availability": true
+  },
+  {
+    "id": 2,
+    "name": "Pizza Pepperoni",
+    "category": "Plat",
+    "description": "Pizza avec sauce tomate, mozzarella et pepperoni épicé.",
+    "price": 10.99,
+    "image": "https://example.com/images/pizza-pepperoni.jpg",
+    "size": ["S", "M", "L", "XL"],
+    "availability": true
+  },
+  {
+    "id": 3,
+    "name": "Pâtes Carbonara",
+    "category": "Plat",
+    "description": "Pâtes avec guanciale, œufs, pecorino et poivre noir.",
+    "price": 12.50,
+    "image": "https://example.com/images/pates-carbonara.jpg",
+    "size": null,
+    "availability": true
+  },
+  {
+    "id": 4,
+    "name": "Salade César",
+    "category": "Entrée",
+    "description": "Laitue romaine, croûtons, parmesan et sauce César.",
+    "price": 7.50,
+    "image": "https://example.com/images/salade-cesar.jpg",
+    "size": ["Petite", "Grande"],
+    "availability": true
+  },
+  {
+    "id": 5,
+    "name": "Burger Classique",
+    "category": "Plat",
+    "description": "Bœuf, cheddar, laitue, tomate, oignons et frites.",
+    "price": 11.99,
+    "image": "https://example.com/images/burger-classique.jpg",
+    "size": null,
+    "availability": false
+  },
+  {
+    "id": 6,
+    "name": "Tiramisu",
+    "category": "Dessert",
+    "description": "Dessert italien classique au café, mascarpone et cacao.",
+    "price": 6.50,
+    "image": "https://example.com/images/tiramisu.jpg",
+    "size": null,
+    "availability": true
+  },
+  {
+    "id": 7,
+    "name": "Eau Minérale",
+    "category": "Boisson",
+    "description": "Eau minérale plate ou gazeuse.",
+    "price": 2.00,
+    "image": "https://example.com/images/eau-minerale.jpg",
+    "size": ["50cl", "1L"],
+    "availability": true
+  },
+  {
+    "id": 8,
+    "name": "Coca-Cola",
+    "category": "Boisson",
+    "description": "Boisson gazeuse rafraîchissante.",
+    "price": 2.50,
+    "image": "https://example.com/images/coca-cola.jpg",
+    "size": ["33cl", "50cl"],
+    "availability": true
+  },
+  {
+    "id": 9,
+    "name": "Pizza 4 Saisons",
+    "category": "Plat",
+    "description": "Artichauts, jambon, champignons et olives.",
+    "price": 13.00,
+    "image": "https://example.com/images/pizza-4-saisons.jpg",
+    "size": ["M", "L"],
+    "availability": true
+  },
+  {
+    "id": 10,
+    "name": "Saumon Grillé",
+    "category": "Plat",
+    "description": "Filet de saumon grillé avec légumes de saison.",
+    "price": 16.99,
+    "image": "https://example.com/images/saumon-grille.jpg",
+    "size": null,
+    "availability": true
+  },
+  {
+    "id": 11,
+    "name": "Bruschetta Tomate",
+    "category": "Entrée",
+    "description": "Pain grillé frotté à l'ail, tomates fraîches et basilic.",
+    "price": 5.99,
+    "image": "https://example.com/images/bruschetta.jpg",
+    "size": ["4 pièces", "6 pièces"],
+    "availability": true
+  },
+  {
+    "id": 12,
+    "name": "Mousse au Chocolat",
+    "category": "Dessert",
+    "description": "Mousse légère au chocolat noir.",
+    "price": 5.00,
+    "image": "https://example.com/images/mousse-chocolat.jpg",
+    "size": null,
+    "availability": true
+  },
+  {
+    "id": 13,
+    "name": "Pâtes Bolognaise",
+    "category": "Plat",
+    "description": "Pâtes avec une riche sauce à la viande hachée.",
+    "price": 11.50,
+    "image": "https://example.com/images/pates-bolognaise.jpg",
+    "size": null,
+    "availability": true
+  },
+  {
+    "id": 14,
+    "name": "Café Espresso",
+    "category": "Boisson",
+    "description": "Café court et intense.",
+    "price": 1.80,
+    "image": "https://example.com/images/espresso.jpg",
+    "size": ["Simple", "Double"],
+    "availability": true
+  },
+  {
+    "id": 15,
+    "name": "Tarte au Citron Meringuée",
+    "category": "Dessert",
+    "description": "Pâte sablée, crème au citron et meringue.",
+    "price": 6.00,
+    "image": "https://example.com/images/tarte-citron.jpg",
+    "size": null,
+    "availability": true
+  },
+  {
+    "id": 16,
+    "name": "Soupe à l'oignon",
+    "category": "Entrée",
+    "description": "Soupe traditionnelle gratinée au fromage.",
+    "price": 7.00,
+    "image": "https://example.com/images/soupe-oignon.jpg",
+    "size": null,
+    "availability": true
+  },
+  {
+    "id": 17,
+    "name": "Steak Frites",
+    "category": "Plat",
+    "description": "Entrecôte grillée servie avec frites et sauce au poivre.",
+    "price": 18.50,
+    "image": "https://example.com/images/steak-frites.jpg",
+    "size": null,
+    "availability": true
+  },
+  {
+    "id": 18,
+    "name": "Jus d'Orange Pressé",
+    "category": "Boisson",
+    "description": "Jus d'oranges fraîches pressées.",
+    "price": 4.00,
+    "image": "https://example.com/images/jus-orange.jpg",
+    "size": ["Standard"],
+    "availability": true
+  },
+  {
+    "id": 19,
+    "name": "Burger Végétarien",
+    "category": "Plat",
+    "description": "Galette de légumes, avocat, laitue et tomate.",
+    "price": 12.00,
+    "image": "https://example.com/images/burger-vegetarien.jpg",
+    "size": null,
+    "availability": true
+  },
+  {
+    "id": 20,
+    "name": "Crème Brûlée",
+    "category": "Dessert",
+    "description": "Crème à la vanille avec une couche de caramel croquant.",
+    "price": 5.50,
+    "image": "https://example.com/images/creme-brulee.jpg",
+    "size": null,
+    "availability": false
+  }
+]
