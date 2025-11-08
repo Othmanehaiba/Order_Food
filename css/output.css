@@ -746,6 +746,10 @@ video {
   width: 100%;
 }
 
+.w-\[95\%\] {
+  width: 95%;
+}
+
 .max-w-lg {
   max-width: 32rem;
 }
@@ -793,6 +797,10 @@ video {
 
 .gap-\[7rem\] {
   gap: 7rem;
+}
+
+.gap-\[11rem\] {
+  gap: 11rem;
 }
 
 .overflow-hidden {
@@ -860,6 +868,14 @@ video {
 
 .bg-opacity-70 {
   --tw-bg-opacity: 0.7;
+}
+
+.bg-opacity-90 {
+  --tw-bg-opacity: 0.9;
+}
+
+.bg-opacity-0 {
+  --tw-bg-opacity: 0;
 }
 
 .object-cover {
@@ -1160,6 +1176,10 @@ video {
 
   .md\:mt-\[1\.5rem\] {
     margin-top: 1.5rem;
+  }
+
+  .md\:mt-\[0\.3rem\] {
+    margin-top: 0.3rem;
   }
 
   .md\:h-\[3\.5rem\] {
