@@ -603,10 +603,6 @@ video {
   display: none;
 }
 
-.h-full {
-  height: 100%;
-}
-
 .h-0\.5 {
   height: 0.125rem;
 }
@@ -615,16 +611,20 @@ video {
   height: 2rem;
 }
 
+.h-full {
+  height: 100%;
+}
+
+.w-6 {
+  width: 1.5rem;
+}
+
 .w-\[90\%\] {
   width: 90%;
 }
 
 .w-full {
   width: 100%;
-}
-
-.w-6 {
-  width: 1.5rem;
 }
 
 .max-w-\[1383px\] {
@@ -667,12 +667,6 @@ video {
   margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.space-y-6 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
-}
-
 .space-x-8 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(2rem * var(--tw-space-x-reverse));
@@ -685,6 +679,12 @@ video {
   margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
 }
 
+.space-y-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+
 .rounded-\[30px\] {
   border-radius: 30px;
 }
@@ -693,7 +693,7 @@ video {
   border-radius: 50px;
 }
 
-.bg-\[\#FFEEB1\] {
+.bg-bodyColor {
   --tw-bg-opacity: 1;
   background-color: rgb(255 238 177 / var(--tw-bg-opacity, 1));
 }
@@ -701,11 +701,6 @@ video {
 .bg-headerOrange {
   --tw-bg-opacity: 1;
   background-color: rgb(243 146 35 / var(--tw-bg-opacity, 1));
-}
-
-.bg-bodyColor {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 238 177 / var(--tw-bg-opacity, 1));
 }
 
 .bg-headerYellow {
@@ -718,9 +713,19 @@ video {
      object-fit: contain;
 }
 
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .py-4 {
@@ -733,22 +738,8 @@ video {
   padding-bottom: 1.5rem;
 }
 
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
 .pt-0 {
   padding-top: 0px;
-}
-
-.font-roboto {
-  font-family: Roboto, sans-serif;
 }
 
 .text-3xl {
@@ -763,11 +754,6 @@ video {
 
 .text-\[10rem\] {
   font-size: 10rem;
-}
-
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
 }
 
 .font-bold {
