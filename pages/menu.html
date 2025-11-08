@@ -320,37 +320,14 @@
             </div>
         </div>
     </section>
+
+    <!-- nos service section !! -->
     <section class="nos-service">
-        <div>
-            <img src="../assets/Menu-service-satisfait.png" alt="service-satisfait">
-            <h3> Customer satisfaction</h3>
-        </div>
-        <div>
-            <img src="../assets/Menu-service-livraisan.png" alt="service-livraisan">
-            <h3> Fast delivery</h3>
-        </div>
-        <div>
-            <img src="../assets/Menu-service-sante.png" alt="service-sante">
-            <h3>Health safety</h3>
-        </div>
-    </section>
-    <section class="plat-of-month">
-        <h2>Dish of the month</h2>
-        <div>
-            <img src="../assets/Menu-plat-of-month.png" alt="plat-of-month">
-        </div>
-        <div>
-            <h3>Pizza Margherita</h3>
-            <p>The Margherita Pizza is a classic Italian recipe made with tomato sauce, melted mozzarella, and fresh
-                basil leaves</p>
-            <span>$120.00</span>
-            <button>Add to panier Now</button>
-        </div>
-    </section>
+
     <footer id="footer-component">
 
     </footer>
-     <script>
+    <script>
         fetch("../components/header.html")
             .then((response) => response.text())
             .then((data) => {
@@ -362,6 +339,7 @@
                 if (menuBtn && mobileMenu) {
                     menuBtn.addEventListener("click", () => {
                         mobileMenu.classList.toggle("hidden");
+                        
                         console.log("menu toggled");
                     });
                 } else {
@@ -370,14 +348,14 @@
             })
             .catch((error) => console.error("Error loading header:", error));
     </script>
-    //    fetch("../components/footer.html")
+    <!-- //    fetch("../components/footer.html")
     //         .then((response) => response.text())
     //         .then((data) => {
     //             document.getElementById("footer-component").innerHTML = data;
     //             console.log(data);
     //         })
     //         .catch((error) => console.error("Error loading Footer:", error));
-    // </script>
+    // </script> -->
 
 </body>
 
