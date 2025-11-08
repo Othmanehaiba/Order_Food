@@ -6,7 +6,18 @@ module.exports = {
     // "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+            fontFamily: {
+            oleo: ['Oleo Script', 'cursive'],
+            roboto: ["Roboto", "sans-serif"],
+            },
+            colors: {
+            prixColor: '#007A4B',
+            bodyColor: '#FFEEB1',
+            headerYellow: "#f3c623",
+            headerOrange: "#f39223",
+            },
+      },
   },
   plugins: [],
 }
