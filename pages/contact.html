@@ -32,9 +32,9 @@
   <body class="bg-bodyColor mx-3">
     <!-- start Header -->
     <header
-      class="bg-headerYellow max-w-[1383px] w-full mx-auto rounded-[50px] flex justify-between items-center px-8 py-4 shadow-md font-roboto mt-5"
+      class="bg-headerYellow max-w-[1383px] w-full mx-auto rounded-[50px] flex justify-between items-center px-8 py-4 shadow-md mt-5"
     >
-      <!-- left logo -->
+      <!-- Logo -->
       <div class="flex items-center space-x-3">
         <img
           src="../assets/food-order-logo.png"
@@ -42,23 +42,25 @@
           class="h-8 sm:h-10 object-contain"
         />
       </div>
-      <!-- Desktop center Nav -->
+
+      <!-- Desktop Nav -->
       <nav class="hidden md:flex space-x-8 text-white font-semibold">
         <a href="../index.html" class="hover:underline">Home</a>
         <a href="../pages/menu.html" class="hover:underline">Menu</a>
         <a href="../pages/contact.html" class="hover:underline">Contact</a>
       </nav>
 
-      <!-- Desktop right panier -->
+      <!-- Desktop Panier -->
       <a href="./panier.html" class="hidden md:block">
         <button
           class="flex items-center space-x-2 bg-headerOrange hover:bg-black text-white font-semibold px-4 py-2 rounded-[30px]"
         >
-          <span class="text-white">Panier</span>
-          <i class="fa-solid fa-cart-shopping text-white text-lg">ss</i>
+          <span>Panier</span>
+          <img src="../assets/shopping card.png" alt="shopping card icon" />
         </button>
       </a>
-      <!-- Mobile Burger Menu  -->
+
+      <!-- Mobile Burger Button -->
       <button
         id="menu-btn"
         class="md:hidden flex flex-col justify-center items-center space-y-1 focus:outline-none"
@@ -74,11 +76,11 @@
       About Our Restaurant
     </h1>
     <div
-      class="bg-lineColor h-1 ml-[52rem] w-[215px] flex justify-center rounded-full"
+      class="bg-lineColor h-1 mx-auto w-[215px] flex justify-center rounded-full"
     ></div>
     <section class="grid grid-cols-2">
-      <div class="grid">
-        <span class="text-[#E99000] mb-10">ABOUT US</span><br />
+      <div class="">
+        <span class="text-[#E99000] my-20">ABOUT US</span><br />
         <span class="text-[#E99000] text-3xl font-bold"
           >We Invite You to Visit Our Coffee House</span
         ><br />
@@ -88,7 +90,7 @@
           et laudantium incidunt eaque! Nesciunt laborum aliquid facere vel!
         </p>
         <button
-          class="text-white bg-[#F39223] px-5 py-2 rounded-2xl h-auto font-black"
+          class="text-white bg-[#F39223] px-3 py-2 rounded-2xl h-auto font-black"
         >
           Read More
         </button>
@@ -113,6 +115,40 @@
         >
           Read More
         </button>
+      </div>
+      <form action="">
+        <input type="text" />
+        <input type="number" />
+        <input type="email" />
+      </form>
+      <div class="">
+        <h2
+          class="font-oleo font-bold text-4xl mx-auto p-1 flex justify-center rounded-full"
+        >
+          More Infos
+        </h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107926.21794342836!2d-9.319095799432002!3d32.29319570843292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdac212049843597%3A0x6b618c47dfd85d40!2sSafi!5e0!3m2!1sfr!2sma!4v1762624415972!5m2!1sfr!2sma"
+          width="400"
+          height="300"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="rounded-xl"
+        ></iframe>
+        <div class="grid grid-cols-[30px 1f] grid-rows-2">
+          <img src="/assets/moto.png" alt="moto pic" class="inline-block auto-cols-auto" />
+          <span class="font-roboto font-bold text-3xl flex justify-start">Call Us Free:</span>
+        </div>
+        <div class="grid grid-cols-2 grid-rows-2">
+          <img src="/assets/figure_2.png" alt="moto pic" class="inline-block auto-cols-auto" />
+          <span class="font-roboto font-bold text-3xl flex justify-start">Online Food Ordring:</span>
+        </div>
+        <div class="grid grid-cols-2 grid-rows-2">
+          <img src="/assets/moto.png" alt="moto pic" class="inline-block auto-cols-auto" />
+          <span class="font-roboto font-bold text-3xl flex justify-start">Call Us Free:</span>
+        </div>
       </div>
     </section>
   </body>
