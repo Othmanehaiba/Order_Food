@@ -395,15 +395,15 @@
                 }
             })
             .catch((error) => console.error("Error loading header:", error));
-    </script>
-    <!-- //    fetch("../components/footer.html")
-    //         .then((response) => response.text())
-    //         .then((data) => {
-    //             document.getElementById("footer-component").innerHTML = data;
-    //             console.log(data);
-    //         })
-    //         .catch((error) => console.error("Error loading Footer:", error));
-    // </script> -->
+    
+    fetch("../components/footer.html")
+         .then((response) => response.text())
+         .then((data) => {
+             document.getElementById("footer-component").innerHTML = data;
+             console.log(data);
+         })
+         .catch((error) => console.error("Error loading Footer:", error));
+ </script>
 
 </body>
 
