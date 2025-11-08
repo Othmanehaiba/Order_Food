@@ -21,7 +21,6 @@ module.exports = {
             headerOrange: "#f39223",
             },
       },
-
   },
   plugins: [],
 };
