@@ -25,7 +25,7 @@ export function Footer() {
         <div>
           <button
             class="w-full flex justify-between items-center text-lg font-bold focus:outline-none"
-            onclick = "toogleMenuFooter('company-menu')"
+             data-footer-toggle = "company-menu"
           >
             Company
              <span id="company-arrow">+</span>
@@ -45,7 +45,7 @@ export function Footer() {
         <div>
           <button
             class="w-full flex justify-between items-center text-lg font-bold focus:outline-none"
-            onclick = "toogleMenuFooter('info-menu')"
+             data-footer-toggle = "info-menu"
           >
             Our Information
              <span id="info-arrow">+</span>
@@ -64,7 +64,7 @@ export function Footer() {
         <div>
           <button
             class="w-full flex justify-between items-center text-lg font-bold focus:outline-none"
-            onclick = "toogleMenuFooter('contact-menu')"
+             data-footer-toggle = "contact-menu"
           >
             Contact Info
              <span id="contact-arrow">+</span>
@@ -135,23 +135,22 @@ export function Footer() {
 `;
 }
 
-export function toogleMenuFooter(id){
-    const menu = document.getElementById(id);
-    const arrow = document.getElementById(id.replace("menu","arrow"));
-    const isHidden = menu.classList.contains("hidden");
+export function toogleMenuFooter(id) {
+  const menu = document.getElementById(id);
+  const arrow = document.getElementById(id.replace("menu", "arrow"));
+  const isHidden = menu.classList.contains("hidden");
 
-    // close all menu [id$='menu'] get all id end with menu
-    document.querySelectorAll("[id$='menu']").forEach((el)=>{
-        el.classList.add("hidden");
-    });
-    document.querySelectorAll("[id$='arrow']").forEach((el)=>{
-        el.textContent = "+"
-    });
+  // close all menu [id$='menu'] get all id end with menu
+  document.querySelectorAll("[id$='menu']").forEach((el) => {
+    el.classList.add("hidden");
+  });
+  document.querySelectorAll("[id$='arrow']").forEach((el) => {
+    el.textContent = "+";
+  });
 
-    // toggle selected menu
-    if(isHidden){
-        menu.classList.remove("hidden");
-        arrow.textContent = '-';
-    }
-
+  // toggle selected menu
+  if (isHidden) {
+    menu.classList.remove("hidden");
+    arrow.textContent = "-";
+  }
 }
