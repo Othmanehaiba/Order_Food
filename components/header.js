@@ -1,3 +1,4 @@
+// activePage = "home" -) ? as parameter
 export function Header() {
   return ` 
     <!-- Header -->

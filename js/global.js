@@ -1,2 +1,3 @@
 import { Header, initHeaderMenu } from "../components/header.js";
-export { Header, initHeaderMenu,};
+import { Footer } from "../components/footer.js";
+export { Header, initHeaderMenu,Footer};
