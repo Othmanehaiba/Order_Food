@@ -1,3 +1,4 @@
+
 fetch("../components/header.html")
             .then((response) => response.text())
             .then((data) => {
@@ -122,3 +123,19 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Ma l9itch l-element dial custom select.');
     }
 });
+
+
+
+// fetch('../data/data.json')
+//   .then(res => res.json())
+//   .then(data => {
+//     const item = data.find(el => el.id == 20);
+//     if (item) {
+//       console.log(item);
+
+//       let img = document.createElement('img');
+//       img.src = item.image;
+//       document.body.appendChild(img);
+//     }
+//   })
+//   .catch(err => console.error('erreur de serveur', err));
