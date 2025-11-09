@@ -132,6 +132,9 @@ export function Footer() {
 `;
 }
 
-export function toogleMenuFooter(){
+export function toogleMenuFooter(id){
+    const menu = document.getElementById(id);
+    const arrow = document.getElementById(id.replace("menu","arrow"));
+    const idHidden = menu.classList.contains("hidden");
     
 }
