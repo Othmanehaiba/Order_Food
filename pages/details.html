@@ -338,7 +338,13 @@
       document.getElementById("header-placeholder").innerHTML = Header();
       document.getElementById("footer-placeholder").innerHTML = Footer();
       initHeaderMenu();
-      window.toogleMenuFooter = toogleMenuFooter;
+      // window.toogleMenuFooter = toogleMenuFooter;
+      document.querySelectorAll("[data-footer-toggle]").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          const targetId = e.target.dataset.footerToggle;
+          toogleMenuFooter(targetId);
+        });
+      });
     </script>
   </body>
 </html>
