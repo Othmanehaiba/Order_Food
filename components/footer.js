@@ -25,6 +25,7 @@ export function Footer() {
         <div>
           <button
             class="w-full flex justify-between items-center text-lg font-bold focus:outline-none"
+            onclick = toogleMenuFooter("company-menu");
           >
             Company
              <span id="company-arrow">+</span>
@@ -44,6 +45,7 @@ export function Footer() {
         <div>
           <button
             class="w-full flex justify-between items-center text-lg font-bold focus:outline-none"
+            onclick = toogleMenuFooter("info-menu");
           >
             Our Information
              <span id="info-arrow">+</span>
@@ -62,6 +64,7 @@ export function Footer() {
         <div>
           <button
             class="w-full flex justify-between items-center text-lg font-bold focus:outline-none"
+            onclick = toogleMenuFooter("contact-menu");
           >
             Contact Info
              <span id="contact-arrow">+</span>
@@ -136,5 +139,5 @@ export function toogleMenuFooter(id){
     const menu = document.getElementById(id);
     const arrow = document.getElementById(id.replace("menu","arrow"));
     const idHidden = menu.classList.contains("hidden");
-    
+
 }
