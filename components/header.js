@@ -87,4 +87,17 @@ export function initHeaderMenu() {
       mobileMenu.classList.toggle("hidden")
     );
   }
+  // close header menu if the user click outside menu
+  document.addEventListener("click", (e) => {
+    const clickInsideMenu = mobileMenu.contains(e.target);
+    const clickMenuBtn = menuBtn.contains(e.target);
+    // this will be happen only if the user click outside menu & menu btn and menu is open
+    if (
+      !clickInsideMenu &&
+      !clickMenuBtn &&
+      !mobileMenu.classList.contains("hidden")
+    ) {
+      mobileMenu.classList.add("hidden");
+    }
+  });
 }
