@@ -25,8 +25,10 @@ export function Footer() {
         <div>
           <button
             class="w-full flex justify-between items-center text-lg font-bold focus:outline-none"
+             data-footer-toggle = "company-menu"
           >
             Company
+             <span id="company-arrow">+</span>
           </button>
           <ul
             id="company-menu"
@@ -43,8 +45,10 @@ export function Footer() {
         <div>
           <button
             class="w-full flex justify-between items-center text-lg font-bold focus:outline-none"
+             data-footer-toggle = "info-menu"
           >
             Our Information
+             <span id="info-arrow">+</span>
           </button>
           <ul
             id="info-menu"
@@ -60,8 +64,10 @@ export function Footer() {
         <div>
           <button
             class="w-full flex justify-between items-center text-lg font-bold focus:outline-none"
+             data-footer-toggle = "contact-menu"
           >
             Contact Info
+             <span id="contact-arrow">+</span>
           </button>
           <ul
             id="contact-menu"
@@ -127,4 +133,24 @@ export function Footer() {
   </p>
 </footer>
 `;
+}
+
+export function toogleMenuFooter(id) {
+  const menu = document.getElementById(id);
+  const arrow = document.getElementById(id.replace("menu", "arrow"));
+  const isHidden = menu.classList.contains("hidden");
+
+  // close all menu [id$='menu'] get all id end with menu
+  document.querySelectorAll("[id$='menu']").forEach((el) => {
+    el.classList.add("hidden");
+  });
+  document.querySelectorAll("[id$='arrow']").forEach((el) => {
+    el.textContent = "+";
+  });
+
+  // toggle selected menu
+  if (isHidden) {
+    menu.classList.remove("hidden");
+    arrow.textContent = "-";
+  }
 }
