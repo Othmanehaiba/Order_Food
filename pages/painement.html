@@ -42,9 +42,8 @@
       <h1 class="text-center text-white text-4xl font-bold mb-16">Checkout</h1>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- FORMULAIRE -->
+        <!-- block de titre et formulaire  -->
         <div class="mt-6 space-y-3">
-         
           <h2 class="text-lg font-semibold text-gray-600">Payment details</h2>
 
           <div class="flex space-x-6">
@@ -76,13 +75,32 @@
             Terms of Service and Privacy Policy
           </label>
           <button
-            class="w-full bg-orange-500 text-black py-3 rounded-sm font-bold text-lg hover:bg-white transition active:scale-[0.98]">
+            class="w-full bg-orange-500 text-black py-3 rounded-sm font-bold text-lg hover:bg-white transition active:scale-[0.98]"
+          >
             Pay $250
-          </button> 
+          </button>
         </div>
 
-        <!-- LISTE COMMANDES -->
-        <div>...</div>
+        <!-- block de listes de commandes  -->
+        
+        <div class=" p-4 rounded-lg">
+            <h2 class="text-lg font-semibold text-gray-600">Your orders</h2>
+
+            <!-- Liste des éléments du panier (sera remplie dynamiquement) -->
+            <!-- <div id="cart-items" class="space-y-3">
+                <p class="text-black text-sm opacity-70 text-center py-4">
+                Aucun produit dans le panier...
+                </p>
+            </div> -->
+
+            <!--  Total -->
+            <!-- <div class="flex justify-between items-center border-t border-black/40 pt-4 mt-4">
+                <h3 class="text-lg font-bold text-black">Total :</h3>
+                <p id="total-price" class="text-lg font-bold text-green-700">
+                £0.00
+                </p>
+            </div> -->
+        </div>
       </div>
     </section>
   </body>
