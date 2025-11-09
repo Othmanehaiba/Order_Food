@@ -1235,16 +1235,12 @@ video {
     width: 11rem;
   }
 
-  .md\:w-\[40\%\] {
-    width: 40%;
+  .md\:w-\[30\%\] {
+    width: 30%;
   }
 
   .md\:w-auto {
     width: auto;
-  }
-
-  .md\:w-\[30\%\] {
-    width: 30%;
   }
 
   .md\:max-w-md {
