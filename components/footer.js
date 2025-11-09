@@ -27,6 +27,7 @@ export function Footer() {
             class="w-full flex justify-between items-center text-lg font-bold focus:outline-none"
           >
             Company
+             <span id="company-arrow">+</span>
           </button>
           <ul
             id="company-menu"
@@ -45,6 +46,7 @@ export function Footer() {
             class="w-full flex justify-between items-center text-lg font-bold focus:outline-none"
           >
             Our Information
+             <span id="info-arrow">+</span>
           </button>
           <ul
             id="info-menu"
@@ -62,6 +64,7 @@ export function Footer() {
             class="w-full flex justify-between items-center text-lg font-bold focus:outline-none"
           >
             Contact Info
+             <span id="contact-arrow">+</span>
           </button>
           <ul
             id="contact-menu"
@@ -127,4 +130,8 @@ export function Footer() {
   </p>
 </footer>
 `;
+}
+
+export function toogleMenuFooter(){
+    
 }
