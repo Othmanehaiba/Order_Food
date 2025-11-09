@@ -328,11 +328,17 @@
     <footer id="footer-placeholder"></footer>
     <!-- script -->
     <script type="module">
-      import { Header, initHeaderMenu, Footer } from "../js/global.js";
+      import {
+        Header,
+        initHeaderMenu,
+        Footer,
+        toogleMenuFooter,
+      } from "../js/global.js";
       // Inject header and footer
       document.getElementById("header-placeholder").innerHTML = Header();
-      document.getElementById("footer-placeholder").innerHTML = Footer();      
+      document.getElementById("footer-placeholder").innerHTML = Footer();
       initHeaderMenu();
+      window.toogleMenuFooter = toogleMenuFooter;
     </script>
   </body>
 </html>
