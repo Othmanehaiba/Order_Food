@@ -1,5 +1,6 @@
 export function Footer() {
-  return `<footer class="bg-[#F3C623] text-white rounded-t-3xl px-10 py-12">
+  return `
+    <footer class="bg-[#F3C623] text-white rounded-t-3xl px-10 py-12">
   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-10">
     <!-- logo Description -->
     <div class="col-span-2 flex flex-col items-start md:items-start">
