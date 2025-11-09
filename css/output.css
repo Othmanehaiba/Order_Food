@@ -574,12 +574,17 @@ video {
   inset: 0px;
 }
 
-.bottom-\[3rem\] {
-  bottom: 3rem;
+<<<<<<<<< Temporary merge branch 1
+.order-1 {
+  order: 1;
 }
 
-.left-\[20rem\] {
-  left: 20rem;
+.order-2 {
+  order: 2;
+=========
+.col-span-2 {
+  grid-column: span 2 / span 2;
+>>>>>>>>> Temporary merge branch 2
 }
 
 .right-0 {
@@ -590,42 +595,58 @@ video {
   top: 0px;
 }
 
-.top-\[19rem\] {
-  top: 19rem;
-}
-
-.top-\[35\%\] {
-  top: 35%;
-}
-
-.top-\[40\%\] {
-  top: 40%;
+<<<<<<<<< Temporary merge branch 1
+.mb-1 {
+  margin-bottom: 0.25rem;
+=========
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+>>>>>>>>> Temporary merge branch 2
 }
 
 .top-\[57\%\] {
   top: 57%;
 }
 
-.z-40 {
-  z-index: 40;
+<<<<<<<<< Temporary merge branch 1
+.mb-2 {
+  margin-bottom: 0.5rem;
 }
 
-.m-auto {
-  margin: auto;
+=========
+>>>>>>>>> Temporary merge branch 2
+.mb-4 {
+  margin-bottom: 1rem;
 }
 
-.mx-\[6rem\] {
-  margin-left: 6rem;
-  margin-right: 6rem;
+.mb-5 {
+  margin-bottom: 1.25rem;
 }
 
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
+.mb-6 {
+  margin-bottom: 1.5rem;
 }
 
-.mb-10 {
-  margin-bottom: 2.5rem;
+<<<<<<<<< Temporary merge branch 1
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.mt-12 {
+  margin-top: 3rem;
+=========
+.ml-3 {
+  margin-left: 0.75rem;
+>>>>>>>>> Temporary merge branch 2
 }
 
 .mt-2 {
@@ -658,6 +679,14 @@ video {
 
 .h-0\.5 {
   height: 0.125rem;
+}
+
+.h-1 {
+  height: 0.25rem;
+}
+
+.h-48 {
+  height: 12rem;
 }
 
 .h-8 {
@@ -790,16 +819,13 @@ video {
   width: 100%;
 }
 
-.w-\[19rem\] {
-  width: 19rem;
-}
-
-.w-\[6rem\] {
-  width: 6rem;
-}
-
-.w-\[70\%\] {
-  width: 70%;
+<<<<<<<<< Temporary merge branch 1
+.max-w-6xl {
+  max-width: 72rem;
+=========
+.max-w-7xl {
+  max-width: 80rem;
+>>>>>>>>> Temporary merge branch 2
 }
 
 .w-\[80\%\] {
@@ -810,24 +836,24 @@ video {
   width: 90%;
 }
 
-.w-\[95\%\] {
-  width: 95%;
+<<<<<<<<< Temporary merge branch 1
+.max-w-sm {
+  max-width: 24rem;
 }
 
-.w-\[9rem\] {
-  width: 9rem;
-}
-
-.w-full {
-  width: 100%;
-}
-
-.max-w-\[1383px\] {
-  max-width: 1383px;
-}
-
+=========
+>>>>>>>>> Temporary merge branch 2
 .flex-grow {
   flex-grow: 1;
+}
+
+<<<<<<<<< Temporary merge branch 1
+.basis-\[25\%\] {
+  flex-basis: 25%;
+=========
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+>>>>>>>>> Temporary merge branch 2
 }
 
 .flex-col {
@@ -854,6 +880,23 @@ video {
   justify-content: space-between;
 }
 
+<<<<<<<<< Temporary merge branch 1
+.gap-12 {
+  gap: 3rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+=========
+.gap-10 {
+  gap: 2.5rem;
+>>>>>>>>> Temporary merge branch 2
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -866,6 +909,21 @@ video {
   margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+<<<<<<<<< Temporary merge branch 1
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-x-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+=========
+>>>>>>>>> Temporary merge branch 2
 .space-x-8 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(2rem * var(--tw-space-x-reverse));
@@ -878,12 +936,34 @@ video {
   margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
 }
 
+<<<<<<<<< Temporary merge branch 1
+=========
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+}
+
+>>>>>>>>> Temporary merge branch 2
 .space-y-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 
+<<<<<<<<< Temporary merge branch 1
+.rounded {
+  border-radius: 0.25rem;
+}
+
+=========
+>>>>>>>>> Temporary merge branch 2
 .rounded-\[30px\] {
   border-radius: 30px;
 }
@@ -901,22 +981,8 @@ video {
   border-top-right-radius: 1.5rem;
 }
 
-.border {
-  border-width: 1px;
-}
-
 .border-white\/40 {
   border-color: rgb(255 255 255 / 0.4);
-}
-
-.border-yellow-400 {
-  --tw-border-opacity: 1;
-  border-color: rgb(250 204 21 / var(--tw-border-opacity, 1));
-}
-
-.bg-\[\#A29874\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(162 152 116 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[\#F3C623\] {
@@ -924,73 +990,14 @@ video {
   background-color: rgb(243 198 35 / var(--tw-bg-opacity, 1));
 }
 
-.bg-\[\#FC8A06\]\/80 {
-  background-color: rgb(252 138 6 / 0.8);
-}
-
-.bg-\[\#FFF3C7\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 243 199 / var(--tw-bg-opacity, 1));
-}
-
 .bg-bodyColor {
   --tw-bg-opacity: 1;
   background-color: rgb(255 238 177 / var(--tw-bg-opacity, 1));
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-
-.rounded-t-3xl {
-  border-top-left-radius: 1.5rem;
-  border-top-right-radius: 1.5rem;
-}
-
-.rounded-t-\[30px\] {
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+>>>>>>>>> Temporary merge branch 2
 }
 
 .border {
   border-width: 1px;
-}
-
-.border-2 {
-  border-width: 2px;
-}
-
-.border-\[3px\] {
-  border-width: 3px;
-}
-
-.border-b-\[3px\] {
-  border-bottom-width: 3px;
-}
-
-.border-t-2 {
-  border-top-width: 2px;
-}
-
-.border-t-\[0\.3rem\] {
-  border-top-width: 0.3rem;
-}
-
-.border-black {
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity, 1));
-}
-
-.border-gray-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(107 114 128 / var(--tw-border-opacity, 1));
-}
-
-.border-headerYellow {
-  --tw-border-opacity: 1;
-  border-color: rgb(243 198 35 / var(--tw-border-opacity, 1));
-}
-
-.border-white\/40 {
-  border-color: rgb(255 255 255 / 0.4);
 }
 
 .border-yellow-400 {
@@ -1042,9 +1049,38 @@ video {
   background-color: rgb(243 198 35 / var(--tw-bg-opacity, 1));
 }
 
+.bg-transparent {
+  background-color: transparent;
+}
+
+.bg-yellow-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 204 21 / var(--tw-bg-opacity, 1));
+}
+
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+<<<<<<<<< Temporary merge branch 1
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.p-1 {
+  padding: 0.25rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+=========
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+>>>>>>>>> Temporary merge branch 2
 }
 
 .px-4 {
@@ -1060,6 +1096,17 @@ video {
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+<<<<<<<<< Temporary merge branch 1
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+=========
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+>>>>>>>>> Temporary merge branch 2
 }
 
 .py-2 {
@@ -1095,6 +1142,22 @@ video {
   padding-top: 0px;
 }
 
+.text-center {
+  text-align: center;
+<<<<<<<<< Temporary merge branch 1
+}
+
+.font-roboto {
+  font-family: Roboto, sans-serif;
+=========
+>>>>>>>>> Temporary merge branch 2
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -1125,8 +1188,10 @@ video {
   font-size: 1.7rem;
 }
 
-.text-\[10rem\] {
-  font-size: 10rem;
+<<<<<<<<< Temporary merge branch 1
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .font-bold {
@@ -1135,6 +1200,17 @@ video {
 
 .font-semibold {
   font-weight: 600;
+}
+
+<<<<<<<<< Temporary merge branch 1
+.italic {
+  font-style: italic;
+}
+
+=========
+>>>>>>>>> Temporary merge branch 2
+.leading-relaxed {
+  line-height: 1.625;
 }
 
 .text-blue-600 {
@@ -1172,14 +1248,24 @@ video {
   color: rgb(0 122 75 / var(--tw-text-opacity, 1));
 }
 
-.text-red-700 {
+<<<<<<<<< Temporary merge branch 1
+.text-yellow-500 {
   --tw-text-opacity: 1;
   color: rgb(185 28 28 / var(--tw-text-opacity, 1));
 }
 
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+.underline {
+  text-decoration-line: underline;
+}
+
+.shadow {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+=========
+.text-white\/90 {
+  color: rgb(255 255 255 / 0.9);
+>>>>>>>>> Temporary merge branch 2
 }
 
 .shadow-md {
@@ -1197,6 +1283,16 @@ video {
 .hover\:bg-black:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-green-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 128 61 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:text-gray-700:hover {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity, 1));
 }
 
 .hover\:text-white:hover {
@@ -1226,9 +1322,11 @@ video {
   .sm\:h-10 {
     height: 2.5rem;
   }
-}
 
-@media (min-width: 768px) {
+  .md\:mt-0 {
+    margin-top: 0px;
+  }
+
   .md\:block {
     display: block;
   }
@@ -1240,4 +1338,82 @@ video {
   .md\:hidden {
     display: none;
   }
+
+<<<<<<<<< Temporary merge branch 1
+  .md\:h-\[120px\] {
+    height: 120px;
+  }
+
+  .md\:w-1\/2 {
+    width: 50%;
+  }
+
+  .md\:w-auto {
+    width: auto;
+  }
+
+  .md\:max-w-md {
+    max-width: 28rem;
+  }
+
+  .md\:basis-\[20\%\] {
+    flex-basis: 20%;
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
+=========
+  .md\:grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+>>>>>>>>> Temporary merge branch 2
+  }
+
+  .md\:items-start {
+    align-items: flex-start;
+  }
+<<<<<<<<< Temporary merge branch 1
+
+  .md\:items-end {
+    align-items: flex-end;
+  }
+
+  .md\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .md\:justify-between {
+    justify-content: space-between;
+  }
+
+  .md\:gap-6 {
+    gap: 1.5rem;
+  }
+
+  .md\:gap-8 {
+    gap: 2rem;
+  }
+
+  .md\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .md\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .md\:text-left {
+    text-align: left;
+  }
+
+  .md\:text-center {
+    text-align: center;
+  }
+
+  .md\:text-right {
+    text-align: right;
+  }
+=========
+>>>>>>>>> Temporary merge branch 2
 }
