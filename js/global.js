@@ -1,5 +1,6 @@
 import { Header, initHeaderMenu } from "../components/header.js";
 import { Footer, toogleMenuFooter } from "../components/footer.js";
+import {panier } from "../components/panier.js";
 // export { Header, initHeaderMenu,Footer,toogleMenuFooter};
 
 // Inject header and footer
@@ -13,3 +14,10 @@ document.querySelectorAll("[data-footer-toggle]").forEach((btn) => {
     toogleMenuFooter(targetId);
   });
 });
+
+// component panier
+const btnP = document.getElementById('btn-panier');
+const panier = document.getElementById('panier-div');
+btnP.addEventListener('click', e =>{
+  panier.classList.remove('hidden')
+}) 

@@ -1,17 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/output.css">
-    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-
-<body>
-    <div class="panier relative ">
+export function panier (){
+     return `    <div class="panier relative z-99 hidden " id='panier-div'>
         <div class="absolute right-0 top-0 h-auto bg-bodyColor w-[20rem] pb-[1.5rem]">
             <div class="bg-prixColor h-[20vh] flex justify-center gap-[1rem] py-[2.5rem]">
                 <img src="../assets/logo-panier.png" alt="logo-panier ">
@@ -77,7 +65,5 @@
             </div>
         </div>
         
-    </div>
-</body>
-
-</html>
+    </div>`
+}

@@ -22,8 +22,9 @@ export function Header() {
       </nav>
 
       <!-- Desktop Panier -->
-      <a href="./panier.html" class="hidden md:block">
+      <a href="./panier.html" class="hidden md:block ">
         <button
+          id = 'btn-panier'
           class="flex items-center space-x-2 bg-headerOrange hover:bg-black text-white font-semibold px-4 py-2 rounded-[30px]"
         >
           <span>Panier</span>
