@@ -805,6 +805,10 @@ video {
   margin-top: 7rem;
 }
 
+.ml-\[1\.5rem\] {
+  margin-left: 1.5rem;
+}
+
 .block {
   display: block;
 }
@@ -889,6 +893,18 @@ video {
   height: 100%;
 }
 
+.h-\[29rem\] {
+  height: 29rem;
+}
+
+.h-\[3rem\] {
+  height: 3rem;
+}
+
+.h-\[75\%\] {
+  height: 75%;
+}
+
 .w-1\/4 {
   width: 25%;
 }
@@ -951,6 +967,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[9rem\] {
+  width: 9rem;
 }
 
 .max-w-5xl {
@@ -1181,6 +1201,10 @@ video {
   border-radius: 0.5rem;
 }
 
+.rounded-\[20px\] {
+  border-radius: 20px;
+}
+
 .rounded-b-\[30px\] {
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
@@ -1296,6 +1320,11 @@ video {
   background-color: rgb(250 204 21 / var(--tw-bg-opacity, 1));
 }
 
+.bg-prixColor {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 122 75 / var(--tw-bg-opacity, 1));
+}
+
 .bg-opacity-70 {
   --tw-bg-opacity: 0.7;
 }
@@ -1336,6 +1365,10 @@ video {
 
 .p-\[2rem\] {
   padding: 2rem;
+}
+
+.p-\[1\.5rem\] {
+  padding: 1.5rem;
 }
 
 .px-10 {
@@ -1499,6 +1532,14 @@ video {
   line-height: 1rem;
 }
 
+.text-\[1\.1rem\] {
+  font-size: 1.1rem;
+}
+
+.text-\[1\.45rem\] {
+  font-size: 1.45rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1652,6 +1693,12 @@ video {
 .shadow-md {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-\[0_4px_20px_rgba\(255\2c 122\2c 0\2c 0\.7\)\] {
+  --tw-shadow: 0 4px 20px rgba(255,122,0,0.7);
+  --tw-shadow-colored: 0 4px 20px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -1941,6 +1988,10 @@ video {
     height: 91vh;
   }
 
+  .md\:h-\[75\%\] {
+    height: 75%;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -2059,6 +2110,10 @@ video {
 
   .md\:gap-\[4rem\] {
     gap: 4rem;
+  }
+
+  .md\:gap-\[5rem\] {
+    gap: 5rem;
   }
 
   .md\:space-x-3 > :not([hidden]) ~ :not([hidden]) {
