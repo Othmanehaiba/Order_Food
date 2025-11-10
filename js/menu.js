@@ -1,35 +1,6 @@
 
-fetch("../components/header.html")
-            .then((response) => response.text())
-            .then((data) => {
-                document.getElementById("header-placeholder").innerHTML = data;
-                console.log(data);
-                const menuBtn = document.getElementById("menu-btn");
-                const mobileMenu = document.getElementById("mobile-menu");
-
-                if (menuBtn && mobileMenu) {
-                    menuBtn.addEventListener("click", () => {
-                        mobileMenu.classList.toggle("hidden");
-                        console.log("menu toggled");
-                    });
-                } else {
-                    console.warn("Menu button or mobile menu not found");
-                }
-            })
-            .catch((error) => console.error("Error loading header:", error));
-    
-    fetch("../components/footer.html")
-         .then((response) => response.text())
-         .then((data) => {
-             document.getElementById("footer-component").innerHTML = data;
-             console.log(data);
-         })
-         .catch((error) => console.error("Error loading Footer:", error));
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // Kan selectioniw l-elementat
     const customSelect = document.querySelector('.block.md\\:hidden');
 
@@ -67,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Listener 3la kol option f l-lista
         options.forEach(option => {
             option.addEventListener('click', (e) => {
-                
+
                 // 1. Nakhdo data l-kamla mn l-option li t-clickat
                 const optionTitleEl = option.querySelector('h4');
                 const optionSubtitleEl = option.querySelector('span');
@@ -107,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 console.log('Selected category now:', currentTriggerData.categorie);
 
-                e.stopPropagation(); 
+                e.stopPropagation();
             });
         });
 
@@ -126,16 +97,89 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// fetch('../data/data.json')
-//   .then(res => res.json())
-//   .then(data => {
-//     const item = data.find(el => el.id == 20);
-//     if (item) {
-//       console.log(item);
+let allData = []; 
+let cuurentPage = 1 ;
+let cardInPage = 6
 
-//       let img = document.createElement('img');
-//       img.src = item.image;
-//       document.body.appendChild(img);
-//     }
-//   })
-//   .catch(err => console.error('erreur de serveur', err));
+
+fetch('../data/data.json')
+  .then(res => res.json())
+  .then(data => {
+    allData = data; 
+    sendData(allData);
+  })
+  .catch(err => console.error('Erreur de serveur: ' + err));
+
+function sendData(data) {
+  const menuDiv = document.getElementById('menu-div');
+  menuDiv.innerHTML = '';
+
+  data.forEach(e => {
+    menuDiv.innerHTML += `
+      <div class="w-full h-[29rem] p-[1.5rem] bg-headerYellow rounded-[20px] shadow-[0_4px_20px_rgba(255,122,0,0.7)]">
+        <div class="w-full h-[75%] md:h-[75%]">
+          <img src="${e.image}" alt="image-test" class="w-full h-full rounded-[20px]">
+        </div>
+        <div>
+          <h3 class="font-roboto font-bold text-[1.45rem] ml-[1.5rem] mt-[1rem]">${e.name}</h3>
+          <div class="flex items-center justify-center gap-[7rem] md:gap-[5rem] mt-[0.3rem]">
+            <span class="font-oleo font-bold text-prixColor text-[2rem] ml-[1rem]">${e.price}$</span>
+            <button class="bg-prixColor w-[9rem] h-[3rem] text-[1.1rem] font-bold font-roboto text-white rounded-[50px]">
+              Add to panier
+            </button>
+          </div>
+        </div>
+      </div>`;
+  });
+}
+
+const filtre = document.querySelectorAll('[data-categorie]');
+filtre.forEach(btn => {
+  btn.addEventListener('click', e => {
+    const category = e.currentTarget.dataset.categorie;
+
+    let filteredData;
+    switch (category) {
+      case 'all':
+        filteredData = allData;
+        break;
+      case 'boissans':
+        filteredData = allData.filter(item => item.category === 'Boisson');
+        break;
+      case 'salade':
+        filteredData = allData.filter(item => item.category === 'Dessert');
+        break;
+      case 'repats':
+        filteredData = allData.filter(item => item.category === 'Plat');
+        break;
+      default:
+        filteredData = allData;
+    }
+
+    sendData(filteredData);
+  });
+});
+
+
+// // Sélectionner tous les éléments qui ont data-categorie
+// const filterItems = document.querySelectorAll('[data-categorie]');
+
+// filterItems.forEach(item => {
+//     item.addEventListener('click', () => {
+//         const fil = item.dataset.categorie;
+
+//         if (fil === "all") {
+//             console.log('All selected');
+//             sendData(data); // envoyer tous les éléments
+//         } else {
+//             // filtrer le tableau data par catégorie
+//             const filteredData = data.filter(el => el.categorie.toLowerCase() === fil.toLowerCase());
+//             console.log(`${fil} selected`, filteredData);
+//             sendData(filteredData);
+//         }
+//     });
+// });
+
+
+
+

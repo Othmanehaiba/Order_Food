@@ -105,7 +105,7 @@
     "category": "Dessert",
     "description": "Pain grillé frotté à l'ail, tomates fraîches et basilic.",
     "price": 5.99,
-    "image": "../assets/imageData/Eau Minérale.jpg",
+    "image": "../assets/imageData/Bruschetta Tomate.jpg",
     "size": ["4 pièces", "6 pièces"],
     "availability": true
   },
