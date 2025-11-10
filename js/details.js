@@ -21,3 +21,18 @@ function renderStars(starCount) {
     starsContainer.appendChild(span);
   }
 }
+
+function updateReview(review) {
+  authorEl.textContent = review.author;
+  speechEl.textContent = `“${review.speech}”`;
+  renderStars(review.star);
+
+  // Highlight active image 
+  profileImages.forEach((img) => {
+    if (img.getAttribute("src") === review.imgUrl) {
+      img.classList.add("bg-yellow-400", "py-5");
+    } else {
+      img.classList.remove("bg-yellow-400", "py-5");
+    }
+  });
+}
