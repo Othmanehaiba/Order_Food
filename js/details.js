@@ -36,3 +36,15 @@ function updateReview(review) {
     }
   });
 }
+// event to profile images  
+profileImages.forEach((img) => {
+  img.addEventListener("click", () => {
+    const selected = reviews.find(
+      (r) => r.imgUrl === img.getAttribute("src")
+    );
+    if (selected) {
+      currentReview = selected;
+      updateReview(selected);
+    }
+  });
+});
