@@ -327,24 +327,6 @@
     </main>
     <footer id="footer-placeholder"></footer>
     <!-- script -->
-    <script type="module">
-      import {
-        Header,
-        initHeaderMenu,
-        Footer,
-        toogleMenuFooter,
-      } from "../js/global.js";
-      // Inject header and footer
-      document.getElementById("header-placeholder").innerHTML = Header();
-      document.getElementById("footer-placeholder").innerHTML = Footer();
-      initHeaderMenu();
-      // window.toogleMenuFooter = toogleMenuFooter;
-      document.querySelectorAll("[data-footer-toggle]").forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-          const targetId = e.target.dataset.footerToggle;
-          toogleMenuFooter(targetId);
-        });
-      });
-    </script>
+    <script type="module" src="../js/global.js">// Inject header and footer</script>
   </body>
 </html>
