@@ -30,46 +30,8 @@
     <title>Contact/Details</title>
   </head>
   <body class="bg-bodyColor mx-3">
-    <!-- start Header -->
-    <header
-      class="bg-headerYellow max-w-[1383px] w-full mx-auto rounded-[50px] flex justify-between items-center px-8 py-4 shadow-md mt-5"
-    >
-      <!-- Logo -->
-      <div class="flex items-center space-x-3">
-        <img
-          src="../assets/food-order-logo.png"
-          alt="foodOrder+ logo"
-          class="h-8 sm:h-10 object-contain"
-        />
-      </div>
-
-      <!-- Desktop Nav -->
-      <nav class="hidden md:flex space-x-8 text-white font-semibold">
-        <a href="../index.html" class="hover:underline">Home</a>
-        <a href="../pages/menu.html" class="hover:underline">Menu</a>
-        <a href="../pages/contact.html" class="hover:underline">Contact</a>
-      </nav>
-
-      <!-- Desktop Panier -->
-      <a href="./panier.html" class="hidden md:block">
-        <button
-          class="flex items-center space-x-2 bg-headerOrange hover:bg-black text-white font-semibold px-4 py-2 rounded-[30px]"
-        >
-          <span>Panier</span>
-          <img src="../assets/shopping card.png" alt="shopping card icon" />
-        </button>
-      </a>
-
-      <!-- Mobile Burger Button -->
-      <button
-        id="menu-btn"
-        class="md:hidden flex flex-col justify-center items-center space-y-1 focus:outline-none"
-      >
-        <span class="block w-6 h-0.5 bg-headerOrange"></span>
-        <span class="block w-6 h-0.5 bg-headerOrange"></span>
-        <span class="block w-6 h-0.5 bg-headerOrange"></span>
-      </button>
-    </header>
+  
+    
     <h1
       class="font-oleo font-bold text-4xl mx-auto p-1 flex justify-center rounded-full"
     >
@@ -90,7 +52,7 @@
           et laudantium incidunt eaque! Nesciunt laborum aliquid facere vel!
         </p>
         <button
-          class="text-white bg-[#F39223] px-3 py-2 rounded-2xl h-auto font-black"
+          class="text-white bg-[#F39223] px-3 py-2 rounded-2xl h-auto font-black hover:bg-white hover:text-headerOrange"
         >
           Read More
         </button>
@@ -111,7 +73,7 @@
           et laudantium incidunt eaque! Nesciunt laborum aliquid facere vel!
         </p>
         <button
-          class="text-white bg-[#F39223] px-5 py-2 rounded-2xl h-auto font-black"
+          class="text-white bg-[#F39223] px-5 py-2 rounded-2xl h-auto font-black hover:bg-white hover:text-headerOrange"
         >
           Read More
         </button>
@@ -121,12 +83,33 @@
       >
         Contact Us
       </h2>
-      <form action="">
-        <input type="text" class="" placeholder="Your Name" />
-        <input type="number" name="" id="" placeholder="Your Number" />
-        <input type="email" name="" id="" placeholder="Your Email" />
-        <textarea name="" id="" placeholder="Write a message..."></textarea>
-        <button>Send message</button>
+      <form action="" class="flex">
+        <input type="text" placeholder="Your Name" class="bg-[#F3C623]" />
+        <input
+          type="number"
+          name=""
+          id=""
+          placeholder="Your Number"
+          class="bg-[#F3C623]"
+        />
+        <input
+          type="email"
+          name=""
+          id=""
+          placeholder="Your Email"
+          class="bg-[#F3C623]"
+        />
+        <textarea
+          name=""
+          id=""
+          placeholder="Write a message..."
+          class="bg-[#F3C623]"
+        ></textarea>
+        <button
+          class="text-white bg-[#F39223] px-5 py-2 rounded-2xl h-auto font-black hover:bg-white hover:text-headerOrange"
+        >
+          Send message
+        </button>
       </form>
       <div class="">
         <h2
