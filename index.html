@@ -88,7 +88,7 @@
         <span class="h-1 w-20 bg-headerYellow"></span>
       </h3>
 
-      <h2 class="text-3xl font-roboto md:text-4xl font-bold mb-5 mt-5">
+      <h2 class="text-3xl font-roboto md:text-4xl font-extrabold mb-5 mt-5">
         Welcome to FoodOrder+
       </h2>
 
@@ -99,7 +99,7 @@
         Tempor erat elit rebum at clita. Diam dolor diam ipsum sit. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore.
       </p>
 
-      <div class="flex items-center gap-10 mb-8">
+      <div class="hidden md:flex items-center gap-10 mb-8">
         <div class="border-l-4 border-headerYellow flex mx-5">
           <p class="p-2 text-5xl font-extrabold text-headerOrange mx-3">15</p>
           <div class="flex flex-col self-center">
@@ -131,29 +131,29 @@
 
 
 <!-- Discover Menu -->
-<section class="flex md:gap-6 p-7 md:p-8">
+<section class="flex flex-col md:flex-row md:gap-6 p-5 md:p-8">
 
   <!--Right Menu -->
-  <div class=" relative bg-[url('../assets/banner5.png')] bg-cover bg-center h-96 w-full">
-    <div class="flex flex-col self-center mt-14 ml-12">
-      <h3 class="font-Fredoka font-bold text-6xl text-white">Steaks & BBQ</h3>
-      <p class="text-white mt-5 text-[1.4rem]">canonical classics to obscure <br> tiki drinks</p>
+  <div class=" relative bg-[url('../assets/banner5.png')] bg-cover bg-center h-64 md:h-96 w-full rounded-2xl mb-10 md:mb-0">
+    <div class="flex flex-col md:self-center mt-10 ml-6">
+      <h3 class="font-Fredoka font-bold text-3xl md:text-6xl text-white">Steaks & BBQ</h3>
+      <p class="text-white mt-3 md:text-[1.4rem]">canonical classics to obscure <br> tiki drinks</p>
     </div> 
     <div class="absolute -bottom-7 left-14"> 
-      <button class="text-homePrice bg-headerYellow rounded-full w-36 h-36 text-5xl font-Fredoka font-bold">
+      <button class="text-homePrice bg-headerYellow rounded-full w-24 h-24 text-3xl md:w-36 md:h-36 md:text-5xl font-Fredoka font-bold">
         $120
       </button>
     </div>
   </div>
 
   <!-- Left Menu -->
-  <div class="relative bg-[url('../assets/banner5.1.png')] bg-cover bg-center h-96 w-full">
-    <div class="flex flex-col self-center mt-14 ml-12">
-      <h3 class="font-Fredoka font-bold text-6xl text-white">Cocktails</h3>
-      <p class="text-white mt-5 text-[1.4rem]">canonical classics to obscure <br> tiki  drinks</p>
+  <div class="relative bg-[url('../assets/banner5.1.png')] bg-cover bg-center h-64 md:h-96 w-full rounded-2xl mb-6 md:mb-0">
+    <div class="flex flex-col md:self-center mt-10 ml-6">
+      <h3 class="font-Fredoka font-bold text-3xl md:text-6xl text-white">Cocktails</h3>
+      <p class="text-white mt-3 md:text-[1.4rem]">canonical classics to obscure <br> tiki  drinks</p>
     </div>
     <div class="absolute -bottom-7 left-14">
-      <button class="text-homePrice bg-headerYellow rounded-full w-36 h-36 text-5xl font-Fredoka font-bold">
+      <button class="text-homePrice bg-headerYellow rounded-full w-24 h-24 md:w-36 md:h-36 text-3xl md:text-5xl font-Fredoka font-bold">
         $120
       </button>
     </div>
@@ -165,10 +165,53 @@
   <div class="h-2 w-64 bg-headerYellow mx-auto text-center rounded my-1"></div>
 </div>
 
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 p-8">
+
+  <div class="flex flex-col bg-headerYellow rounded-2xl">
+    <div>
+      <img src="./assets/Rectangle 126.png" alt="" class="h-50 p-5 w-full ">
+    </div>
+    <div class="ml-7">
+      <h4 class="font-bold text-2xl">Kiwi New Zealand</h4>
+      <div class="flex justify-between py-9">
+        <p class="text-prixColor text-2xl md:text-4xl font-extrabold">$33.00</p>
+        <button class="text-white bg-prixColor font-bold px-3 py-1 md:px-8 md:py-3 mr-6 rounded-full">Add to panier</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col bg-headerYellow rounded-2xl">
+    <div>
+      <img src="./assets/Rectangle 129.png" class="h-50 p-5 w-full">
+    </div>
+    <div class="ml-7">
+      <h4 class="font-bold text-2xl">Kiwi New Zealand</h4>
+      <div class="flex justify-between py-9">
+        <p class="text-prixColor text-2xl md:text-4xl font-extrabold">$33.00</p>
+        <button class="text-white bg-prixColor font-bold px-3 py-1 md:px-8 md:py-3 mr-6 rounded-full">Add to panier</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col bg-headerYellow rounded-2xl">
+    <div>
+      <img src="./assets/Rectangle 128.png" alt="" class="h-50 p-5 w-full">
+    </div>
+    <div class="ml-7">
+      <h4 class="font-bold text-2xl">Kiwi New Zealand</h4>
+      <div class="flex justify-between py-9">
+        <p class="text-prixColor text-2xl md:text-4xl font-extrabold">$33.00</p>
+        <button class="text-white bg-prixColor font-bold px-3 py-1 md:px-8 md:py-3 mr-6 rounded-full">Add to panier</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 <!-- Foote -->
 <!-- <div id="footer-placeholder"></div> -->
 <script type="module" src="./js/global.js"></script>
+<script src="./js/index.js"></script>
 </body>
 </html>
