@@ -123,16 +123,21 @@
             <hr class="border-t-[0.3rem] border-headerYellow w-1/4 md:w-[8.6875rem]">
         </div>
         <input
-            class="placeholder-black placeholder-opacity-70 p-[2rem] w-[19rem] md:w-[25rem] h-[4.25rem] bg-headerOrange opacity-80 text-black font-extrabold text-[1.3rem] rounded-[50px] mx-[6rem] md:mx-[34rem] my-[2rem]"
+            id="search-bar" class="placeholder-black placeholder-opacity-70 p-[2rem] w-[19rem] md:w-[25rem] h-[4.25rem] bg-headerOrange opacity-80 text-black font-extrabold text-[1.3rem] rounded-[50px] mx-[6rem] md:mx-[34rem] my-[2rem]"
             type="text" placeholder="Taper le plat ....">
 
         <div class="block md:hidden w-full max-w-md mx-auto" id="filtre">
             <div
                 class="hover:bg-headerOrange rounded-t-[30px] transition-all duration-300 ease-in-out relative flex justify-center items-center gap-[2rem] mx-auto w-[80%] border-[3px] rounded-[30px] border-black p-[1rem] ">
-                <div class="text-center p-2 cursor-pointer" data-categorie="all">
-                    <h4 class="text-2xl font-bold text-black font-oleo text-[2.5rem]">All</h4>
-                    <span class="text-sm text-headerYellow font-roboto font-bold text-[1.3rem]">repats , boisons
-                        ...</span>
+                
+                <div class="flex justify-center items-center space-x-3 p-2 cursor-pointer" data-categorie="all">
+                    <div class="w-[6rem] h-[6rem]">
+                        <img src="../assets/Menu-all-section.webp" alt="All items" class="w-full h-full object-contain">
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-bold text-black font-oleo text-[2.5rem]">All</h4>
+                        <span class="text-sm text-headerYellow font-roboto font-bold text-[1.3rem]">repats , boisons ...</span>
+                    </div>
                 </div>
                 <i class="fa-solid fa-chevron-down absolute bottom-[3rem] left-[20rem]"></i>
             </div>
@@ -228,11 +233,37 @@
                 </div>
             </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-[2.5rem] px-[2rem] md:px-[7rem] mt-[5rem] "
-            id="menu-div">
+        <div class="relative w-full  mx-auto">
 
+    <button id="prev-page-desktop"
+        class="hidden md:block absolute left-2 md:left-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-headerYellow text-prixColor rounded-full shadow-lg text-2xl hover:bg-opacity-80 transition-all">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
 
+    <div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-[2.5rem] px-[2rem] md:px-[7rem] mt-[5rem]"
+        id="menu-div">
         </div>
+
+    <button id="next-page-desktop"
+        class="hidden md:block absolute right-2 md:right-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-headerYellow text-prixColor rounded-full shadow-lg text-2xl hover:bg-opacity-80 transition-all">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <div class="flex md:hidden justify-center items-center gap-4 mt-8">
+        
+        <button id="prev-page-mobile"
+            class="w-12 h-12 bg-headerYellow text-prixColor rounded-full shadow-lg text-2xl hover:bg-opacity-80 transition-all">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <button id="next-page-mobile"
+            class="w-12 h-12 bg-headerYellow text-prixColor rounded-full shadow-lg text-2xl hover:bg-opacity-80 transition-all">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </div>
+    
+</div>
+        
     </section>
 
     <!-- nos service section !! -->
@@ -288,10 +319,12 @@
             </div>
         </div>
     </section>
+    
     <footer id="footer-component">
 
     </footer>
     <script src="../js/menu.js"></script>
+    <script type="module" src="../js/global.js"></script>
 
 </body>
 

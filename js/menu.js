@@ -1,31 +1,4 @@
 
-fetch("../components/header.html")
-    .then((response) => response.text())
-    .then((data) => {
-        document.getElementById("header-placeholder").innerHTML = data;
-        const menuBtn = document.getElementById("menu-btn");
-        const mobileMenu = document.getElementById("mobile-menu");
-
-        if (menuBtn && mobileMenu) {
-            menuBtn.addEventListener("click", () => {
-                mobileMenu.classList.toggle("hidden");
-                console.log("menu toggled");
-            });
-        } else {
-            console.warn("Menu button or mobile menu not found");
-        }
-    })
-    .catch((error) => console.error("Error loading header:", error));
-
-fetch("../components/footer.html")
-    .then((response) => response.text())
-    .then((data) => {
-        document.getElementById("footer-component").innerHTML = data;
-    })
-    .catch((error) => console.error("Error loading Footer:", error));
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
 
     // Kan selectioniw l-elementat
@@ -125,6 +98,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 let allData = []; 
+let cuurentPage = 1 ;
+let cardInPage = 6
 
 
 fetch('../data/data.json')
@@ -204,3 +179,7 @@ filtre.forEach(btn => {
 //         }
 //     });
 // });
+
+
+
+
