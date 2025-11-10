@@ -5,7 +5,7 @@
     "category": "Plat",
     "description": "Pizza traditionnelle avec sauce tomate, mozzarella et basilic frais.",
     "price": 8.99,
-    "image": "https://example.com/images/pizza-margherita.jpg",
+    "image": "../assets/imageData/Margarita-pizza.jpg",
     "size": ["S", "M", "L", "XL"],
     "availability": true
   },
@@ -15,7 +15,7 @@
     "category": "Plat",
     "description": "Pizza avec sauce tomate, mozzarella et pepperoni épicé.",
     "price": 10.99,
-    "image": "https://example.com/images/pizza-pepperoni.jpg",
+    "image": "../assets/imageData/Peperoni-pizza.jpg",
     "size": ["S", "M", "L", "XL"],
     "availability": true
   },
@@ -25,17 +25,17 @@
     "category": "Plat",
     "description": "Pâtes avec guanciale, œufs, pecorino et poivre noir.",
     "price": 12.50,
-    "image": "https://example.com/images/pates-carbonara.jpg",
+    "image": "../assets/imageData/Pâtes Carbonara.jpg",
     "size": null,
     "availability": true
   },
   {
     "id": 4,
     "name": "Salade César",
-    "category": "Entrée",
+    "category": "Dessert",
     "description": "Laitue romaine, croûtons, parmesan et sauce César.",
     "price": 7.50,
-    "image": "https://example.com/images/salade-cesar.jpg",
+    "image": "../assets/imageData/Salade César.jpg",
     "size": ["Petite", "Grande"],
     "availability": true
   },
@@ -45,7 +45,7 @@
     "category": "Plat",
     "description": "Bœuf, cheddar, laitue, tomate, oignons et frites.",
     "price": 11.99,
-    "image": "https://example.com/images/burger-classique.jpg",
+    "image": "../assets/imageData/Burger Classique.jpg",
     "size": null,
     "availability": false
   },
@@ -55,7 +55,7 @@
     "category": "Dessert",
     "description": "Dessert italien classique au café, mascarpone et cacao.",
     "price": 6.50,
-    "image": "https://example.com/images/tiramisu.jpg",
+    "image": "../assets/imageData/Tiramisu.jpg",
     "size": null,
     "availability": true
   },
@@ -65,7 +65,7 @@
     "category": "Boisson",
     "description": "Eau minérale plate ou gazeuse.",
     "price": 2.00,
-    "image": "https://example.com/images/eau-minerale.jpg",
+    "image": "../assets/imageData/Eau Minérale.jpg",
     "size": ["50cl", "1L"],
     "availability": true
   },
@@ -75,7 +75,7 @@
     "category": "Boisson",
     "description": "Boisson gazeuse rafraîchissante.",
     "price": 2.50,
-    "image": "https://example.com/images/coca-cola.jpg",
+    "image": "../assets/imageData/Coca-Cola.jpg",
     "size": ["33cl", "50cl"],
     "availability": true
   },
@@ -85,7 +85,7 @@
     "category": "Plat",
     "description": "Artichauts, jambon, champignons et olives.",
     "price": 13.00,
-    "image": "https://example.com/images/pizza-4-saisons.jpg",
+    "image": "../assets/imageData/Pizza 4 Saisons.jpg",
     "size": ["M", "L"],
     "availability": true
   },
@@ -95,17 +95,17 @@
     "category": "Plat",
     "description": "Filet de saumon grillé avec légumes de saison.",
     "price": 16.99,
-    "image": "https://example.com/images/saumon-grille.jpg",
+    "image": "../assets/imageData/Saumon Grillé.jpg",
     "size": null,
     "availability": true
   },
   {
     "id": 11,
     "name": "Bruschetta Tomate",
-    "category": "Entrée",
+    "category": "Dessert",
     "description": "Pain grillé frotté à l'ail, tomates fraîches et basilic.",
     "price": 5.99,
-    "image": "https://example.com/images/bruschetta.jpg",
+    "image": "../assets/imageData/Eau Minérale.jpg",
     "size": ["4 pièces", "6 pièces"],
     "availability": true
   },
@@ -115,7 +115,7 @@
     "category": "Dessert",
     "description": "Mousse légère au chocolat noir.",
     "price": 5.00,
-    "image": "https://example.com/images/mousse-chocolat.jpg",
+    "image": "../assets/imageData/Mousse au Chocolat.jpg",
     "size": null,
     "availability": true
   },
@@ -125,7 +125,7 @@
     "category": "Plat",
     "description": "Pâtes avec une riche sauce à la viande hachée.",
     "price": 11.50,
-    "image": "https://example.com/images/pates-bolognaise.jpg",
+    "image": "../assets/imageData/Pâtes Bolognaise.jpg",
     "size": null,
     "availability": true
   },
@@ -135,7 +135,7 @@
     "category": "Boisson",
     "description": "Café court et intense.",
     "price": 1.80,
-    "image": "https://example.com/images/espresso.jpg",
+    "image": "../assets/imageData/Café Espresso.jpg",
     "size": ["Simple", "Double"],
     "availability": true
   },
@@ -145,17 +145,17 @@
     "category": "Dessert",
     "description": "Pâte sablée, crème au citron et meringue.",
     "price": 6.00,
-    "image": "https://example.com/images/tarte-citron.jpg",
+    "image": "../assets/imageData/Tarte au Citron Meringuée.jpg",
     "size": null,
     "availability": true
   },
   {
     "id": 16,
     "name": "Soupe à l'oignon",
-    "category": "Entrée",
+    "category": "Dessert",
     "description": "Soupe traditionnelle gratinée au fromage.",
     "price": 7.00,
-    "image": "https://example.com/images/soupe-oignon.jpg",
+    "image": "../assets/imageData/Soupe à l'oignon.jpg",
     "size": null,
     "availability": true
   },
@@ -165,7 +165,7 @@
     "category": "Plat",
     "description": "Entrecôte grillée servie avec frites et sauce au poivre.",
     "price": 18.50,
-    "image": "https://example.com/images/steak-frites.jpg",
+    "image": "../assets/imageData/Steak Frites.jpg",
     "size": null,
     "availability": true
   },
@@ -175,7 +175,7 @@
     "category": "Boisson",
     "description": "Jus d'oranges fraîches pressées.",
     "price": 4.00,
-    "image": "https://example.com/images/jus-orange.jpg",
+    "image": "../assets/imageData/Jus d'Orange Pressé.jpg",
     "size": ["Standard"],
     "availability": true
   },
@@ -185,7 +185,7 @@
     "category": "Plat",
     "description": "Galette de légumes, avocat, laitue et tomate.",
     "price": 12.00,
-    "image": "https://example.com/images/burger-vegetarien.jpg",
+    "image": "../assets/imageData/Burger Végétarien.jpg",
     "size": null,
     "availability": true
   },
@@ -195,7 +195,7 @@
     "category": "Dessert",
     "description": "Crème à la vanille avec une couche de caramel croquant.",
     "price": 5.50,
-    "image": "https://example.com/images/creme-brulee.jpg",
+    "image": "../assets/imageData/Crème Brûlée.jpg",
     "size": null,
     "availability": false
   }
