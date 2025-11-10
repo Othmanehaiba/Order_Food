@@ -1,24 +1,27 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./*.html",          // all HTML files in the root
-    "./**/*.html",       // all HTML files in subfolders
-    // if you later add JS/TS files, you can include:
-    // "./**/*.{js,jsx,ts,tsx}",
+    "./**/*.html", // Scans all HTML files in your project directory and subdirectories
+    // Add other paths here if you use JS or other template languages:
+    // "./src/**/*.{js,jsx,ts,tsx}",
+    "./index.html",
+    "./pages/**/*.html",
+    "./components/**/*.html",
   ],
   theme: {
     extend: {
       fontFamily: {
-        oleo: ['Oleo Script', 'cursive'],
+        oleo: ["Oleo Script", "cursive"],
         roboto: ["Roboto", "sans-serif"],
       },
       colors: {
-        prixColor: '#007A4B',
-        bodyColor: '#FFEEB1',
-        headerYellow: "#f3c623",
-        headerOrange: "#f39223",
+        prixColor: "#007A4B",
+        bodyColor: "#FFEEB1",
+        headerYellow: "#F3C623",
+        headerOrange: "#F39223",
       },
     },
   },
   plugins: [],
 }
+
