@@ -55,3 +55,11 @@ async function loadReviews() {
 }
 
 loadReviews();
+
+
+// dynamic product 
+// get full url
+const params = new URLSearchParams(window.location.search);
+// get id 
+const id = params.get('id') || 1;
+// console.log(id);
