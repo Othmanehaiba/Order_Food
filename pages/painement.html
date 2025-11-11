@@ -8,7 +8,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/output.css" />
-    <script src="../tailwind.config.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <script src="../tailwind.config.js"></script>
     <title>Document</title>
   </head>
 
@@ -80,23 +80,43 @@
          <div class="p-4 rounded-lg">
           <h2 class="text-lg font-semibold text-yellow-900">Your orders</h2>
 
-          <!-- Liste des éléments du panier (sera remplie dynamiquement) -->
+          <!-- La liste de produit -->
           <div id="cart-items" class="space-y-3">
-            <p class="text-black text-sm opacity-70 text-center py-4">
-              Aucun produit dans le panier...
-            </p>
-          </div>
 
-          <!--  Total -->
-          <div
-            class="flex justify-between items-center border-t border-black/40 pt-4 mt-4"
-          >
-            <h3 class="text-lg font-bold text-black">Total :</h3>
-            <p id="total-price" class="text-lg font-bold text-prixColor">
-              £0.00
-            </p>
-          </div>
-        </div> 
+            <div class="flex justify-between items-center  p-3 rounded-lg ">
+              <div class="grid-rows-1 gap-3">
+                <!-- <img src="../assets/icon1.png" alt="" class="w-10 h-2 rounded-lg object-cover"> -->
+                <div>
+                  <p class=" font-bold text-prixColor">£27.90</p>
+                  <p class="font-bold text-roboto text-black">12” Vegitarian Pizza </p>
+                  <p class="font-roboto text-black">No Mushrooms + greenpeppers </p>
+                  <wa-icon name="trash" variant="light" style="color: #B197FC;"></wa-icon>
+                </div>
+
+                 <div>
+                  <p class=" font-bold text-prixColor">£27.90</p>
+                  <p class="font-bold text-roboto text-black">12” Vegitarian Pizza </p>
+                  <p class="font-roboto text-black">No Mushrooms + greenpeppers </p>
+                </div>
+
+                <div>
+                  <p class=" font-bold text-prixColor">£27.90</p>
+                  <p class="font-bold text-roboto text-black">12” Vegitarian Pizza </p>
+                  <p class="font-roboto text-black">No Mushrooms + greenpeppers </p>
+                </div>
+              </div>
+            </div>
+
+           <!--  Total -->
+            <div
+              class="flex justify-between items-center border-t border-black/40 pt-4 mt-4"
+            >
+              <h3 class="text-lg font-bold text-black">Total :</h3>
+              <p id="total-price" class="text-lg font-bold text-prixColor">
+                £0.00
+              </p>
+            </div>
+          </div> 
       </div>
       <div>
         <img src="../assets/logo.png" class="w-40 md:mx-auto mt-6" />
