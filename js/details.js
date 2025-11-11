@@ -80,7 +80,16 @@ function displayProduct(product) {
   console.log(product.name);
   console.log(product.description);
   console.log(detailsSection);
-
+  let generateSizeOptions = () => {
+    const count = product.size.length;
+    console.log(count);
+    let content = ``;
+    for (let index = 0; index < product.size.length; index++) {
+      const element = product.size[index];
+      content += `<option>${element}</option>`;
+    }
+    return content;
+  };
   detailsSection.innerHTML = ` <!-- LEFT: Text content -->
         <div class="md:w-1/2 order-2 md:order-1 flex flex-col">
           <!-- On desktop -->
@@ -113,18 +122,22 @@ function displayProduct(product) {
           </h2>
 
           <!-- Size dropdown -->
-          <div class="hidden md:flex ml-6 mb-6 space-x-6 gap-4">
+          ${
+            product.size
+              ? `<div class="hidden md:flex ml-6 mb-6 space-x-6 gap-4">
             <label for="size" class="font-semibold">Size</label>
             <select
               id="size"
               name="size"
               class="bg-[#A29874] text-white p-1 text-sm rounded px-4 py-2"
             >
-              <option>Small (+0€)</option>
-              <option>Medium (+2€)</option>
-              <option>Large (+4€)</option>
+            ${generateSizeOptions()}
+              
             </select>
-          </div>
+          </div>`
+              : ``
+          }
+          
 
           <!-- Quantity -->
           <div class="hidden md:flex ml-6 mt-6 mb-6 space-x-3">
@@ -263,6 +276,4 @@ function displayProduct(product) {
             </button>
           </div>
         </div>`;
-
-        
 }
