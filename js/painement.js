@@ -8,4 +8,4 @@
      adress : document.getElementById("adress"),
      terms : document.getElementById("terms"),
 };
-const bytbtn = document.getElementById("pay-btn");
+const btnby = document.getElementById("pay-btn");
