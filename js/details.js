@@ -83,7 +83,10 @@ function displayProduct(product) {
   let generateSizeOptions = () => {
     return product.size.map((size) => `<option>${size}</option>`).join("");
   };
-  detailsSection.innerHTML = ` <!-- LEFT: Text content -->
+
+  function generateSectionDetails(product) {
+    return `
+      <!-- LEFT: Text content -->
         <div class="md:w-1/2 order-2 md:order-1 flex flex-col">
           <!-- On desktop -->
           <h1 class="hidden md:block text-3xl font-bold mb-2">
@@ -107,7 +110,7 @@ function displayProduct(product) {
           <p
             class="hidden md:block md:text-center text-4xl font-semibold text-yellow-500 mb-8"
           >
-            €${product.price}
+            ${product.price}
           </p>
 
           <h2 class="hidden md:block text-3xl font-normal mb-6">
@@ -130,7 +133,6 @@ function displayProduct(product) {
           </div>`
               : ``
           }
-          
 
           <!-- Quantity -->
           <div class="hidden md:flex ml-6 mt-6 mb-6 space-x-3">
@@ -174,7 +176,7 @@ function displayProduct(product) {
 
           <!-- Main pizza image -->
           <img
-            src="${product.image}"
+           src="${product.image}"
             alt="${product.name}"
             class="w-full max-w-sm md:max-w-md h-auto rounded-lg shadow-md mb-4"
           />
@@ -227,19 +229,21 @@ function displayProduct(product) {
           </h2>
 
           <!-- Size dropdown -->
-          <div
-            class="md:hidden flex items-center justify-center mb-4 space-x-4"
-          >
-            <label for="size-mobile" class="font-semibold text-2xl">Size</label>
+          ${
+            product.size
+              ? `<div class="flex md:hidden ml-6 mb-6 space-x-6 gap-4">
+            <label for="size" class="font-semibold">Size</label>
             <select
-              id="size-mobile"
-              name="size-mobile"
-              class="bg-[#A29874] text-white text-sm rounded px-4 py-2"
+              id="size"
+              name="size"
+              class="bg-[#A29874] text-white p-1 text-sm rounded px-4 py-2"
             >
             ${generateSizeOptions()}
-             
+              
             </select>
-          </div>
+          </div>`
+              : ``
+          }
 
           <!-- Quantity -->
           <div
@@ -270,48 +274,12 @@ function displayProduct(product) {
             </button>
           </div>
         </div>
-        <!-- Bottom Section -->
-      <section
-        class="mt-12 flex flex-col md:flex-row items-center justify-between w-full md:gap-8 max-w-6xl mx-auto"
-      >
-        <!-- Total to Pay -->
-        <div class="w-full md:w-auto flex justify-center md:justify-start">
-          <button
-            class="bg-[#FC8A06]/80 hover:bg-[#e07a00] text-white font-bold px-6 py-3 rounded-lg flex items-center justify-center shadow-md"
-          >
-            <span class="text-xl mr-2">Total to pay</span>
-            <span class="font-semibold text-4xl" id="total-pay-js">€17.90</span>
-          </button>
-        </div>
 
-        <!-- Actions -->
-        <div
-          class="w-full md:w-auto flex flex-col items-center md:items-end text-center md:text-right mt-6 md:mt-0"
-        >
-          <p class="text-xs text-gray-600 mb-4">
-            Delivery & Tax will be calculated in the panier
-          </p>
-
-          <div
-            class="flex flex-col md:flex-row items-center gap-4 md:gap-6 w-full md:w-auto"
-          >
-            <button
-              class="underline font-semibold text-gray-900 hover:text-gray-700 transition"
-            >
-              Take me back
-            </button>
-
-            <button
-              class="bg-green-600 hover:bg-headerYellow text-white px-6 py-3 text-2xl rounded-lg flex items-center justify-center gap-2 font-semibold shadow-md"
-            >
-              <img src="../assets/arrow-right.svg" alt="" />
-              <span>Add to Panier</span>
-            </button>
-          </div>
-        </div>
-      </section>
-
-        `;
+        
+  `;
+  }
+  detailsSection.innerHTML = generateSectionDetails(product);
+  console.log(detailsSection);
 
   const quantityInput = detailsSection.querySelector("#quantity");
   const quantityInputMobile = detailsSection.querySelector("#quantity-mobile");
@@ -319,7 +287,10 @@ function displayProduct(product) {
     'button[aria-label="Decrease quantity"], button[aria-label="Increase quantity"]'
   );
 
-  // const priceEl = detailsSection.querySelector(".price-el");
+  const priceEl = document.querySelector(".price-el-js");
+  priceEl.textContent = product.price;
+  console.log(priceEl);
+  
   // const priceElMobile = detailsSection.querySelector(".price-el-mobile");
 
   const updatePrice = (quantity) => {
@@ -332,6 +303,7 @@ function displayProduct(product) {
     btn.addEventListener("click", () => {
       let isIncrease = btn.getAttribute("aria-label").includes("Increase");
       let val = parseInt(quantityInput.value);
+      console.log(isIncrease);
 
       if (isIncrease) val += 1;
       else if (val > 1) val -= 1;
