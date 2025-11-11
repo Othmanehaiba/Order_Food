@@ -243,9 +243,8 @@ function displayProduct(product) {
               name="size-mobile"
               class="bg-[#A29874] text-white text-sm rounded px-4 py-2"
             >
-              <option>Small (+0€)</option>
-              <option>Medium (+2€)</option>
-              <option>Large (+4€)</option>
+            ${generateSizeOptions()}
+             
             </select>
           </div>
 
