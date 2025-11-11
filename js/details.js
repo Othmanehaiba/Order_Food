@@ -81,14 +81,7 @@ function displayProduct(product) {
   console.log(product.description);
   console.log(detailsSection);
   let generateSizeOptions = () => {
-    const count = product.size.length;
-    console.log(count);
-    let content = ``;
-    for (let index = 0; index < product.size.length; index++) {
-      const element = product.size[index];
-      content += `<option>${element}</option>`;
-    }
-    return content;
+    return product.size.map((size) => `<option>${size}</option>`).join("");
   };
   detailsSection.innerHTML = ` <!-- LEFT: Text content -->
         <div class="md:w-1/2 order-2 md:order-1 flex flex-col">
@@ -275,4 +268,5 @@ function displayProduct(product) {
             </button>
           </div>
         </div>`;
+    
 }
