@@ -99,36 +99,30 @@ export function panier() {
 
 // }
 
-// component panier
 export function openPanier() {
-  // 1. Kanakhdo ga3 l element li ghan7tajo
+
   const btnP_desktop = document.getElementById('btn-panier');
   const btnP_mobile = document.getElementById('mobile-btn-panier');
   const panier = document.getElementById('panier-div');
-  const mobileMenu = document.getElementById('mobile-menu'); // 7tajiina 7ta l menu dial mobile
+  const mobileMenu = document.getElementById('mobile-menu'); 
 
-  // 2. Kanchofo wach l panier kayn, ila makanch kan7ebso
   if (!panier) return;
 
-  // 3. Had function hiya li kat7ell o katssedd l panier
   const toggleThePanier = () => {
     panier.classList.toggle('opacity-0');
     panier.classList.toggle('translate-x-full');
     panier.classList.toggle('pointer-events-none');
   };
 
-  // 4. Kanrkkbo l listener 3la button dial Desktop
   if (btnP_desktop) {
     btnP_desktop.addEventListener('click', toggleThePanier);
   }
 
-  // 5. Kanrkkbo l listener 3la button dial Mobile
   if (btnP_mobile && mobileMenu) {
     btnP_mobile.addEventListener('click', () => {
-      // Melli ycliki:
-      // A. 7ell l panier
+      
       toggleThePanier();
-      // B. Sedd l menu dial mobile bache mayb9ach m7loul mor l panier
+
       mobileMenu.classList.add('hidden');
     });
   }
