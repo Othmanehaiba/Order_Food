@@ -109,6 +109,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// variable globale
+let prevnBtn = document.getElementById('prev-page-desktop');
+
 
 // fetch data
 let allData = []; 
@@ -127,9 +130,10 @@ fetch('../data/data.json')
 function sendData(data) {
   const menuDiv = document.getElementById('menu-div');
   menuDiv.innerHTML = '';
+  const CardOn = data.slice(0, cardInPage);
 
-  for(let i = 0; i<=cardInPage;i++ ){
-    data.forEach(e => {
+
+    CardOn.forEach(e => {
     menuDiv.innerHTML += `
       <div class="w-full h-[29rem] p-[1.5rem] bg-headerYellow rounded-[20px] shadow-[0_4px_20px_rgba(255,122,0,0.7)]">
         <div class="w-full h-[75%] md:h-[75%]">
@@ -147,7 +151,7 @@ function sendData(data) {
       </div>`;
   });
   }
-}
+
 
 const filtre = document.querySelectorAll('[data-categorie]');
 filtre.forEach(btn => {
