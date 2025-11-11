@@ -128,7 +128,8 @@ function sendData(data) {
   const menuDiv = document.getElementById('menu-div');
   menuDiv.innerHTML = '';
 
-  data.forEach(e => {
+  for(let i = 0; i<=cardInPage;i++ ){
+    data.forEach(e => {
     menuDiv.innerHTML += `
       <div class="w-full h-[29rem] p-[1.5rem] bg-headerYellow rounded-[20px] shadow-[0_4px_20px_rgba(255,122,0,0.7)]">
         <div class="w-full h-[75%] md:h-[75%]">
@@ -145,6 +146,7 @@ function sendData(data) {
         </div>
       </div>`;
   });
+  }
 }
 
 const filtre = document.querySelectorAll('[data-categorie]');
