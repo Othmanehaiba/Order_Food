@@ -1,30 +1,30 @@
 
-fetch("../components/header.html")
-            .then((response) => response.text())
-            .then((data) => {
-                document.getElementById("header-placeholder").innerHTML = data;
-                console.log(data);
-                const menuBtn = document.getElementById("menu-btn");
-                const mobileMenu = document.getElementById("mobile-menu");
+// fetch("../components/header.html")
+//             .then((response) => response.text())
+//             .then((data) => {
+//                 document.getElementById("header-placeholder").innerHTML = data;
+//                 console.log(data);
+//                 const menuBtn = document.getElementById("menu-btn");
+//                 const mobileMenu = document.getElementById("mobile-menu");
 
-                if (menuBtn && mobileMenu) {
-                    menuBtn.addEventListener("click", () => {
-                        mobileMenu.classList.toggle("hidden");
-                        console.log("menu toggled");
-                    });
-                } else {
-                    console.warn("Menu button or mobile menu not found");
-                }
-            })
-            .catch((error) => console.error("Error loading header:", error));
+//                 if (menuBtn && mobileMenu) {
+//                     menuBtn.addEventListener("click", () => {
+//                         mobileMenu.classList.toggle("hidden");
+//                         console.log("menu toggled");
+//                     });
+//                 } else {
+//                     console.warn("Menu button or mobile menu not found");
+//                 }
+//             })
+//             .catch((error) => console.error("Error loading header:", error));
     
-    fetch("../components/footer.html")
-         .then((response) => response.text())
-         .then((data) => {
-             document.getElementById("footer-component").innerHTML = data;
-             console.log(data);
-         })
-         .catch((error) => console.error("Error loading Footer:", error));
+//     fetch("../components/footer.html")
+//          .then((response) => response.text())
+//          .then((data) => {
+//              document.getElementById("footer-component").innerHTML = data;
+//              console.log(data);
+//          })
+//          .catch((error) => console.error("Error loading Footer:", error));
 
 
 
