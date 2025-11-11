@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // fetch data
 let allData = []; 
 let cuurentPage = 1 ;
-let cardInPage = 6
+let cardInPage = 6;
 
 
 fetch('../data/data.json')
