@@ -34,9 +34,9 @@
         Checkout
       </h1>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
         <!-- block de titre et formulaire  -->
-        <div class="mt-6 space-y-3">
+        <div class="mt-6 space-y-3 ">
           <h2 class="text-lg font-semibold text-yellow-900">Payment details</h2>
 
           <div class="flex space-x-6">
@@ -77,7 +77,7 @@
 
         <!-- block de listes de commandes  -->
 
-        <div class="p-4 rounded-lg">
+        <div class="mt-6 space-y-3">
           <h2 class="text-lg font-semibold text-yellow-900">Your orders</h2>
 
             <!-- La liste de produit -->
@@ -85,8 +85,8 @@
 
             <div class="space-y-6">
 
-           <!-- Élément du panier -->
-              <div class="flex items-start justify-between border-b border-black/40 pb-4">
+              <!-- Élément du panier -->
+              <div class="flex items-start justify-between pb-4">
                 <!-- Bloc gauche -->
                 <div class="flex items-start gap-4">
 
@@ -97,7 +97,7 @@
 
                   <!-- Infos commande -->
                   <div class="space-y-1">
-                    <p class="text-[#04724D] font-extrabold text-xl">£27.90</p>
+                    <p class="text-prixColor font-semibold text-xl">£27.90</p>
                     <p class="font-bold text-black">12” Vegitarian Pizza</p>
                     <p class="text-black text-sm opacity-80 leading-4">
                       No Mushrooms + green peppers
@@ -114,17 +114,77 @@
 
             </div>
 
+            <div class="space-y-6">
+
+              <!-- Élément du panier -->
+              <div class="flex items-start justify-between border-t border-black/40  pb-4">
+                <!-- Bloc gauche -->
+                <div class="flex items-start gap-4">
+
+                  <!-- Badge quantité -->
+                  <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center">
+                    <span class="text-white font-bold text-lg">1x</span>
+                  </div>
+
+                  <!-- Infos commande -->
+                  <div class="space-y-1">
+                    <p class="text-prixColor font-semibold text-xl">£27.90</p>
+                    <p class="font-bold text-black">12” Vegitarian Pizza</p>
+                    <p class="text-black text-sm opacity-80 leading-4">
+                      No Mushrooms + green peppers
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Bouton suppression -->
+                <button class="opacity-70 hover:opacity-100">
+                  <img src="../assets/remove.png" class="w-7">
+                </button>
+
+              </div>
+
+            </div>
+
+            <div class="space-y-6 ">
+
+              <!-- Élément du panier -->
+              <div class="flex items-start justify-between border-t border-black/40  pb-4">
+                <!-- Bloc gauche -->
+                <div class="flex items-start gap-4">
+
+                  <!-- Badge quantité -->
+                  <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center">
+                    <span class="text-white font-bold text-lg">1x</span>
+                  </div>
+
+                  <!-- Infos commande -->
+                  <div class="space-y-1 ">
+                    <p class="text-prixColor font-semibold text-xl">£27.90</p>
+                    <p class="font-bold text-black">12” Vegitarian Pizza</p>
+                    <p class="text-black text-sm opacity-80 leading-4">
+                      No Mushrooms + green peppers
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Bouton suppression -->
+                <button class="opacity-70 hover:opacity-100">
+                  <img src="../assets/remove.png" class="w-7">
+                </button>
+
+              </div>
+
+            </div>
 
             <!--  Total -->
               <div
-                class="flex justify-between items-center border-t border-black/40 pt-4 mt-4"
+                class="flex justify-between items-center border-t border-black/40 pt-4 mb-10"
               >
-                <h3 class="text-lg font-bold text-black">Total :</h3>
-                <p id="total-price" class="text-lg font-bold text-prixColor">
+                <h3 class="text-xl font-bold text-black">Total :</h3>
+                <p id="total-price" class="text-xl font-bold text-prixColor">
                   £0.00
                 </p>
               </div>
-
           </div> 
 
         </div>
