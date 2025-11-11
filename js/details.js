@@ -250,6 +250,7 @@ function displayProduct(product) {
             >
             <button
               class="bg-yellow-400 text-white rounded px-3 text-lg font-bold"
+              aria-label="Decrease quantity"
             >
               -
             </button>
@@ -263,10 +264,82 @@ function displayProduct(product) {
             />
             <button
               class="bg-yellow-400 text-white rounded px-3 text-lg font-bold"
+              aria-label="Increase quantity"
             >
               +
             </button>
           </div>
-        </div>`;
-    
+        </div>
+        <!-- Bottom Section -->
+      <section
+        class="mt-12 flex flex-col md:flex-row items-center justify-between w-full md:gap-8 max-w-6xl mx-auto"
+      >
+        <!-- Total to Pay -->
+        <div class="w-full md:w-auto flex justify-center md:justify-start">
+          <button
+            class="bg-[#FC8A06]/80 hover:bg-[#e07a00] text-white font-bold px-6 py-3 rounded-lg flex items-center justify-center shadow-md"
+          >
+            <span class="text-xl mr-2">Total to pay</span>
+            <span class="font-semibold text-4xl" id="total-pay-js">€17.90</span>
+          </button>
+        </div>
+
+        <!-- Actions -->
+        <div
+          class="w-full md:w-auto flex flex-col items-center md:items-end text-center md:text-right mt-6 md:mt-0"
+        >
+          <p class="text-xs text-gray-600 mb-4">
+            Delivery & Tax will be calculated in the panier
+          </p>
+
+          <div
+            class="flex flex-col md:flex-row items-center gap-4 md:gap-6 w-full md:w-auto"
+          >
+            <button
+              class="underline font-semibold text-gray-900 hover:text-gray-700 transition"
+            >
+              Take me back
+            </button>
+
+            <button
+              class="bg-green-600 hover:bg-headerYellow text-white px-6 py-3 text-2xl rounded-lg flex items-center justify-center gap-2 font-semibold shadow-md"
+            >
+              <img src="../assets/arrow-right.svg" alt="" />
+              <span>Add to Panier</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+        `;
+
+  const quantityInput = detailsSection.querySelector("#quantity");
+  const quantityInputMobile = detailsSection.querySelector("#quantity-mobile");
+  const btns = detailsSection.querySelectorAll(
+    'button[aria-label="Decrease quantity"], button[aria-label="Increase quantity"]'
+  );
+
+  // const priceEl = detailsSection.querySelector(".price-el");
+  // const priceElMobile = detailsSection.querySelector(".price-el-mobile");
+
+  const updatePrice = (quantity) => {
+    const total = (product.price * quantity).toFixed(2);
+    priceEl.textContent = `€${total}`;
+    priceElMobile.textContent = `€${total}`;
+  };
+
+  btns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      let isIncrease = btn.getAttribute("aria-label").includes("Increase");
+      let val = parseInt(quantityInput.value);
+
+      if (isIncrease) val += 1;
+      else if (val > 1) val -= 1;
+
+      quantityInput.value = val;
+      quantityInputMobile.value = val;
+
+      updatePrice(val);
+    });
+  });
 }
