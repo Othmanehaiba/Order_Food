@@ -73,30 +73,28 @@ fetch("../data/data.json")
     console.log(currentProduct);
     // diplay product info
     displayProduct(currentProduct);
-})
+  })
   .catch((err) => console.error(`product not fetch correct ${err}`));
 
+function displayProduct(product) {
+  console.log(product.name);
+  console.log(product.description);
+  console.log(detailsSection);
 
-function displayProduct(product){
-    console.log(product.name);
-    console.log(product.description);
-    console.log(detailsSection);
-    
-    detailsSection.innerHTML = ` <!-- LEFT: Text content -->
+  detailsSection.innerHTML = ` <!-- LEFT: Text content -->
         <div class="md:w-1/2 order-2 md:order-1 flex flex-col">
           <!-- On desktop -->
           <h1 class="hidden md:block text-3xl font-bold mb-2">
-            Classic Margherita Pizza
+            ${product.name}
           </h1>
           <p class="hidden md:block text-sm text-gray-700 italic mb-4">
-            Italian, Vegetarian
+            ${product.category}
           </p>
 
           <p
             class="hidden md:block text-sm text-gray-700 mb-6 max-w-md leading-relaxed"
           >
-            A traditional pizza topped with tomato sauce, mozzarella, fresh
-            basil, and extra virgin olive oil.
+            ${product.description}
           </p>
 
           <p
@@ -107,7 +105,7 @@ function displayProduct(product){
           <p
             class="hidden md:block md:text-center text-4xl font-semibold text-yellow-500 mb-8"
           >
-            €9.99
+            €${product.price}
           </p>
 
           <h2 class="hidden md:block text-3xl font-normal mb-6">
@@ -162,16 +160,16 @@ function displayProduct(product){
           <h1
             class="md:hidden text-2xl font-bold mb-2 text-gray-900 text-center"
           >
-            Classic Margherita Pizza
+            ${product.name}
           </h1>
           <p class="md:hidden text-sm text-gray-700 italic mb-4 text-center">
-            Italian, Vegetarian
+            ${product.category}
           </p>
 
           <!-- Main pizza image -->
           <img
-            src="../assets/pizza.png"
-            alt="Margherita Pizza"
+            src="${product.image}"
+            alt="${product.name}"
             class="w-full max-w-sm md:max-w-md h-auto rounded-lg shadow-md mb-4"
           />
 
@@ -200,8 +198,7 @@ function displayProduct(product){
           <p
             class="md:hidden text-sm text-gray-700 mb-6 text-center max-w-md leading-relaxed"
           >
-            A traditional pizza topped with tomato sauce, mozzarella, fresh
-            basil, and extra virgin olive oil.
+            ${product.description}
           </p>
 
           <!-- Base price (mobile only) -->
@@ -213,7 +210,7 @@ function displayProduct(product){
           <p
             class="md:hidden text-4xl font-semibold text-yellow-500 mb-6 text-center"
           >
-            €9.99
+            €${product.price}
           </p>
 
           <!-- Customization Options (mobile only) -->
@@ -265,7 +262,7 @@ function displayProduct(product){
               +
             </button>
           </div>
-        </div>`
+        </div>`;
 
-    
+        
 }
