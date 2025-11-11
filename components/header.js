@@ -22,14 +22,16 @@ export function Header() {
       </nav>
 
       <!-- Desktop Panier -->
-      <a href="./panier.html" class="hidden md:block">
+      <div class="hidden md:block">
+      
         <button
+          id = "btn-panier"
           class="flex items-center space-x-2 bg-headerOrange hover:bg-black text-white font-semibold px-4 py-2 rounded-[30px]"
         >
           <span>Panier</span>
           <img src="../assets/shopping card.png" alt="shopping card icon">
         </button>
-      </a>
+        </div>
 
       <!-- Mobile Burger Button -->
       <button
@@ -45,7 +47,7 @@ export function Header() {
     <!-- Mobile Menu -->
     <div
       id="mobile-menu"
-      class="hidden fixed top-0 right-0 w-[90%] h-full bg-bodyColor text-headerOrange font-bold text-4xl flex flex-col items-center justify-start pt-0 z-40"
+      class="hidden fixed top-0 right-0 w-[90%] h-full bg-bodyColor text-headerOrange font-bold text-4xl  flex-col items-center justify-start pt-0 z-40"
     >
       <!-- Top orange section -->
       <div
@@ -67,14 +69,13 @@ export function Header() {
       </div>
 
       <!-- Panier -->
-      <a href="./panier.html" class="mb-10">
         <button
+          id = "mobile-btn-panier"
           class="flex items-center space-x-2 bg-headerOrange text-white font-semibold px-8 py-4 rounded-[30px] hover:bg-black transition-colors"
         >
           <span>Panier</span>
           <img src="../assets/shopping card.png" alt="shopping card icon">
         </button>
-      </a>
     </div>
 
 `;
