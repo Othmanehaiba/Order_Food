@@ -204,3 +204,18 @@ filtre.forEach((btn) => {
 		sendData(); 
 	});
 });
+
+
+
+
+// recherche 
+const searchInput = document.getElementById('search-bar');
+searchInput.addEventListener('input', (e) => {
+  const searchTerm = e.target.value.toLowerCase();
+  const filteredData = allData.filter(item =>
+    item.name.toLowerCase().includes(searchTerm)
+  );
+  currentData = filteredData;
+  cuurentPage = 1; 
+  sendData();
+});
