@@ -9,7 +9,9 @@
      terms : document.getElementById("terms"),
 };
 const paybtn = document.getElementById("pay-btn");
+
 // validation regex 
+
 const regex = {
   name: /^[A-Za-z\s]{3,}$/,
   phone: /^0[6-7]\d{8}$/,
@@ -17,4 +19,5 @@ const regex = {
   adress: /^.{5,}$/, // Min 5 caractères
 };
 
+// Augmenter le prix Total 
 
