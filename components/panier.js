@@ -11,49 +11,11 @@ export function panier() {
           <img src="../assets/logo-panier.png" alt="logo-panier ">
           <h2 class="font-oleo text-white text-[2rem]">My Panier</h2>
         </div>
+        <div id="panier-cards" class="mt-[1rem]">
+          
+        </div>
         
-        <div class="card flex items-center justify-center mt-[1rem] ">
-          <div class="m-[1rem] w-[3rem] bg-headerOrange h-[3rem] flex items-center justify-center rounded-[50px]">
-            <samp class="text-[1.5rem] font-extrabold text-white">1x</samp>
-          </div>
-          <div>
-            <samp class="text-[1.5rem] text-prixColor font-extrabold">£27.90</samp>
-            <h2>12” Vegitarian Pizza </h2>
-            <p>No Mushrooms + greenpeppers</p>
-          </div>
-          <div>
-            <img src="../assets/logo corbeille.png" alt="logo-corbeille">
-          </div>
-        </div>
-        <div class=" h-[0.1rem] bg-black w-[95%] ml-[2%] my-[1rem]"></div>
-        <div class="card flex items-center justify-center mt-[1rem] ">
-          <div class="m-[1rem] w-[3rem] bg-headerOrange h-[3rem] flex items-center justify-center rounded-[50px]">
-            <samp class="text-[1.5rem] font-extrabold text-white">1x</samp>
-          </div>
-          <div>
-            <samp class="text-[1.5rem] text-prixColor font-extrabold">£27.90</samp>
-            <h2>12” Vegitarian Pizza </h2>
-            <p>No Mushrooms + greenpeppers</p>
-          </div>
-          <div>
-            <img src="../assets/logo corbeille.png" alt="logo-corbeille">
-          </div>
-        </div>
-        <div class=" h-[0.1rem] bg-black w-[95%] ml-[2%] my-[1rem]"></div>
-        <div class="card flex items-center justify-center mt-[1rem] ">
-          <div class="m-[1rem] w-[3rem] bg-headerOrange h-[3rem] flex items-center justify-center rounded-[50px]">
-            <samp class="text-[1.5rem] font-extrabold text-white">1x</samp>
-          </div>
-          <div>
-            <samp class="text-[1.5rem] text-prixColor font-extrabold">£27.90</samp>
-            <h2>12” Vegitarian Pizza </h2>
-            <p>No Mushrooms + greenpeppers</p>
-          </div>
-          <div>
-            <img src="../assets/logo corbeille.png" alt="logo-corbeille">
-          </div>
-        </div>
-        <div class=" h-[0.1rem] bg-black w-[95%] ml-[2%] my-[1rem]"></div>
+       
         
         <div class="my-[1.5rem] flex justify-center gap-[3rem]">
           <h2 class="font-roboto font-bold text-[1.5rem]">Sub Total: </h2>

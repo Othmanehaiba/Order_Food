@@ -17,7 +17,7 @@
 //                 }
 //             })
 //             .catch((error) => console.error("Error loading header:", error));
-    
+
 //     fetch("../components/footer.html")
 //          .then((response) => response.text())
 //          .then((data) => {
@@ -30,83 +30,83 @@
 // le select de mobile
 document.addEventListener('DOMContentLoaded', () => {
 
-    const customSelect = document.querySelector('.block.md\\:hidden');
+  const customSelect = document.querySelector('.block.md\\:hidden');
 
-    if (customSelect) {
-        const selectTrigger = customSelect.querySelector('.relative.flex.justify-center');
-        const optionsList = customSelect.querySelector('ul');
-        const chevronIcon = selectTrigger.querySelector('i');
-        const options = optionsList.querySelectorAll('li');
+  if (customSelect) {
+    const selectTrigger = customSelect.querySelector('.relative.flex.justify-center');
+    const optionsList = customSelect.querySelector('ul');
+    const chevronIcon = selectTrigger.querySelector('i');
+    const options = optionsList.querySelectorAll('li');
 
-        const triggerTitle = selectTrigger.querySelector('h4');
-        const triggerSubtitle = selectTrigger.querySelector('span');
+    const triggerTitle = selectTrigger.querySelector('h4');
+    const triggerSubtitle = selectTrigger.querySelector('span');
 
 
-        let currentTriggerData = {
-            title: triggerTitle.textContent,
-            subtitle: triggerSubtitle.textContent,
-            categorie: 'all',
-            imgSrc: '', 
-            imgAlt: ''
+    let currentTriggerData = {
+      title: triggerTitle.textContent,
+      subtitle: triggerSubtitle.textContent,
+      categorie: 'all',
+      imgSrc: '',
+      imgAlt: ''
+    };
+
+    optionsList.classList.add('hidden');
+
+    selectTrigger.addEventListener('click', () => {
+      optionsList.classList.toggle('hidden');
+      chevronIcon.classList.toggle('rotate-180');
+    });
+
+    options.forEach(option => {
+      option.addEventListener('click', (e) => {
+
+        const optionTitleEl = option.querySelector('h4');
+        const optionSubtitleEl = option.querySelector('span');
+        const optionImageEl = option.querySelector('img');
+        const optionCategorie = option.getAttribute('data-categorie');
+
+        const clickedOptionData = {
+          title: optionTitleEl.textContent,
+          subtitle: optionSubtitleEl.textContent,
+          categorie: optionCategorie,
+          imgSrc: optionImageEl.src,
+          imgAlt: optionImageEl.alt
         };
 
+        const oldTriggerData = { ...currentTriggerData };
+
+        triggerTitle.textContent = clickedOptionData.title;
+
+        optionTitleEl.textContent = oldTriggerData.title;
+
+        optionSubtitleEl.textContent = oldTriggerData.subtitle;
+
+
+        option.setAttribute('data-categorie', oldTriggerData.categorie);
+        optionImageEl.src = oldTriggerData.imgSrc;
+        optionImageEl.alt = oldTriggerData.imgAlt;
+
+        currentTriggerData = clickedOptionData;
+
         optionsList.classList.add('hidden');
+        chevronIcon.classList.remove('rotate-180');
 
-        selectTrigger.addEventListener('click', () => {
-            optionsList.classList.toggle('hidden');
-            chevronIcon.classList.toggle('rotate-180');
-        });
+        console.log('Selected category now:', currentTriggerData.categorie);
 
-        options.forEach(option => {
-            option.addEventListener('click', (e) => {
+        e.stopPropagation();
+      });
+    });
 
-                const optionTitleEl = option.querySelector('h4');
-                const optionSubtitleEl = option.querySelector('span');
-                const optionImageEl = option.querySelector('img');
-                const optionCategorie = option.getAttribute('data-categorie');
+    document.addEventListener('click', (e) => {
+      if (!customSelect.contains(e.target)) {
+        optionsList.classList.add('hidden');
+        chevronIcon.classList.remove('rotate-180');
+      }
+    });
 
-                const clickedOptionData = {
-                    title: optionTitleEl.textContent,
-                    subtitle: optionSubtitleEl.textContent,
-                    categorie: optionCategorie,
-                    imgSrc: optionImageEl.src,
-                    imgAlt: optionImageEl.alt
-                };
-
-                const oldTriggerData = { ...currentTriggerData };
-
-                triggerTitle.textContent = clickedOptionData.title;
-                
-                optionTitleEl.textContent = oldTriggerData.title;
-
-                optionSubtitleEl.textContent = oldTriggerData.subtitle;
-
-
-                option.setAttribute('data-categorie', oldTriggerData.categorie);
-                optionImageEl.src = oldTriggerData.imgSrc; 
-                optionImageEl.alt = oldTriggerData.imgAlt;
-
-                currentTriggerData = clickedOptionData;
-
-                optionsList.classList.add('hidden');
-                chevronIcon.classList.remove('rotate-180');
-
-                console.log('Selected category now:', currentTriggerData.categorie);
-
-                e.stopPropagation();
-            });
-        });
-
-        document.addEventListener('click', (e) => {
-            if (!customSelect.contains(e.target)) {
-                optionsList.classList.add('hidden');
-                chevronIcon.classList.remove('rotate-180');
-            }
-        });
-
-    } else {
-        console.error('Ma l9itch l-element dial custom select.');
-    }
+  } else {
+    console.error('Ma l9itch l-element dial custom select.');
+  }
 });
 
 // variable globale
@@ -119,27 +119,32 @@ let cuurentPage = 1;
 let cardInPage = 6;
 
 
+// function saveLOcalstorage(card){
+//   localStorage.setItem('card', JSON.stringify(card));
+// }
+
 fetch('../data/data.json')
-	.then((res) => res.json())
-	.then((data) => {
-		allData = data;
-		currentData = data; 
-		sendData();
-	})
-	.catch((err) => console.error('Erreur de serveur: ' + err));
+  .then((res) => res.json())
+  .then((data) => {
+    allData = data;
+    currentData = data;
+    sendData();
+    // saveLOcalstorage(data);
+  })
+  .catch((err) => console.error('Erreur de serveur: ' + err));
 
 function sendData() {
-	const menuDiv = document.getElementById('menu-div');
-	menuDiv.innerHTML = '';
+  const menuDiv = document.getElementById('menu-div');
+  menuDiv.innerHTML = '';
 
-	let start = (cuurentPage - 1) * cardInPage;
-	let end = start + cardInPage;
+  let start = (cuurentPage - 1) * cardInPage;
+  let end = start + cardInPage;
 
-	const CardOn = currentData.slice(start, end);
+  const CardOn = currentData.slice(start, end);
 
-	CardOn.forEach((e) => {
-		menuDiv.innerHTML += `
-      <a href="details.html?id=${e.id}" class="block bg-white rounded-[1.25rem] shadow-lg hover:shadow-xl transition-shadow duration-300">
+  CardOn.forEach((e) => {
+    menuDiv.innerHTML += `
+      <div href="details.html?id=${e.id}" class="block bg-white rounded-[1.25rem] shadow-lg hover:shadow-xl transition-shadow duration-300">
       <div data-id=${e.id} class="w-full h-[29rem] p-[1.5rem] bg-headerYellow rounded-[20px] shadow-[0_4px_20px_rgba(255,122,0,0.7)]">
         <div class="w-full h-[75%] md:h-[75%]">
           <img src="${e.image}" alt="image-test" class="w-full h-full rounded-[20px]">
@@ -148,61 +153,117 @@ function sendData() {
           <h3 class="font-roboto font-bold text-[1.45rem] ml-[1.5rem] mt-[1rem]">${e.name}</h3>
           <div class="flex items-center justify-center gap-[7rem] md:gap-[5rem] mt-[0.3rem]">
             <span class="font-oleo font-bold text-prixColor text-[2rem] ml-[1rem]">${e.price}$</span>
-            <button class="bg-prixColor w-[9rem] h-[3rem] text-[1.1rem] font-bold font-roboto text-white rounded-[50px]">
+            
+            <button data-id=${e.id} class="btn-add-panier bg-prixColor w-[9rem] h-[3rem] text-[1.1rem] font-bold font-roboto text-white rounded-[50px]">
               Add to panier
             </button>
+          
           </div>
         </div>
       </div>
-    </a>
+    </div>
     `;
-	});
+  });
+
+  // locale de panier 
+  function addPanierToLocal(id) {
+    const selectedCard = allData.find(card => card.id == id);
+    if (selectedCard) {
+      let panier = JSON.parse(localStorage.getItem('panier')) || [];
+      panier.push(selectedCard);
+      localStorage.setItem('panier', JSON.stringify(panier));
+    }
+  }
+
+
+  // gestion des add to panier 
+  let addpaniers = document.querySelectorAll('.btn-add-panier');
+  // console.log(addpaniers);
+  let panier = document.getElementById('panier-cards');
+
+  addpaniers.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation(); // facultatif pour bloquer les events parents
+
+      const id = e.currentTarget.dataset.id;
+      const selectedCard = allData.find(card => card.id == id);
+
+      if (selectedCard) {
+        // Ajouter dans le localStorage
+        addPanierToLocal(id);
+
+        // Afficher dans le panier
+        panier.innerHTML += `
+        <div class="card flex items-center justify-between mt-[1rem] p-2 border rounded-xl shadow-md bg-white">
+          <div class="flex items-center">
+            <div class="m-[1rem] w-[3rem] bg-headerOrange h-[3rem] flex items-center justify-center rounded-full">
+              <span class="text-[1.5rem] font-extrabold text-white">1x</span>
+            </div>
+            <div>
+              <h2 class="text-[1.2rem] font-semibold text-gray-800">${selectedCard.name}</h2>
+              <p class="text-[1rem] text-prixColor font-bold">${selectedCard.prix || ''} MAD</p>
+            </div>
+          </div>
+          <div class="cursor-pointer delete-item">
+            <img src="../assets/logo corbeille.png" alt="logo-corbeille" class="w-6 h-6">
+          </div>
+        </div>
+        <div class=" h-[0.1rem] bg-black w-[95%] ml-[2%] my-[1rem]"></div>`;
+      }
+    });
+  });
+
 
   if (cuurentPage === 1) {
-      prevnBtn.classList.add('none');
-    }
-	nextBtn.disabled = end >= currentData.length;
+    prevnBtn.classList.add('none');
+  }
+  nextBtn.disabled = end >= currentData.length;
 }
 
 nextBtn.addEventListener('click', () => {
-	cuurentPage++;
-	sendData();
+  cuurentPage++;
+  sendData();
 });
 
 prevnBtn.addEventListener('click', () => {
-	if (cuurentPage > 1) {
-		cuurentPage--;
-	}
-	sendData(); 
+  if (cuurentPage > 1) {
+    cuurentPage--;
+  }
+  sendData();
 });
 
 const filtre = document.querySelectorAll('[data-categorie]');
 filtre.forEach((btn) => {
-	btn.addEventListener('click', (e) => {
-		const category = e.currentTarget.dataset.categorie;
+  btn.addEventListener('click', (e) => {
+    const category = e.currentTarget.dataset.categorie;
+    document.querySelectorAll('[data-categorie]').forEach((button) => {
+      button.classList.remove('shadow-[6px_6px_15px_rgba(0,0,0,0.25)]');
+    });
 
-		let filteredData; 
-		switch (category) {
-			case 'all':
-				filteredData = allData;
-				break;
-			case 'boissans':
-				filteredData = allData.filter((item) => item.category === 'Boisson');
-				break;
-			case 'salade':
-				filteredData = allData.filter((item) => item.category === 'Dessert');
-				break;
-			case 'repats':
-				filteredData = allData.filter((item) => item.category === 'Plat');
-				break;
-			default:
-				filteredData = allData;
-		}
+    e.currentTarget.classList.add('shadow-[6px_6px_15px_rgba(0,0,0,0.25)]', 'p-6', 'rounded-xl', 'duration-300');
 
-		currentData = filteredData; 
-		cuurentPage = 1; 
-		sendData(); 
-	});
+    let filteredData;
+    switch (category) {
+      case 'all':
+        filteredData = allData;
+        break;
+      case 'boissans':
+        filteredData = allData.filter((item) => item.category === 'Boisson');
+        break;
+      case 'salade':
+        filteredData = allData.filter((item) => item.category === 'Dessert');
+        break;
+      case 'repats':
+        filteredData = allData.filter((item) => item.category === 'Plat');
+        break;
+      default:
+        filteredData = allData;
+    }
+
+    currentData = filteredData;
+    cuurentPage = 1;
+    sendData();
+  });
 });
 
 
@@ -216,6 +277,13 @@ searchInput.addEventListener('input', (e) => {
     item.name.toLowerCase().includes(searchTerm)
   );
   currentData = filteredData;
-  cuurentPage = 1; 
+  cuurentPage = 1;
   sendData();
 });
+
+function savetoPanier(card) {
+  let panier = JSON.parse(localStorage.getItem('panier')) || [];
+  panier.push(card);
+  localStorage.setItem('panier', JSON.stringify(panier));
+}
+
