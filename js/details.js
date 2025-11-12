@@ -81,16 +81,12 @@ function displayProduct(product) {
   console.log(product.description);
   console.log(detailsSection);
   let generateSizeOptions = () => {
-    const count = product.size.length;
-    console.log(count);
-    let content = ``;
-    for (let index = 0; index < product.size.length; index++) {
-      const element = product.size[index];
-      content += `<option>${element}</option>`;
-    }
-    return content;
+    return product.size.map((size) => `<option>${size}</option>`).join("");
   };
-  detailsSection.innerHTML = ` <!-- LEFT: Text content -->
+
+  function generateSectionDetails(product) {
+    return `
+      <!-- LEFT: Text content -->
         <div class="md:w-1/2 order-2 md:order-1 flex flex-col">
           <!-- On desktop -->
           <h1 class="hidden md:block text-3xl font-bold mb-2">
@@ -114,7 +110,7 @@ function displayProduct(product) {
           <p
             class="hidden md:block md:text-center text-4xl font-semibold text-yellow-500 mb-8"
           >
-            €${product.price}
+            ${product.price}
           </p>
 
           <h2 class="hidden md:block text-3xl font-normal mb-6">
@@ -137,7 +133,6 @@ function displayProduct(product) {
           </div>`
               : ``
           }
-          
 
           <!-- Quantity -->
           <div class="hidden md:flex ml-6 mt-6 mb-6 space-x-3">
@@ -181,7 +176,7 @@ function displayProduct(product) {
 
           <!-- Main pizza image -->
           <img
-            src="${product.image}"
+           src="${product.image}"
             alt="${product.name}"
             class="w-full max-w-sm md:max-w-md h-auto rounded-lg shadow-md mb-4"
           />
@@ -234,19 +229,21 @@ function displayProduct(product) {
           </h2>
 
           <!-- Size dropdown -->
-          <div
-            class="md:hidden flex items-center justify-center mb-4 space-x-4"
-          >
-            <label for="size-mobile" class="font-semibold text-2xl">Size</label>
+          ${
+            product.size
+              ? `<div class="flex md:hidden ml-6 mb-6 space-x-6 gap-4">
+            <label for="size" class="font-semibold">Size</label>
             <select
-              id="size-mobile"
-              name="size-mobile"
-              class="bg-[#A29874] text-white text-sm rounded px-4 py-2"
+              id="size"
+              name="size"
+              class="bg-[#A29874] text-white p-1 text-sm rounded px-4 py-2"
             >
             ${generateSizeOptions()}
-             
+              
             </select>
-          </div>
+          </div>`
+              : ``
+          }
 
           <!-- Quantity -->
           <div
@@ -257,6 +254,7 @@ function displayProduct(product) {
             >
             <button
               class="bg-yellow-400 text-white rounded px-3 text-lg font-bold"
+              aria-label="Decrease quantity"
             >
               -
             </button>
@@ -270,9 +268,50 @@ function displayProduct(product) {
             />
             <button
               class="bg-yellow-400 text-white rounded px-3 text-lg font-bold"
+              aria-label="Increase quantity"
             >
               +
             </button>
           </div>
-        </div>`;
+        </div>
+
+        
+  `;
+  }
+  detailsSection.innerHTML = generateSectionDetails(product);
+  console.log(detailsSection);
+
+  const quantityInput = detailsSection.querySelector("#quantity");
+  const quantityInputMobile = detailsSection.querySelector("#quantity-mobile");
+  const btns = detailsSection.querySelectorAll(
+    'button[aria-label="Decrease quantity"], button[aria-label="Increase quantity"]'
+  );
+
+  const priceEl = document.querySelector(".price-el-js");
+  priceEl.textContent = product.price;
+  console.log(priceEl);
+  
+  // const priceElMobile = detailsSection.querySelector(".price-el-mobile");
+
+  const updatePrice = (quantity) => {
+    const total = (product.price * quantity).toFixed(2);
+    priceEl.textContent = `€${total}`;
+    priceElMobile.textContent = `€${total}`;
+  };
+
+  btns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      let isIncrease = btn.getAttribute("aria-label").includes("Increase");
+      let val = parseInt(quantityInput.value);
+      console.log(isIncrease);
+
+      if (isIncrease) val += 1;
+      else if (val > 1) val -= 1;
+
+      quantityInput.value = val;
+      quantityInputMobile.value = val;
+
+      updatePrice(val);
+    });
+  });
 }
