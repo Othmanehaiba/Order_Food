@@ -288,7 +288,7 @@ function displayProduct(product) {
   );
 
   const priceEl = document.querySelector(".price-el-js");
-  priceEl.textContent = product.price;
+  priceEl.textContent = `€${product.price}`;
   console.log(priceEl);
   
   // const priceElMobile = detailsSection.querySelector(".price-el-mobile");
