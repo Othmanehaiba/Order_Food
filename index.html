@@ -19,6 +19,7 @@
 
   <!-- Header -->
   <div id="header-placeholder"></div>
+  <div id="panier-placeholder"></div>
 
   <!-- hero section-->
   <section class="w-full grid md:grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 p-4 md:p-8">
@@ -273,21 +274,56 @@
             <i class="fa-solid fa-chevron-right"></i>
         </button>
     </div>
+  </div>
 
-
+  <div class="my-20">
+    <h3 class="font-oleo text-center text-6xl">Meet Our Experts</h3>
+    <div class="h-2 w-64 bg-headerYellow mx-auto text-center rounded my-1"></div>
   </div>
    
+  <!-- Chef Container -->
+  <div id="chefsContainer" class="flex flex-col md:flex-row items-center justify-center gap-12"></div>
   
 
+  <!-- Review section -->
+      <section class="py-16 text-center">
+      <h2 class="text-2xl md:text-4xl font-bold mb-4">Customer Reviews</h2>
+      <div class="flex justify-center mb-4">
+        <div class="w-32 h-1 bg-headerYellow rounded"></div>
+      </div>
+      <h3 class="author-el text-2xl md:text-3xl font-bold mb-6"></h3>
+      <p
+        class="speech-el max-w-xl mx-auto text-[#212121] font-bold leading-relaxed mb-5"
+      ></p>
+      <!-- Star rating -->
+      <div class="stars-container flex justify-center mb-6 gap-1"></div>
+      <!-- Reviewer profiles images -->
+      <div class="profile-images flex justify-center items-center space-x-5">
+        <img
+          src="../assets/review-profile2.png"
+          alt="Reviewer 1"
+          class="w-16 h-auto rounded-lg object-cover cursor-pointer"
+        />
+        <img
+          src="../assets/review-profile1.png"
+          alt="Reviewer 2"
+          class="w-16 h-auto rounded-lg py-5 object-cover bg-yellow-400 cursor-pointer"
+        />
+        <img
+          src="../assets/review-profile3.png"
+          alt="Reviewer 3"
+          class="w-16 h-auto rounded-lg object-cover cursor-pointer"
+        />
+      </div>
+    </section>
 
-  <div class="flex justify-center gap-1 my-7" id="Menu-special">
-    
-  </div>
-
-  <!-- Foote -->
+  <!-- Footer -->
   <div id="footer-placeholder"></div>
-  <script type="module" src="./js/global.js"></script>
+
+  
   <script src="./js/index.js"></script>
+  <script src="../js/details.js"></script>
+  <script type="module" src="../js/global.js"></script>
 </body>
 
 </html>

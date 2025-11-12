@@ -167,3 +167,48 @@ window.addEventListener('resize', () => {
         startAutoPlay();
     }
 });
+
+
+fetch('../data/chefs.json')
+.then(response => response.json())
+.then(chefs => {
+    const container = document.getElementById('chefsContainer');
+
+    chefs.forEach(chef => {
+    // Card wrapper
+    const card = document.createElement('div');
+    card.className = 'relative flex flex-col items-center text-center';
+
+    // Chef Image (large)
+    const img = document.createElement('img');
+    img.src = chef.image;
+    img.alt = chef.name;
+    img.className = 'w-[25rem] h-[30rem]';
+
+    // Yellow circle with info
+    const info = document.createElement('div');
+    info.className = 'bg-headerYellow w-[23rem] h-[23rem] rounded-full border-4 -mt-40 flex flex-col items-center justify-center';
+
+    const specialist = document.createElement('p');
+    specialist.className = `text-homePrice font-Fredoka font-bold`;
+    specialist.textContent = chef.specialist;
+
+    const name = document.createElement('h2');
+    name.className = 'text-3xl font-Fredoka  font-bold text-black mt-7';
+    name.textContent = chef.name;
+
+    const signature = document.createElement('img');
+    signature.src = chef.signature;
+    signature.alt = 'signature';
+    signature.className = 'mx-auto font-Fredoka  w-30 mt-32';
+
+    info.appendChild(specialist);
+    info.appendChild(name);
+    info.appendChild(signature);
+
+    card.appendChild(img);
+    card.appendChild(info);
+    container.appendChild(card);
+    });
+})
+.catch(err => console.error('Error loading chefs.json:', err));
