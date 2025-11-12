@@ -6,10 +6,12 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap"
       rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/css/output.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <script src="../tailwind.config.js"></script>
-    <title>Document</title>
+      />
+      <link rel="stylesheet" href="/css/output.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <script src="../tailwind.config.js"></script>
+      <title>Document</title>
+      <!-- Telecharger facture comme pdf -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   </head>
 
   <body
@@ -69,7 +71,7 @@
           </label>
           <button
             class="w-full bg-orange-500 text-black py-3 rounded-sm font-bold text-lg hover:bg-white transition active:scale-[0.98]"
-            id="pay-btn"
+            id="pay-btn" onclick="generatePDF()"
           >
             Pay $250
           </button>
@@ -186,7 +188,6 @@
                 </p>
               </div>
           </div> 
-
         </div>
 
 

@@ -21,3 +21,10 @@ const regex = {
 
 // Augmenter le prix Total 
 
+// Telecharger PDF 
+function generatePDF(){
+     const {jsPDF} = window.jsPDF ; 
+     const doc = new jsPDF();
+     doc.text(100,20,"this maryem");
+     doc.text(10,30,"this mar")
+}
