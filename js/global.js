@@ -16,5 +16,4 @@ document.querySelectorAll("[data-footer-toggle]").forEach((btn) => {
     toogleMenuFooter(targetId);
   });
 });
-openPanier(); 
-
+openPanier();
