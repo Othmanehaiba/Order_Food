@@ -39,7 +39,7 @@ function sendData() {
           <h3 class="font-roboto font-bold text-[1.45rem] ml-[1.5rem] mt-[1rem]">${e.name}</h3>
           <div class="flex items-center justify-center gap-[7rem] md:gap-[5rem] mt-[0.3rem]">
             <span class="font-oleo font-bold text-prixColor text-[2rem] ml-[1rem]">${e.price}$</span>
-            <button class="bg-prixColor w-[9rem] h-[3rem] text-[1.1rem] font-bold font-roboto text-white rounded-[50px]">
+            <button class="bg-prixColor w-[15rem] md:w-[9rem] h-[3rem] text-[0.9rem] md:text-[1.1rem] font-bold font-roboto text-white rounded-[50px]">
               Add to panier
             </button>
           </div>
