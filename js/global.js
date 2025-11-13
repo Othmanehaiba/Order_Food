@@ -15,5 +15,6 @@ document.querySelectorAll("[data-footer-toggle]").forEach((btn) => {
     const targetId = e.target.dataset.footerToggle;
     toogleMenuFooter(targetId);
   });
+
 });
 openPanier();

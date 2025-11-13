@@ -148,13 +148,13 @@ function sendData() {
     menuDiv.innerHTML += `
       <div href="details.html?id=${e.id}" class="block bg-white rounded-[1.25rem] shadow-lg hover:shadow-xl transition-shadow duration-300">
       <div data-id=${e.id} class="w-full h-[29rem] p-[1.5rem] bg-headerYellow rounded-[20px] shadow-[0_4px_20px_rgba(255,122,0,0.7)]">
-        <div class="w-full h-[75%] md:h-[75%]">
-          <img src="${e.image}" alt="image-test" class="w-full h-full rounded-[20px]">
+        <div class="w-full h-[75%] md:h-[75%] overflow-hidden rounded-[20px]">
+          <img src="${e.images[0]}" alt="image-test" class="w-full h-full rounded-[20px] hover:scale-125 transition-transform duration-300 object-cover">
         </div>
         <div>
           <h3 class="font-roboto font-bold text-[1.45rem] ml-[1.5rem] mt-[1rem]">${e.name}</h3>
           <div class="flex items-center justify-center gap-[7rem] md:gap-[5rem] mt-[0.3rem]">
-            <span class="font-oleo font-bold text-prixColor text-[2rem] ml-[1rem]">${e.price}$</span>
+            <span class="font-oleo font-bold text-prixColor text-[2rem] ml-[1rem]">${e.basePrice}$</span>
             
             <button data-id=${e.id} class="btn-add-panier bg-prixColor w-[9rem] h-[3rem] text-[1.1rem] font-bold font-roboto text-white rounded-[50px]">
               Add to panier
@@ -172,7 +172,7 @@ function sendData() {
     const selectedCard = allData.find(card => card.id == id);
     if (selectedCard) {
       let panierData = JSON.parse(localStorage.getItem('panier')) || [];
-      panierData.push(selectedCard);
+      panierData.push({...selectedCard, quantity: 1 });
       localStorage.setItem('panier', JSON.stringify(panierData));
     }
   }
@@ -182,6 +182,7 @@ function sendData() {
 
   addpaniers.forEach((btn) => {
     btn.addEventListener('click', (e) => {
+      let quantityy = 1;
       const id = e.currentTarget.dataset.id;
       const selectedCard = allData.find(card => card.id == id);
 
@@ -196,6 +197,7 @@ function sendData() {
           const dataa = localStorage.getItem('panier');
           const panierItems = dataa ? JSON.parse(dataa) : [];
 
+          
 
           panierElement.innerHTML = '';
           panierItems.forEach((item) => {
@@ -206,12 +208,12 @@ function sendData() {
 
                   <!-- Badge quantité -->
                   <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mt-[1rem]">
-                    <span class="text-white font-bold text-lg">1x</span>
+                    <span class="text-white font-bold text-lg">${quantityy}x</span>
                   </div>
 
                   <!-- Infos commande -->
                   <div class="space-y-1">
-                    <p class="text-prixColor font-semibold text-xl font-oleo">$${item.price}</p>
+                    <p class="text-prixColor font-semibold text-xl font-oleo">$${item.basePrice}</p>
                     <p class="font-bold text-black font-roboto">${item.name}</p>
                     <p class="text-black text-sm opacity-80 leading-4">
                       No Mushrooms + green peppers
@@ -275,9 +277,11 @@ function afficherPrice() {
 
 
   panierItems.forEach((item) => {
-    total += parseFloat(item.price);
+    total += parseFloat(item.basePrice);
   });
   total += 5;
+  total = total.toFixed(2);
+
   total1.innerHTML = `          
         <h2 class="text-[1.5rem] font-bold font-roboto text-white">Total to pay</h2>
         <span class="font-roboto font-bold text-[1.5rem] text-white">${total}</span>`

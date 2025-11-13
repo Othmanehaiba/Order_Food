@@ -10,7 +10,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Aclonica&family=Fredoka:wght@300..700&family=Koulen&family=Oleo+Script:wght@400;700&display=swap"
     rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
   <title>Food Order+</title>
   <link href="./css/output.css" rel="stylesheet">
 </head>
@@ -19,6 +20,7 @@
 
   <!-- Header -->
   <div id="header-placeholder"></div>
+  <div id="panier-placeholder"></div>
 
   <!-- hero section-->
   <section class="w-full grid md:grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 p-4 md:p-8">
@@ -26,96 +28,24 @@
     <!-- Left column -->
     <div class="grid grid-rows-2 md:grid-rows-[1.5fr_1fr] gap-4 md:gap-6 md:col-span-1 h-[90vh]">
       <!-- Burger -->
-      <div class="relative group overflow-hidden rounded-3xl shadow-md h-full">
-
-        <img src="./assets/pexels-valeriya-1199957.jpg" alt="Burger"
-          class="w-full h-full object-cover object-center block">
-
-        <div
-          class="rounded-[50px] pl-[1.7rem] w-[90%] md:w-[90%] h-[9.5rem] md:h-[70%] absolute top-[42%] md:top-[25%] ml-[1.1rem] inset-0 bg-headerYellow bg-opacity-70 text-white opacity-0 translate-y-1/4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
-
-          <h3 class="font-oleo text-[1.5rem] md:text-[1.9rem] mt-[1rem] ">Cheese Burger</h3>
-          <p class="text-[0.9rem] md:text-[1.1rem] text-black font-roboto font-bold w-[100%]">
-            A delicious grilled burger with cheese, lettuce, and special sauce.
-          </p>
-          <hr class="border-t-2 border-gray-500 w-[95%] mt-[0.7rem]">
-          <div class="flex gap-[6rem] md:gap-[3rem] align-center md:ml-[0rem]">
-            <p
-              class="text-[2rem] md:text-[2.5rem] text-black font-oleo font-bold md:mt-[0.3rem] ml-[1rem] md:ml-[0rem]">
-              Prix</p>
-            <span
-              class="block text-center text-[2rem] font-oleo md:text-[2.5rem] font-bold text-prixColor ">$12.00</span>
-          </div>
-        </div>
-
+      <div class="relative group overflow-hidden rounded-3xl shadow-md h-full" id="burger">
+        
       </div>
 
       <!-- Pancakes -->
-      <div class="relative overflow-hidden group rounded-3xl shadow-md h-full">
-        <img src="./assets/pexels-ash-craig-122861-376464.jpg" alt="Pancakes"
-          class="w-full h-full object-cover object-center block">
-
-        <div
-          class="rounded-[50px] pl-[1.7rem] w-[90%] md:w-[90%] h-[9.5rem] md:h-[85%] absolute top-[50%] md:top-[5%] ml-[1.1rem] inset-0 bg-headerYellow bg-opacity-70 text-white opacity-0 translate-y-1/4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
-
-          <h3 class="font-oleo text-[1.3rem] md:text-[1.9rem] mt-[1rem] ">Cheese Burger</h3>
-          <p class="text-[0.8rem] md:text-[1rem] text-black font-roboto font-bold w-[100%]">
-            A delicious grilled burger with cheese, lettuce, and special sauce.
-          </p>
-          <hr class="border-t-2 border-gray-500 w-[95%] mt-[0.5rem]">
-          <div class="flex gap-[6rem] md:gap-[3rem] align-center md:ml-[0rem]">
-            <p class="text-[2rem] md:text-[2rem] text-black font-oleo font-bold md:mt-[0.3rem] ml-[1rem] md:ml-[0rem]">
-              Prix</p>
-            <span
-              class="block text-center text-[1.7rem] font-oleo md:text-[2.5rem] font-bold text-prixColor ">$12.00</span>
-          </div>
-        </div>
+      <div class="relative overflow-hidden group rounded-3xl shadow-md h-full" id="pancake">
       </div>
     </div>
 
     <!-- Middle -->
-    <div class="md:col-span-2 relative group rounded-3xl shadow-md overflow-hidden h-[90vh]">
-      <img src="./assets/pexels-rajesh-tp-749235-1633525.jpg" alt="Sandwich"
-        class="w-full h-full object-cover object-center block">
-
-      <div
-        class="rounded-[50px] pl-[1.7rem] w-[90%] md:w-[95%] h-[9.5rem] md:h-[30%] absolute top-[74%] md:top-[65%] ml-[1.1rem] inset-0 bg-headerYellow bg-opacity-70 text-white opacity-0 translate-y-1/4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
-
-        <h3 class="font-oleo text-[1.3rem] md:text-[1.9rem] mt-[1rem] ">Cheese Burger</h3>
-        <p class="text-[0.8rem] md:text-[1rem] text-black font-roboto font-bold w-[100%]">
-          A delicious grilled burger with cheese, lettuce, and special sauce.
-        </p>
-        <hr class="border-t-2 border-gray-500 w-[95%] mt-[0.5rem]">
-        <div class="flex gap-[6rem] md:gap-[23rem] align-center md:ml-[0rem]">
-          <p class="text-[2rem] md:text-[2.5rem] text-black font-oleo font-bold md:mt-[0.3rem] ml-[1rem] md:ml-[0rem]">
-            Prix</p>
-          <span
-            class="block text-center text-[1.7rem] font-oleo md:text-[2.5rem] font-bold text-prixColor ">$12.00</span>
-        </div>
-      </div>
+    <div class="md:col-span-2 relative group rounded-3xl shadow-md overflow-hidden h-[90vh]" id="Chicken Sandwich">
     </div>
+
     </div>
 
     <!-- Right  -->
-    <div class="md:col-span-1 relative group rounded-3xl shadow-md overflow-hidden h-[90vh]">
-      <img src="./assets/pexels-bella-white-201200-1289256.jpg" alt="Drink"
-        class="w-full h-full object-cover object-center block">
+    <div class="md:col-span-1 relative group rounded-3xl shadow-md overflow-hidden h-[90vh]" id="Juice">
 
-      <div
-        class="rounded-[50px] pl-[1.7rem] w-[90%] md:w-[90%] h-[9.5rem] md:h-[33%] absolute top-[75%] md:top-[63%] ml-[1.1rem] inset-0 bg-headerYellow bg-opacity-70 text-white opacity-0 translate-y-1/4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
-
-        <h3 class="font-oleo text-[1.3rem] md:text-[1.9rem] mt-[1rem] ">Cheese Burger</h3>
-        <p class="text-[0.8rem] md:text-[1rem] text-black font-roboto font-bold w-[100%]">
-          A delicious grilled burger with cheese, lettuce, and special sauce.
-        </p>
-        <hr class="border-t-2 border-gray-500 w-[95%] mt-[0.5rem]">
-        <div class="flex gap-[6rem] md:gap-[4.5rem] align-center md:ml-[0rem]">
-          <p class="text-[2rem] md:text-[2rem] text-black font-oleo font-bold md:mt-[0.3rem] ml-[1rem] md:ml-[0rem]">
-            Prix</p>
-          <span
-            class="block text-center text-[1.7rem] font-oleo md:text-[2.5rem] font-bold text-prixColor ">$12.00</span>
-        </div>
-      </div>
     </div>
 
   </section>
@@ -189,7 +119,7 @@
 
         <button
           class="bg-headerOrange text-white hover:bg-white hover:text-headerOrange font-semibold py-4 px-14 rounded-3xl transition">
-          Read More
+          <a href="./pages/contact.html">Read More</a>
         </button>
       </div>
 
@@ -215,7 +145,7 @@
       <div class="absolute -bottom-7 left-14">
         <button
           class="text-homePrice bg-headerYellow rounded-full w-24 h-24 text-3xl md:w-36 md:h-36 md:text-5xl font-Fredoka font-bold">
-          $120
+          $40
         </button>
       </div>
     </div>
@@ -230,7 +160,7 @@
       <div class="absolute -bottom-7 left-14">
         <button
           class="text-homePrice bg-headerYellow rounded-full w-24 h-24 md:w-36 md:h-36 text-3xl md:text-5xl font-Fredoka font-bold">
-          $120
+          $20
         </button>
       </div>
     </div>
@@ -241,125 +171,89 @@
     <div class="h-2 w-64 bg-headerYellow mx-auto text-center rounded my-1"></div>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-[2.5rem] px-[2rem] md:px-[7rem] mt-[5rem]"
-    id="menu-div">
 
-    <div class="w-full h-[29rem] p-[1.5rem] bg-headerYellow rounded-[20px] shadow-[0_4px_20px_rgba(255,122,0,0.7)]">
-      <div class="w-full h-[75%] md:h-[75%]">
-        <img src="./assets/bg.jpg" alt="image-test" class="w-full h-full rounded-[20px]">
-      </div>
-      <div>
-        <h3 class="font-roboto font-bold text-[1.45rem] ml-[1.5rem] mt-[1rem]">name the plats</h3>
-        <div class="flex items-center justify-center gap-[7rem] md:gap-[5rem] mt-[0.3rem]">
-          <span class="font-oleo font-bold text-prixColor text-[2rem] ml-[1rem]">31$</span>
-          <button class="bg-prixColor w-[9rem] h-[3rem] text-[1.1rem] font-bold font-roboto text-white rounded-[50px]">
-            Add to panier
-          </button>
-        </div>
-      </div>
+  <div class="relative w-full mx-auto overflow-hidden group">
+
+    <!-- Desktop Prev Button -->
+    <button id="prev-page-desktop"
+        class="hidden md:block absolute left-2 md:left-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-headerYellow text-prixColor rounded-full shadow-lg text-2xl hover:bg-opacity-80 transition-all">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <!-- Carousel Grid -->
+    <div id="carousel" class="grid grid-cols-1 md:grid-cols-3 gap-10 px-8 md:px-28 mt-20">
+      <!-- Cards will be injected here -->
     </div>
 
-    <div class="w-full h-[29rem] p-[1.5rem] bg-headerYellow rounded-[20px] shadow-[0_4px_20px_rgba(255,122,0,0.7)]">
-      <div class="w-full h-[75%] md:h-[75%]">
-        <img src="./assets/bg.jpg" alt="image-test" class="w-full h-full rounded-[20px]">
-      </div>
-      <div>
-        <h3 class="font-roboto font-bold text-[1.45rem] ml-[1.5rem] mt-[1rem]">name the plats</h3>
-        <div class="flex items-center justify-center gap-[7rem] md:gap-[5rem] mt-[0.3rem]">
-          <span class="font-oleo font-bold text-prixColor text-[2rem] ml-[1rem]">31$</span>
-          <button class="bg-prixColor w-[9rem] h-[3rem] text-[1.1rem] font-bold font-roboto text-white rounded-[50px]">
-            Add to panier
-          </button>
-        </div>
-      </div>
-    </div>
+    <!-- Desktop Next Button -->
+    <button id="next-page-desktop"
+        class="hidden md:block absolute right-2 md:right-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-headerYellow text-prixColor rounded-full shadow-lg text-2xl hover:bg-opacity-80 transition-all">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
 
-    <div class="w-full h-[29rem] p-[1.5rem] bg-headerYellow rounded-[20px] shadow-[0_4px_20px_rgba(255,122,0,0.7)]">
-      <div class="w-full h-[75%] md:h-[75%]">
-        <img src="./assets/bg.jpg" alt="image-test" class="w-full h-full rounded-[20px]">
-      </div>
-      <div>
-        <h3 class="font-roboto font-bold text-[1.45rem] ml-[1.5rem] mt-[1rem]">name the plats</h3>
-        <div class="flex items-center justify-center gap-[7rem] md:gap-[5rem] mt-[0.3rem]">
-          <span class="font-oleo font-bold text-prixColor text-[2rem] ml-[1rem]">31$</span>
-          <button class="bg-prixColor w-[9rem] h-[3rem] text-[1.1rem] font-bold font-roboto text-white rounded-[50px]">
-            Add to panier
-          </button>
-        </div>
-      </div>
-    </div>
+    <!-- Mobile Navigation -->
+    <div class="flex md:hidden justify-center items-center gap-4 mt-8">
+        <button id="prev-page-mobile"
+            class="w-12 h-12 bg-headerYellow text-prixColor rounded-full shadow-lg text-2xl hover:bg-opacity-80 transition-all">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
 
-    <div class="flex items-center space-x-2 m-auto md:mt-[3rem] ml-[7rem] md:ml-[36rem]">
-      <!-- flex items-center space-x-2 my-[3rem] md:mt-[3rem] ml-[7rem] md:ml-[36rem] -->
-      <div class="h-5 w-5 rounded-full bg-headerOrange "></div>
-      <div class="h-5 w-5 rounded-full bg-gray-400"></div>
-      <div class="h-5 w-5 rounded-full bg-gray-400"></div>
-      <div class="h-5 w-5 rounded-full bg-gray-400"></div>
+        <button id="next-page-mobile"
+            class="w-12 h-12 bg-headerYellow text-prixColor rounded-full shadow-lg text-2xl hover:bg-opacity-80 transition-all">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
     </div>
   </div>
 
+  <div class="my-20">
+    <h3 class="font-oleo text-center text-6xl">Meet Our Experts</h3>
+    <div class="h-2 w-64 bg-headerYellow mx-auto text-center rounded my-1"></div>
+  </div>
+   
+  <!-- Chef Container -->
+  <div id="chefsContainer" class="flex flex-col md:flex-row items-center justify-center gap-12"></div>
+  
 
-  <section class=" mt-[0px]">
-    <div class="container mx-auto px-4">
-
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-16 gap-y-24">
-
-        <div class="relative flex flex-col items-center">
-          <img src="./assets/chef.png" alt="Chef Thomas Walim" class="relative z-10 h-[20rem] w-auto object-contain">
-
-          <div class="relative w-72 h-72 rounded-full bg-yellow-400 -mt-40">
-            <div class="absolute bottom-10 left-0 right-0 text-center px-6">
-              <p class="text-sm font-semibold text-red-600">
-                Dessert specialist
-              </p>
-              <h3 class="text-2xl font-bold text-gray-900 mt-1">
-                Thomas Walim
-              </h3>
-              <img src="./assets/signature.png" alt="Signature" class="h-10 mx-auto mt-2">
-            </div>
-          </div>
-        </div>
-
-        <div class="relative flex flex-col items-center">
-
-          <img src="./assets/chef.png" alt="Chef" class="relative h-[15rem] w-auto object-contain z-0">
-
-          <div class="relative w-72 h-72 rounded-full bg-yellow-400 z-10 -mt-40">
-
-            <div class="absolute bottom-8 left-0 right-0 flex flex-col items-center">
-              <h3 class="text-xl font-bold text-gray-900">
-                Thomas Walim
-              </h3>
-              <img src="./assets/signature.png" alt="Signature" class="h-12 w-auto mt-1">
-            </div>
-          </div>
-        </div>
-
-        <div class="relative flex flex-col items-center">
-          <img src="./assets/chef.png" alt="Chef Room Minal" class="relative z-10 h-80 w-auto object-contain">
-          <div class="relative w-72 h-72 rounded-full bg-yellow-400 -mt-40">
-            <div class="absolute bottom-10 left-0 right-0 text-center px-6">
-              <p class="text-sm font-semibold text-red-600">
-                Dessert specialist
-              </p>
-              <h3 class="text-2xl font-bold text-gray-900 mt-1">
-                Room Minal
-              </h3>
-              <img src="./assets/signature.png" alt="Signature" class="h-10 mx-auto mt-2">
-            </div>
-          </div>
-        </div>
-
+  <!-- Review section -->
+      <section class="py-16 text-center">
+      <h2 class="text-2xl md:text-4xl font-bold mb-4">Customer Reviews</h2>
+      <div class="flex justify-center mb-4">
+        <div class="w-32 h-1 bg-headerYellow rounded"></div>
       </div>
-    </div>
-  </section>
+      <h3 class="author-el text-2xl md:text-3xl font-bold mb-6"></h3>
+      <p
+        class="speech-el max-w-xl mx-auto text-[#212121] font-bold leading-relaxed mb-5"
+      ></p>
+      <!-- Star rating -->
+      <div class="stars-container flex justify-center mb-6 gap-1"></div>
+      <!-- Reviewer profiles images -->
+      <div class="profile-images flex justify-center items-center space-x-5">
+        <img
+          src="../assets/review-profile2.png"
+          alt="Reviewer 1"
+          class="w-16 h-auto rounded-lg object-cover cursor-pointer"
+        />
+        <img
+          src="../assets/review-profile1.png"
+          alt="Reviewer 2"
+          class="w-16 h-auto rounded-lg py-5 object-cover bg-yellow-400 cursor-pointer"
+        />
+        <img
+          src="../assets/review-profile3.png"
+          alt="Reviewer 3"
+          class="w-16 h-auto rounded-lg object-cover cursor-pointer"
+        />
+      </div>
+    </section>
 
-
-
-  <!-- Foote -->
+  <!-- Footer -->
   <div id="footer-placeholder"></div>
-  <script type="module" src="./js/global.js"></script>
+
+  
   <script src="./js/index.js"></script>
+  <script src="../js/details.js"></script>
+  <script type="module" src="../js/global.js"></script>
 </body>
 
 </html>
+

@@ -88,7 +88,7 @@ function addPanier() {
 
                   <!-- Infos commande -->
                   <div class="space-y-1">
-                    <p class="text-prixColor font-semibold text-xl font-oleo">$${item.price}</p>
+                    <p class="text-prixColor font-semibold text-xl font-oleo">$${item.basePrice}</p>
                     <p class="font-bold text-black font-roboto">${item.name}</p>
                     <p class="text-black text-sm opacity-80 leading-4">
                       No Mushrooms + green peppers
@@ -140,6 +140,7 @@ function afficherPrice() {
   const total2 = document.getElementById('totalPrice2');
   let total = 0;
 
+
   if (panierItems.length === 0){
     total1.innerHTML = `          
           <h2 class="text-[1.5rem] font-bold font-roboto text-white">Total to pay</h2>
@@ -151,8 +152,10 @@ function afficherPrice() {
   }
 
   panierItems.forEach((item) => {
-    total += parseFloat(item.price);
+    total += parseFloat(item.basePrice);
   });
+      total = total.toFixed(2);
+
   total1.innerHTML = `          
         <h2 class="text-[1.5rem] font-bold font-roboto text-white">Total to pay</h2>
         <span class="font-roboto font-bold text-[1.5rem] text-white">${total}</span>`
