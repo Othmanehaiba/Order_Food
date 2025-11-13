@@ -85,6 +85,7 @@ function displayProduct(product) {
       .join("");
 
   function generateSectionDetails(product) {
+    document.title = `${product.name} | FoodOrder+`;
     return `
       <!-- LEFT: Text content -->
       <div class="md:w-1/2 order-2 md:order-1 flex flex-col">
