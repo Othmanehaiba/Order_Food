@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return alert("Veuillez accepter les conditions");
 
     // Génération PDF
-    const order = {
+     const order = {
       name: document.getElementById("name").value,
       email: document.getElementById("email").value,
       address: document.getElementById("adress").value,
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "Cheese Burger", price: 15.5, quantity: 2 },
       ],
       total: 27.9 + 15.5 * 2,
-    };
+     };
 
     // Génération du ticket PDF
     const { jsPDF } = window.jspdf;
