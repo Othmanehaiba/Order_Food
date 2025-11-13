@@ -120,6 +120,7 @@ function sendData(direction = 'none') {
         }, 500);
     } else {
         menuDiv.innerHTML = newContent;
+
     }
 
     // Update button states

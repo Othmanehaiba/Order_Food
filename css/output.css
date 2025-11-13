@@ -1392,6 +1392,10 @@ video {
   width: 100%;
 }
 
+.w-\[15rem\] {
+  width: 15rem;
+}
+
 .max-w-5xl {
   max-width: 64rem;
 }
@@ -4382,6 +4386,10 @@ video {
 
   .md\:w-auto {
     width: auto;
+  }
+
+  .md\:w-\[9rem\] {
+    width: 9rem;
   }
 
   .md\:max-w-md {
