@@ -234,4 +234,12 @@ function displayProduct(product) {
     window.location.href = `painement.html?id=${product.id}&quantity=${quantityGlobal}&price=${priceGlobal}`;
   });
 
+  // add to panier 
+  const addToPanier = document.querySelector(".add-to-panier-js");
+  console.log(addToPanier);
+
+  addToPanier.addEventListener('click',(e)=>{
+    
+  })
+
 }
