@@ -812,6 +812,18 @@ video {
   margin-top: 7rem;
 }
 
+.ml-10 {
+  margin-left: 2.5rem;
+}
+
+.ml-40 {
+  margin-left: 10rem;
+}
+
+.ml-36 {
+  margin-left: 9rem;
+}
+
 .block {
   display: block;
 }
@@ -1084,6 +1096,14 @@ video {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
 }
 
 .gap-1 {
@@ -1419,11 +1439,6 @@ video {
   background-color: rgb(243 198 35 / 0.4);
 }
 
-.bg-orange-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 115 22 / var(--tw-bg-opacity, 1));
-}
-
 .bg-prixColor {
   --tw-bg-opacity: 1;
   background-color: rgb(0 122 75 / var(--tw-bg-opacity, 1));
@@ -1571,12 +1586,23 @@ video {
   padding-bottom: 1.5rem;
 }
 
-.py-\[2\.5rem\] {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+.py-\[2rem\] {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
-.pb-\[1\.5rem\] {
+.py-\[8rem\] {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.py-\[9rem\] {
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+}
+
+.py-\[1\.5rem\] {
+  padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
 
@@ -1974,7 +2000,17 @@ video {
   opacity: 1;
 }
 
+@media not all and (min-width: 768px) {
+  .max-md\:hidden {
+    display: none;
+  }
+}
+
 @media (min-width: 640px) {
+  .sm\:hidden {
+    display: none;
+  }
+
   .sm\:h-10 {
     height: 2.5rem;
   }
@@ -2361,4 +2397,44 @@ video {
   .lg\:text-\[4\.5rem\] {
     font-size: 4.5rem;
   }
+}
+
+.\[\&\:\:placeholder\]\:text-\[2rem\]::-moz-placeholder {
+  font-size: 2rem;
+}
+
+.\[\&\:\:placeholder\]\:text-\[2rem\]::placeholder {
+  font-size: 2rem;
+}
+
+.\[\&\:\:placeholder\]\:text-\[1\.2rem\]::-moz-placeholder {
+  font-size: 1.2rem;
+}
+
+.\[\&\:\:placeholder\]\:text-\[1\.2rem\]::placeholder {
+  font-size: 1.2rem;
+}
+
+.\[\&\:\:placeholder\]\:text-\[1\.1rem\]::-moz-placeholder {
+  font-size: 1.1rem;
+}
+
+.\[\&\:\:placeholder\]\:text-\[1\.1rem\]::placeholder {
+  font-size: 1.1rem;
+}
+
+.\[\&\:\:placeholder\]\:text-\[1\.5rem\]::-moz-placeholder {
+  font-size: 1.5rem;
+}
+
+.\[\&\:\:placeholder\]\:text-\[1\.5rem\]::placeholder {
+  font-size: 1.5rem;
+}
+
+.\[\&\:\:placeholder\]\:font-bold::-moz-placeholder {
+  font-weight: 700;
+}
+
+.\[\&\:\:placeholder\]\:font-bold::placeholder {
+  font-weight: 700;
 }
