@@ -135,14 +135,17 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const params = new URLSearchParams(window.location.search);
-const id = params.get('id');
+let Id = params.get('id');
 const price = params.get('price');
 const quantity = params.get('quantity');
+const total = document.getElementById("total-price");
+total.textContent = `$${price || 0}`;
 
 fetch('../data/data.json')
      .then(res => res.json())
      .then(data => {
-               const card = data.find(c => c.id == id);
+          if(Id) {
+                          const card = data.find(c => c.id == Id);
                const dataContainer = document.getElementById("data");
                dataContainer.innerHTML = ` <div class="flex items-start justify-between mt-6 pb-4">
                 <!-- Bloc gauche -->
@@ -169,7 +172,18 @@ fetch('../data/data.json')
                 </button>
 
               </div>`;
-     })
 
+              const btn = document.getElementById("delete-cmd1");
+              btn.addEventListener("click", () => {
+               
+               
+                dataContainer.innerHTML = "";
+                window.location.search = "";
+                total.textContent = `$0`;
+              });
+          }
+    
+
+     })
 
 
