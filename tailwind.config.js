@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
+    "./**/*.js", 
     "./**/*.html", 
     "./index.html",
     "./pages/**/*.html",
@@ -18,9 +19,9 @@ module.exports = {
             bodyColor: '#FFEEB1',
             headerYellow: "#f3c623",
             headerOrange: "#f39223",
+            homePrice : '#F3274C',
             },
       },
     },
   plugins: [],
 }
-

@@ -4,12 +4,261 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tailwind Test</title>
+<<<<<<<<< Temporary merge branch 1
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Aclonica&family=Fredoka:wght@300..700&family=Koulen&family=Oleo+Script:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
+  <title>Food Order+</title>
   <link href="./css/output.css" rel="stylesheet">
 </head>
-<body class="">
-  <h1 class="text-[10rem] font-bold text-blue-600">Tailwind is Working! 🎉</h1>
-  <p class="text-red-700 text-4xl font-bold">ddd</p>
+
+<body class="bg-bodyColor font-roboto">
+
+  <!-- Header -->
+  <div id="header-placeholder"></div>
+
+  <!-- hero section-->
+  <section class="w-full grid md:grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 p-4 md:p-8">
+
+    <!-- Left column -->
+    <div class="grid grid-rows-2 md:grid-rows-[1.5fr_1fr] gap-4 md:gap-6 md:col-span-1 h-[90vh]">
+      <!-- Burger -->
+      <div class="relative group overflow-hidden rounded-3xl shadow-md h-full">
+
+        <img src="./assets/pexels-valeriya-1199957.jpg" alt="Burger"
+          class="w-full h-full object-cover object-center block">
+
+        <div
+          class="rounded-[50px] pl-[1.7rem] w-[90%] md:w-[90%] h-[9.5rem] md:h-[70%] absolute top-[42%] md:top-[25%] ml-[1.1rem] inset-0 bg-headerYellow bg-opacity-70 text-white opacity-0 translate-y-1/4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
+
+          <h3 class="font-oleo text-[1.5rem] md:text-[1.9rem] mt-[1rem] ">Cheese Burger</h3>
+          <p class="text-[0.9rem] md:text-[1.1rem] text-black font-roboto font-bold w-[100%]">
+            A delicious grilled burger with cheese, lettuce, and special sauce.
+          </p>
+          <hr class="border-t-2 border-gray-500 w-[95%] mt-[0.7rem]">
+          <div class="flex gap-[6rem] md:gap-[3rem] align-center md:ml-[0rem]">
+            <p
+              class="text-[2rem] md:text-[2.5rem] text-black font-oleo font-bold md:mt-[0.3rem] ml-[1rem] md:ml-[0rem]">
+              Prix</p>
+            <span
+              class="block text-center text-[2rem] font-oleo md:text-[2.5rem] font-bold text-prixColor ">$12.00</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Pancakes -->
+      <div class="relative overflow-hidden group rounded-3xl shadow-md h-full">
+        <img src="./assets/pexels-ash-craig-122861-376464.jpg" alt="Pancakes"
+          class="w-full h-full object-cover object-center block">
+
+        <div
+          class="rounded-[50px] pl-[1.7rem] w-[90%] md:w-[90%] h-[9.5rem] md:h-[85%] absolute top-[50%] md:top-[5%] ml-[1.1rem] inset-0 bg-headerYellow bg-opacity-70 text-white opacity-0 translate-y-1/4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
+
+          <h3 class="font-oleo text-[1.3rem] md:text-[1.9rem] mt-[1rem] ">Cheese Burger</h3>
+          <p class="text-[0.8rem] md:text-[1rem] text-black font-roboto font-bold w-[100%]">
+            A delicious grilled burger with cheese, lettuce, and special sauce.
+          </p>
+          <hr class="border-t-2 border-gray-500 w-[95%] mt-[0.5rem]">
+          <div class="flex gap-[6rem] md:gap-[3rem] align-center md:ml-[0rem]">
+            <p class="text-[2rem] md:text-[2rem] text-black font-oleo font-bold md:mt-[0.3rem] ml-[1rem] md:ml-[0rem]">
+              Prix</p>
+            <span
+              class="block text-center text-[1.7rem] font-oleo md:text-[2.5rem] font-bold text-prixColor ">$12.00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Middle -->
+    <div class="md:col-span-2 relative group rounded-3xl shadow-md overflow-hidden h-[90vh]">
+      <img src="./assets/pexels-rajesh-tp-749235-1633525.jpg" alt="Sandwich"
+        class="w-full h-full object-cover object-center block">
+
+      <div
+        class="rounded-[50px] pl-[1.7rem] w-[90%] md:w-[95%] h-[9.5rem] md:h-[30%] absolute top-[74%] md:top-[65%] ml-[1.1rem] inset-0 bg-headerYellow bg-opacity-70 text-white opacity-0 translate-y-1/4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
+
+        <h3 class="font-oleo text-[1.3rem] md:text-[1.9rem] mt-[1rem] ">Cheese Burger</h3>
+        <p class="text-[0.8rem] md:text-[1rem] text-black font-roboto font-bold w-[100%]">
+          A delicious grilled burger with cheese, lettuce, and special sauce.
+        </p>
+        <hr class="border-t-2 border-gray-500 w-[95%] mt-[0.5rem]">
+        <div class="flex gap-[6rem] md:gap-[23rem] align-center md:ml-[0rem]">
+          <p class="text-[2rem] md:text-[2.5rem] text-black font-oleo font-bold md:mt-[0.3rem] ml-[1rem] md:ml-[0rem]">
+            Prix</p>
+          <span
+            class="block text-center text-[1.7rem] font-oleo md:text-[2.5rem] font-bold text-prixColor ">$12.00</span>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- Right  -->
+    <div class="md:col-span-1 relative group rounded-3xl shadow-md overflow-hidden h-[90vh]">
+      <img src="./assets/pexels-bella-white-201200-1289256.jpg" alt="Drink"
+        class="w-full h-full object-cover object-center block">
+
+      <div
+        class="rounded-[50px] pl-[1.7rem] w-[90%] md:w-[90%] h-[9.5rem] md:h-[33%] absolute top-[75%] md:top-[63%] ml-[1.1rem] inset-0 bg-headerYellow bg-opacity-70 text-white opacity-0 translate-y-1/4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
+
+        <h3 class="font-oleo text-[1.3rem] md:text-[1.9rem] mt-[1rem] ">Cheese Burger</h3>
+        <p class="text-[0.8rem] md:text-[1rem] text-black font-roboto font-bold w-[100%]">
+          A delicious grilled burger with cheese, lettuce, and special sauce.
+        </p>
+        <hr class="border-t-2 border-gray-500 w-[95%] mt-[0.5rem]">
+        <div class="flex gap-[6rem] md:gap-[4.5rem] align-center md:ml-[0rem]">
+          <p class="text-[2rem] md:text-[2rem] text-black font-oleo font-bold md:mt-[0.3rem] ml-[1rem] md:ml-[0rem]">
+            Prix</p>
+          <span
+            class="block text-center text-[1.7rem] font-oleo md:text-[2.5rem] font-bold text-prixColor ">$12.00</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="py-16 px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+      <!-- LEFT -->
+      <div class="md:grid grid-cols-2 gap-4 hidden">
+        <!-- Larger top left image -->
+        <div class="overflow-hidden shadow-md">
+          <img src="./assets/about-1 1.png" alt="Restaurant interior"
+            class="h-64 md:h-80 object-cover flex   transition-transform duration-300 hover:scale-105">
+        </div>
+
+        <!-- Smaller top right image -->
+        <div class="overflow-hidden self-end">
+          <img src="./assets/about-2 1.png" alt="Restaurant interior"
+            class=" h-52 md:h-64 object-cover  transition-transform duration-300 hover:scale-105">
+        </div>
+
+        <!-- Smaller bottom left image -->
+        <div class="overflow-hidden flex self-start justify-end">
+          <img src="./assets/about-3 1.png" alt="Salad"
+            class="h-52 md:h-64 object-cover transition-transform duration-300 hover:scale-105">
+        </div>
+
+        <!-- Larger bottom right image -->
+        <div class="overflow-hidden shadow-md">
+          <img src="./assets/about-4 1.png" alt="Food platter"
+            class="h-64 md:h-80 object-cover transition-transform duration-300 hover:scale-105">
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div>
+        <h3 class="text-headerYellow font-oleo text-4xl mb-2 flex items-center gap-7">
+          <span class="h-1 w-20 bg-headerYellow"></span> About Us
+          <span class="h-1 w-20 bg-headerYellow"></span>
+        </h3>
+
+        <h2 class="text-3xl font-roboto md:text-4xl font-extrabold mb-5 mt-5">
+          Welcome to FoodOrder+
+        </h2>
+
+        <p class="mb-4 font-bold">
+          Tempor erat elit rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos erat ipsum et lorem et
+          sit, sed stet lorem sit.
+        </p>
+        <p class="mb-6 font-bold">
+          Tempor erat elit rebum at clita. Diam dolor diam ipsum sit. Clita erat ipsum et lorem et sit, sed stet lorem
+          sit clita duo justo magna dolore.
+        </p>
+
+        <div class="hidden md:flex items-center gap-10 mb-8">
+          <div class="border-l-4 border-headerYellow flex mx-5">
+            <p class="p-2 text-5xl font-extrabold text-headerOrange mx-3">15</p>
+            <div class="flex flex-col self-center">
+              <p class="font-bold text-gray-500 text-sm -mt-1">Years of</p>
+              <p class="font-bold text-sm -mt-1">Experience</p>
+            </div>
+          </div>
+          <div class="border-l-4 border-headerYellow flex">
+            <p class="p-2 text-5xl font-extrabold text-headerOrange mx-3">50</p>
+            <div class="flex flex-col self-center">
+              <p class="font-bold text-gray-500 text-sm -mt-1">Popular</p>
+              <p class="font-bold text-sm -mt-">Master Chefs</p>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="bg-headerOrange text-white hover:bg-white hover:text-headerOrange font-semibold py-4 px-14 rounded-3xl transition">
+          Read More
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="my-16">
+    <h3 class="font-oleo text-center text-6xl">Discover Menu</h3>
+    <div class="h-2 w-64 bg-headerYellow mx-auto text-center rounded my-1"></div>
+  </div>
+
+
+  <!-- Discover Menu -->
+  <section class="flex flex-col md:flex-row md:gap-6 p-5 md:p-8">
+
+    <!--Right Menu -->
+    <div
+      class=" relative bg-[url('../assets/banner5.png')] bg-cover bg-center h-64 md:h-96 w-full rounded-2xl mb-10 md:mb-0">
+      <div class="flex flex-col md:self-center mt-10 ml-6">
+        <h3 class="font-Fredoka font-bold text-3xl md:text-6xl text-white">Steaks & BBQ</h3>
+        <p class="text-white mt-3 md:text-[1.4rem]">canonical classics to obscure <br> tiki drinks</p>
+      </div>
+      <div class="absolute -bottom-7 left-14">
+        <button
+          class="text-homePrice bg-headerYellow rounded-full w-24 h-24 text-3xl md:w-36 md:h-36 md:text-5xl font-Fredoka font-bold">
+          $120
+        </button>
+      </div>
+    </div>
+
+    <!-- Left Menu -->
+    <div
+      class="relative bg-[url('../assets/banner5.1.png')] bg-cover bg-center h-64 md:h-96 w-full rounded-2xl mb-6 md:mb-0">
+      <div class="flex flex-col md:self-center mt-10 ml-6">
+        <h3 class="font-Fredoka font-bold text-3xl md:text-6xl text-white">Cocktails</h3>
+        <p class="text-white mt-3 md:text-[1.4rem]">canonical classics to obscure <br> tiki drinks</p>
+      </div>
+      <div class="absolute -bottom-7 left-14">
+        <button
+          class="text-homePrice bg-headerYellow rounded-full w-24 h-24 md:w-36 md:h-36 text-3xl md:text-5xl font-Fredoka font-bold">
+          $120
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <div class="my-20">
+    <h3 class="font-oleo text-center text-6xl">Featured Dishes</h3>
+    <div class="h-2 w-64 bg-headerYellow mx-auto text-center rounded my-1"></div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-[2.5rem] px-[2rem] md:px-[7rem] mt-[5rem]" id="menu-div"></div>
+
+
+  <!-- Foote -->
+  <div id="footer-placeholder"></div>
+  <script type="module" src="./js/global.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 
 </html>
+
+
+
+=========
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
+>>>>>>>>> Temporary merge branch 2

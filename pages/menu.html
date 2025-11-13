@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth;">
 
 <head>
     <meta charset="UTF-8">
@@ -13,9 +13,11 @@
 
 <body class="bg-bodyColor overflow-x-hidden ">
     <div id="header-placeholder">
+        <!-- class="fixed z-10 w-full top-0 left-0 right-0 " -->
     </div>
     <div id="panier-placeholder"></div>
     <section class="hero-section flex flex-col md:flex-row justify-center items-center pt-8 md:pt-0">
+        <!-- pt-24 -->
 
         <div class="hero-section-left w-full md:w-[39.0625rem] md:mx-[5rem] p-8 md:p-0 text-center md:text-left">
             <h1 class="font-oleo text-4xl md:leading-tight md:text-[4.375rem] mx-auto md:mx-16">Hello in the menu <br>of
@@ -24,9 +26,11 @@
             <p
                 class="font-oleo text-xl md:text-[2.5rem] md:leading-none w-full max-w-md md:w-[30.6875rem] mx-auto md:mx-[7.5rem] my-4">
                 Ready to explore tasty dishes? Your next meal is just a tap away on FoodOrder+!</p>
-            <button
+            <a href="#menu-div" >
+                <button
                 class="w-3/4 md:w-[25.25rem] h-16 md:h-[4.5rem] bg-headerYellow rounded-[3.125rem] text-2xl md:text-[2.5rem] font-oleo mx-auto md:mx-16 my-4 md:my-[1rem]">Our
                 menu</button>
+            </a>
         </div>
 
         <div class="hero-section-right w-full md:w-[48.625rem] md:h-[91vh] overflow-hidden relative md:bottom-[2rem]">
@@ -65,9 +69,9 @@
                     alt="special-jus">
                 <div
                     class="rounded-[50px] pl-[1.7rem] w-[90%] md:w-[95%] h-[9.5rem] md:h-[12.5rem] absolute top-[35%] md:top-[53%]  ml-[1.1rem] inset-0 bg-headerYellow bg-opacity-70 text-white opacity-0 opacity-0 translate-y-1/4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
-                    <h3 class="font-oleo text-[1.5rem] md:text-[1.9rem] mt-[1rem] ">Strawberry Juice</h3>
+                    <h3 class="font-oleo text-[1.5rem] md:text-[1.9rem] mt-[1rem] ">Fish & Rice</h3>
                     <p class="text-[0.9rem] md:text-[1.1rem] text-black font-roboto font-bold w-[100%]">Strawberry juice
-                        is a refreshing and sweet drink made from freshly blended or pressed strawberries.</p>
+                        Grilled salmon served with aromatic rice, drizzled with a light lemon butter sauce.</p>
                     <hr class="border-t-2 border-gray-500 w-[95%] mt-[0.7rem]">
                     <div class="flex gap-[11rem] md:gap-[25rem] align-center md:ml-[5rem]">
                         <p class="text-[2rem] md:text-[2.5rem] text-black font-oleo font-bold md:mt-[0.3rem] ml-[1rem]">
@@ -82,9 +86,9 @@
                     alt="special-jus">
                 <div
                     class="rounded-[50px] pl-[1.7rem] w-[90%] h-[15.5rem] md:h-[16.5rem] absolute top-[40%]  md:top-[40%] ml-[1.1rem] inset-0 bg-headerYellow bg-opacity-70 text-white opacity-0 opacity-0 translate-y-1/4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
-                    <h3 class="font-oleo text-[2rem] mt-[2rem] ">Strawberry Juice</h3>
+                    <h3 class="font-oleo text-[2rem] mt-[2rem] ">Chocolate Cake</h3>
                     <p class="text-[1rem]  text-black text-roboto font-bold w-[70%]">Strawberry juice is a refreshing
-                        and sweet drink made from freshly blended or pressed strawberries.</p>
+                        Rich and moist chocolate cake topped with creamy chocolate ganache</p>
                     <hr class="border-t-2 border-gray-500 w-[90%] mt-[1rem] md:mt-[1rem]">
                     <div class="flex gap-[11rem] md:gap-[4rem] align-center md:mt-[0.7rem] mt-[0.8rem] md:ml-[1rem]">
                         <p class="text-[2rem] md:text-[2.5rem] text-black font-oleo font-bold ">Prix</p>
@@ -97,9 +101,9 @@
                     alt="special-jus">
                 <div
                     class="rounded-[50px] pl-[1.7rem] w-[90%] h-[15.5rem] md:h-[16.5rem] absolute top-[40%]  md:top-[40%] ml-[1.1rem] inset-0 bg-headerYellow bg-opacity-70 text-white opacity-0 opacity-0 translate-y-1/4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
-                    <h3 class="font-oleo text-[2rem] mt-[2rem] ">Strawberry Juice</h3>
-                    <p class="text-[1rem]  text-black text-roboto font-bold w-[70%]">Strawberry juice is a refreshing
-                        and sweet drink made from freshly blended or pressed strawberries.</p>
+                    <h3 class="font-oleo text-[2rem] mt-[2rem] ">Greek Salad</h3>
+                    <p class="text-[1rem]  text-black text-roboto font-bold w-[70%]">Fresh tomatoes, cucumbers, olives,
+                        and feta cheese tossed in a tangy olive oil dressing</p>
                     <hr class="border-t-2 border-gray-500 w-[90%] mt-[1rem] md:mt-[1rem]">
                     <div class="flex gap-[11rem] md:gap-[4rem] align-center md:mt-[0.7rem] mt-[0.8rem] md:ml-[1rem]">
                         <p class="text-[2rem] md:text-[2.5rem] text-black font-oleo font-bold ">Prix</p>
@@ -122,21 +126,22 @@
             <h2 class="font-oleo text-3xl md:text-[3.75rem] text-headerYellow text-center">Our menu</h2>
             <hr class="border-t-[0.3rem] border-headerYellow w-1/4 md:w-[8.6875rem]">
         </div>
-        <input
-            id="search-bar" class="placeholder-black placeholder-opacity-70 p-[2rem] w-[19rem] md:w-[25rem] h-[4.25rem] bg-headerOrange opacity-80 text-black font-extrabold text-[1.3rem] rounded-[50px] mx-[6rem] md:mx-[34rem] my-[2rem]"
+        <input id="search-bar"
+            class="placeholder-black placeholder-opacity-70 p-[2rem] w-[19rem] md:w-[25rem] h-[4.25rem] bg-headerOrange opacity-80 text-black font-extrabold text-[1.3rem] rounded-[50px] mx-[6rem] md:mx-[34rem] my-[2rem]"
             type="text" placeholder="Taper le plat ....">
 
         <div class="block md:hidden w-full max-w-md mx-auto" id="filtre">
             <div
                 class="hover:bg-headerOrange rounded-t-[30px] transition-all duration-300 ease-in-out relative flex justify-center items-center gap-[2rem] mx-auto w-[80%] border-[3px] rounded-[30px] border-black p-[1rem] ">
-                
+
                 <div class="flex justify-center items-center space-x-3 p-2 cursor-pointer" data-categorie="all">
                     <div class="w-[6rem] h-[6rem]">
                         <img src="../assets/Menu-all-section.webp" alt="All items" class="w-full h-full object-contain">
                     </div>
                     <div>
                         <h4 class="text-2xl font-bold text-black font-oleo text-[2.5rem]">All</h4>
-                        <span class="text-sm text-headerYellow font-roboto font-bold text-[1.3rem]">repats , boisons ...</span>
+                        <span class="text-sm text-headerYellow font-roboto font-bold text-[1.3rem]">repats , boisons
+                            ...</span>
                     </div>
                 </div>
                 <i class="fa-solid fa-chevron-down absolute bottom-[3rem] left-[20rem]"></i>
@@ -156,7 +161,8 @@
                         </div>
                     </div>
                 </li>
-                <li data-categorie="boissans" class="mb-[3px] border-b-[3px] border-black  hover:bg-headerOrange transition-all duration-300 ease-in-out">
+                <li data-categorie="boissans"
+                    class="mb-[3px] border-b-[3px] border-black  hover:bg-headerOrange transition-all duration-300 ease-in-out">
                     <div class="flex justify-center items-center space-x-3 cursor-pointer">
                         <div class="w-[6rem] h-[6rem]">
                             <img src="../assets/Menu-section-boissans.png" alt="Menu-section-boissans"
@@ -169,7 +175,8 @@
                         </div>
                     </div>
                 </li>
-                <li data-categorie="salade" class="mb-[3px] p-[0.7rem] hover:bg-headerOrange rounded-b-[30px] transition-all duration-300 ease-in-out">
+                <li data-categorie="salade"
+                    class="mb-[3px] p-[0.7rem] hover:bg-headerOrange rounded-b-[30px] transition-all duration-300 ease-in-out">
                     <div class="flex  justify-center items-center space-x-3 p-2 cursor-pointer">
                         <div class="w-12 h-12">
                             <img src="../assets/Menu-section-salad.png" alt="Menu-section-salad"
@@ -185,7 +192,8 @@
             </ul>
         </div>
 
-        <div class="hidden md:flex justify-center items-center w-full max-w-5xl mx-auto my-8 space-x-4 w-full" id="filtre" >
+        <div class="hidden md:flex justify-center items-center w-full max-w-5xl mx-auto my-8 space-x-4 w-full"
+            id="filtre">
 
             <div class="text-center p-2 cursor-pointer" data-categorie="all">
                 <h4 class="text-2xl font-bold text-black font-oleo text-[2.5rem]">All</h4>
@@ -235,36 +243,36 @@
         </div>
         <div class="relative w-full  mx-auto">
 
-    <button id="prev-page-desktop"
-        class="hidden md:block absolute left-2 md:left-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-headerYellow text-prixColor rounded-full shadow-lg text-2xl hover:bg-opacity-80 transition-all">
-        <i class="fa-solid fa-chevron-left"></i>
-    </button>
+            <button id="prev-page-desktop"
+                class="hidden md:block absolute left-2 md:left-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-headerYellow text-prixColor rounded-full shadow-lg text-2xl hover:bg-opacity-80 transition-all">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-[2.5rem] px-[2rem] md:px-[7rem] mt-[5rem]"
-        id="menu-div">
+            <div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-[2.5rem] px-[2rem] md:px-[7rem] mt-[5rem]"
+                id="menu-div">
+            </div>
+
+
+            <button id="next-page-desktop"
+                class="hidden md:block absolute right-2 md:right-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-headerYellow text-prixColor rounded-full shadow-lg text-2xl hover:bg-opacity-80 transition-all">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+            <div class="flex md:hidden justify-center items-center gap-4 mt-8">
+
+                <button id="prev-page-mobile"
+                    class="w-12 h-12 bg-headerYellow text-prixColor rounded-full shadow-lg text-2xl hover:bg-opacity-80 transition-all">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <button id="next-page-mobile"
+                    class="w-12 h-12 bg-headerYellow text-prixColor rounded-full shadow-lg text-2xl hover:bg-opacity-80 transition-all">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
         </div>
-  
 
-    <button id="next-page-desktop"
-        class="hidden md:block absolute right-2 md:right-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-headerYellow text-prixColor rounded-full shadow-lg text-2xl hover:bg-opacity-80 transition-all">
-        <i class="fa-solid fa-chevron-right"></i>
-    </button>
-
-    <div class="flex md:hidden justify-center items-center gap-4 mt-8">
-        
-        <button id="prev-page-mobile"
-            class="w-12 h-12 bg-headerYellow text-prixColor rounded-full shadow-lg text-2xl hover:bg-opacity-80 transition-all">
-            <i class="fa-solid fa-chevron-left"></i>
-        </button>
-
-        <button id="next-page-mobile"
-            class="w-12 h-12 bg-headerYellow text-prixColor rounded-full shadow-lg text-2xl hover:bg-opacity-80 transition-all">
-            <i class="fa-solid fa-chevron-right"></i>
-        </button>
-    </div>
-    
-</div>
-        
     </section>
 
     <!-- nos service section !! -->
@@ -286,7 +294,8 @@
         </div>
     </section>
     <section class="plat-of-month">
-        <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-[3rem] mt-16 md:mt-[10rem] md:mb-[3rem]">
+        <div
+            class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-[3rem] mt-16 md:mt-[10rem] md:mb-[3rem]">
             <hr class="border-t-[0.3rem] border-headerYellow w-1/4 md:w-[8.6875rem]">
             <h2 class="font-oleo text-3xl md:text-[3.75rem] text-headerYellow text-center">Dish of the month</h2>
             <hr class="border-t-[0.3rem] border-headerYellow w-1/4 md:w-[8.6875rem]">
@@ -312,22 +321,18 @@
                 <span class="font-oleo font-bold text-4xl md:text-[3rem] text-prixColor ">$120.00</span>
 
                 <br>
-
-                <button
-                    class="mt-6 w-full max-w-xs md:w-[22rem] h-[5rem] font-oleo font-bold text-2xl md:text-[2rem] bg-headerYellow rounded-[50px] md:ml-[15rem]">
-                    Add to panier Now
-                </button>
             </div>
         </div>
     </section>
     <footer id="footer-placeholder">
 
     </footer>
+
+    <script type="module" src="../js/global.js"></script>
     <script src="../js/menu.js"></script>
-    <script type="module" src="../js/global.js"></script>
 
-    <script type="module" src="../js/global.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
