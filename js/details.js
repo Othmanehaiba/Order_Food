@@ -185,4 +185,21 @@ if(priceEl) priceEl.textContent = `${product.basePrice}`;
       updatePrice(currentVal);
     });
   });
+
+  // add swap images between main img & ingre imgs
+  const mainImg = document.querySelector(".main-img-js");
+  const ingresImg = document.querySelectorAll(".ingre-img-js");
+  console.log(mainImg);
+  console.log(ingresImg);
+
+  
+  ingresImg.forEach((img)=>{
+    img.addEventListener('click',(e)=>{
+      const temp = img.src;
+      img.src = mainImg.src;
+      mainImg.src = temp;
+
+
+    })
+  })
 }
