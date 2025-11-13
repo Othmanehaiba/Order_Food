@@ -242,7 +242,6 @@ function displayProduct(product) {
   const addToPanier = document.querySelector(".add-to-panier-js");
   console.log(addToPanier);
   function addPanierToLocal(id) {
-    
     let panierData = JSON.parse(localStorage.getItem("panier")) || [];
     console.log(panierData);
 
@@ -258,5 +257,22 @@ function displayProduct(product) {
   addToPanier.addEventListener("click", (e) => {
     addPanierToLocal(product.id);
     console.log("added successfully");
+    Swal.fire({
+      icon: "success",
+      title: "Added to Panier!",
+      text: `${product.name} has been added.`,
+      showCancelButton: false,
+      confirmButtonText: "Go to Menu",
+      cancelButtonText: "Go to Panier",
+      confirmButtonColor: "#f3c623",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.location.href = "../pages/menu.html";
+
+      } else {
+        window.location.href = "../index.html";
+
+      }
+    });
   });
 }
