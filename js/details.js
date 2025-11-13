@@ -1,6 +1,6 @@
 let reviews = [];
 let currentReview;
-
+let allData = [];
 const authorEl = document.querySelector(".author-el");
 const speechEl = document.querySelector(".speech-el");
 const starsContainer = document.querySelector(".stars-container");
@@ -70,6 +70,7 @@ let priceGlobal = 0;
 fetch("../data/data.json")
   .then((res) => res.json())
   .then((data) => {
+    let allData = data;
     currentProduct = data.find((p) => p.id == id);
     displayProduct(currentProduct);
   })
@@ -164,7 +165,10 @@ function displayProduct(product) {
 
   const priceEl = document.querySelector(".price-el-js");
 
-  if (priceEl) priceEl.textContent = `${product.basePrice}`;
+  if (priceEl) {
+    priceEl.textContent = `${product.basePrice}`;
+    priceGlobal = product.basePrice;
+  }
   let selectedSizePrice = 0;
 
   const sizeDesktop = detailsSection.querySelector("#size-desktop");
@@ -234,12 +238,25 @@ function displayProduct(product) {
     window.location.href = `painement.html?id=${product.id}&quantity=${quantityGlobal}&price=${priceGlobal}`;
   });
 
-  // add to panier 
+  // add to panier
   const addToPanier = document.querySelector(".add-to-panier-js");
   console.log(addToPanier);
-
-  addToPanier.addEventListener('click',(e)=>{
+  function addPanierToLocal(id) {
     
-  })
+    let panierData = JSON.parse(localStorage.getItem("panier")) || [];
+    console.log(panierData);
 
+    panierData.push({
+      ...product,
+      quantity: quantityGlobal,
+      basePrice: priceGlobal,
+    });
+    console.log(panierData);
+
+    localStorage.setItem("panier", JSON.stringify(panierData));
+  }
+  addToPanier.addEventListener("click", (e) => {
+    addPanierToLocal(product.id);
+    console.log("added successfully");
+  });
 }
