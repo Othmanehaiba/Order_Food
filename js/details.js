@@ -68,18 +68,18 @@ let currentProduct;
 fetch("../data/data.json")
   .then((res) => res.json())
   .then((data) => {
-    console.log(data);
+    // console.log(data);
     currentProduct = data.find((p) => p.id == id);
-    console.log(currentProduct);
+    // console.log(currentProduct);
     // diplay product info
     displayProduct(currentProduct);
   })
   .catch((err) => console.error(`product not fetch correct ${err}`));
 
 function displayProduct(product) {
-  console.log(product.name);
-  console.log(product.description);
-  console.log(detailsSection);
+  // console.log(product.name);
+  // console.log(product.description);
+  // console.log(detailsSection);
   let generateSizeOptions = () => {
     return product.size.map((size) => `<option>${size}</option>`).join("");
   };
@@ -279,7 +279,7 @@ function displayProduct(product) {
   `;
   }
   detailsSection.innerHTML = generateSectionDetails(product);
-  console.log(detailsSection);
+  // console.log(detailsSection);
 
   const quantityInput = detailsSection.querySelector("#quantity");
   const quantityInputMobile = detailsSection.querySelector("#quantity-mobile");
@@ -289,7 +289,7 @@ function displayProduct(product) {
 
   const priceEl = document.querySelector(".price-el-js");
   priceEl.textContent = product.price;
-  console.log(priceEl);
+  // console.log(priceEl);
   
   // const priceElMobile = detailsSection.querySelector(".price-el-mobile");
 
@@ -303,7 +303,7 @@ function displayProduct(product) {
     btn.addEventListener("click", () => {
       let isIncrease = btn.getAttribute("aria-label").includes("Increase");
       let val = parseInt(quantityInput.value);
-      console.log(isIncrease);
+      // console.log(isIncrease);
 
       if (isIncrease) val += 1;
       else if (val > 1) val -= 1;

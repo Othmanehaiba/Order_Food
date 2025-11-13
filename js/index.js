@@ -169,6 +169,7 @@ window.addEventListener('resize', () => {
     }
 });
 
+// chefs
 
 fetch('../data/chefs.json')
 .then(response => response.json())
@@ -176,7 +177,7 @@ fetch('../data/chefs.json')
     const container = document.getElementById('chefsContainer');
 
     chefs.forEach(chef => {
-    // Card wrapper
+    
     const card = document.createElement('div');
     card.className = 'relative flex flex-col items-center text-center';
 
@@ -186,7 +187,7 @@ fetch('../data/chefs.json')
     img.alt = chef.name;
     img.className = 'w-[25rem] h-[30rem]';
 
-    // Yellow circle with info
+    // Yellow circle 
     const info = document.createElement('div');
     info.className = 'bg-headerYellow w-[23rem] h-[23rem] rounded-full border-4 -mt-40 flex flex-col items-center justify-center';
 
@@ -213,3 +214,98 @@ fetch('../data/chefs.json')
     });
 })
 .catch(err => console.error('Error loading chefs.json:', err));
+
+// PoulairFood
+fetch('../data/populaireFood.json')
+    .then(res => res.json())
+    .then(data => {
+        data.forEach(
+            d =>{ 
+            if (d.name === "Cheese Burger") {
+                console.log(d.name);
+                const burger = document.getElementById('burger');
+
+                burger.innerHTML = `<img src="${d.image}" alt="Burger"
+                                    class="w-full h-full object-cover object-center block">
+
+                                    <div
+                                    class="rounded-[50px] pl-[1.7rem] w-[90%] md:w-[90%] h-[9.5rem] md:h-[70%] absolute top-[42%] md:top-[25%] ml-[1.1rem] inset-0 bg-headerYellow bg-opacity-70 text-white opacity-0 translate-y-1/4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
+
+                                    <h3 class="font-oleo text-[1.5rem] md:text-[1.9rem] mt-[1rem] ">Cheese Burger</h3>
+                                    <p class="text-[0.9rem] md:text-[1.1rem] text-black font-roboto font-bold w-[100%]">
+                                        ${d.description}
+                                    </p>
+                                    <hr class="border-t-2 border-gray-500 w-[95%] mt-[0.7rem]">
+                                    <div class="flex gap-[6rem] md:gap-[3rem] align-center md:ml-[0rem]">
+                                        <p
+                                        class="text-[2rem] md:text-[2.5rem] text-black font-oleo font-bold md:mt-[0.3rem] ml-[1rem] md:ml-[0rem]">
+                                        Prix</p>
+                                        <span
+                                        class="block text-center text-[2rem] font-oleo md:text-[2.5rem] font-bold text-prixColor ">$${d.prix}</span>
+                                    </div>
+                                    </div>`;
+            }
+            else if(d.name === "pancake") {
+                console.log(d.name);
+                const pancake = document.getElementById('pancake');
+
+                pancake.innerHTML = `   <img src="${d.image}" alt="Pancakes" class="w-full h-full object-cover object-center block">
+                                        <div class="rounded-[50px] pl-[1.7rem] w-[90%] md:w-[90%] h-[9.5rem] md:h-[85%] absolute top-[50%] md:top-[5%] ml-[1.1rem] inset-0 bg-headerYellow bg-opacity-70 text-white opacity-0 translate-y-1/4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
+                                            <h3 class="font-oleo text-[1.3rem] md:text-[1.9rem] mt-[1rem] ">${d.name}</h3>
+                                            <p class="text-[0.8rem] md:text-[1rem] text-black font-roboto font-bold w-[100%]">
+                                                ${d.description}
+                                            </p>
+                                            <hr class="border-t-2 border-gray-500 w-[95%] mt-[0.5rem]">
+                                            <div class="flex gap-[6rem] md:gap-[3rem] align-center md:ml-[0rem]">
+                                                <p class="text-[2rem] md:text-[2rem] text-black font-oleo font-bold md:mt-[0.3rem] ml-[1rem] md:ml-[0rem]">
+                                                Prix</p>
+                                                <span
+                                                class="block text-center text-[1.7rem] font-oleo md:text-[2.5rem] font-bold text-prixColor ">$${d.prix}</span>
+                                            </div>
+                                        </div>`;
+            }
+            else if(d.name === "Chicken Sandwich") {
+                console.log(d.name);
+                const pancake = document.getElementById('Chicken Sandwich');
+
+                pancake.innerHTML = `   <img src="${d.image}" alt="Sandwich" class="w-full h-full object-cover object-center block">
+
+                                        <div class="rounded-[50px] pl-[1.7rem] w-[90%] md:w-[95%] h-[9.5rem] md:h-[30%] absolute top-[74%] md:top-[65%] ml-[1.1rem] inset-0 bg-headerYellow bg-opacity-70 text-white opacity-0 translate-y-1/4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
+
+                                            <h3 class="font-oleo text-[1.3rem] md:text-[1.9rem] mt-[1rem] ">${d.name}</h3>
+                                            <p class="text-[0.8rem] md:text-[1rem] text-black font-roboto font-bold w-[100%]">
+                                            ${d.description}
+                                            </p>
+                                            <hr class="border-t-2 border-gray-500 w-[95%] mt-[0.5rem]">
+                                            <div class="flex gap-[6rem] md:gap-[23rem] align-center md:ml-[0rem]">
+                                                <p class="text-[2rem] md:text-[2.5rem] text-black font-oleo font-bold md:mt-[0.3rem] ml-[1rem] md:ml-[0rem]">
+                                                Prix</p>
+                                                <span class="block text-center text-[1.7rem] font-oleo md:text-[2.5rem] font-bold text-prixColor ">$${d.prix}</span>
+                                            </div>
+                                        </div>`;
+            }
+            else if(d.name === "Juice") {
+                console.log(d.name);
+                const pancake = document.getElementById('Juice');
+
+                pancake.innerHTML = `   <img src="${d.image}" alt="Drink" class="w-full h-full object-cover object-center block">
+
+                                        <div class="rounded-[50px] pl-[1.7rem] w-[90%] md:w-[90%] h-[9.5rem] md:h-[33%] absolute top-[75%] md:top-[63%] ml-[1.1rem] inset-0 bg-headerYellow bg-opacity-70 text-white opacity-0 translate-y-1/4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
+
+                                            <h3 class="font-oleo text-[1.3rem] md:text-[1.9rem] mt-[1rem] ">${d.name}</h3>
+                                            <p class="text-[0.8rem] md:text-[1rem] text-black font-roboto font-bold w-[100%]">
+                                                ${d.description}
+                                            </p>
+                                            <hr class="border-t-2 border-gray-500 w-[95%] mt-[0.5rem]">
+                                            <div class="flex gap-[6rem] md:gap-[4.5rem] align-center md:ml-[0rem]">
+                                            <p class="text-[2rem] md:text-[2rem] text-black font-oleo font-bold md:mt-[0.3rem] ml-[1rem] md:ml-[0rem]">
+                                                Prix</p>
+                                            <span
+                                                class="block text-center text-[1.7rem] font-oleo md:text-[2.5rem] font-bold text-prixColor ">$${d.prix}</span>
+                                            </div>
+                                        </div> `;
+            }
+    })
+        
+    })
+    .catch(err => console.error('Error loading populaireFood.json', err));
