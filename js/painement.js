@@ -132,17 +132,5 @@ document.addEventListener("DOMContentLoaded", () => {
     doc.save(`FoodOrder_Ticket.pdf`);
   });
   // button suprimer 
-  document.addEventListener("DOMContentLoaded", () => {
-  const deleteButtons = document.querySelectorAll(".delete-btn");
-
-  deleteButtons.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      // Trouver le parent de cette commande et le supprimer du DOM
-      const commande = e.target.closest(".commande");
-      if (commande) {
-        commande.remove();
-      }
-    });
-  });
-});
+  
 });
