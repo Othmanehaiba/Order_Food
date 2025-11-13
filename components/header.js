@@ -1,11 +1,9 @@
 // activePage = "home" -) ? as parameter
 export function Header() {
   return ` 
-    <!-- Header -->
     <header
       class="bg-headerYellow max-w-[1383px] w-full mx-auto rounded-[50px] flex justify-between items-center px-8 py-4 shadow-md mt-5"
     >
-      <!-- Logo -->
       <div class="flex items-center space-x-3">
         <img
           src="../assets/food-order-logo.png"
@@ -14,14 +12,12 @@ export function Header() {
         />
       </div>
 
-      <!-- Desktop Nav -->
       <nav class="hidden md:flex space-x-8 text-white font-semibold">
         <a href="../index.html" class="hover:underline">Home</a>
         <a href="../pages/menu.html" class="hover:underline">Menu</a>
         <a href="../pages/contact.html" class="hover:underline">Contact</a>
       </nav>
 
-      <!-- Desktop Panier -->
       <div class="hidden md:block">
       
         <button
@@ -33,7 +29,6 @@ export function Header() {
         </button>
         </div>
 
-      <!-- Mobile Burger Button -->
       <button
         id="menu-btn"
         class="md:hidden flex flex-col justify-center items-center space-y-1 focus:outline-none"
@@ -44,12 +39,13 @@ export function Header() {
       </button>
     </header>
 
-    <!-- Mobile Menu -->
     <div
       id="mobile-menu"
-      class="hidden fixed top-0 right-0 w-[90%] h-full bg-bodyColor text-headerOrange font-bold text-4xl  flex-col items-center justify-start pt-0 z-40"
+      class="fixed top-0 right-0 w-[90%] h-full bg-bodyColor text-headerOrange font-bold text-4xl flex flex-col items-center justify-start pt-0 z-40 
+             
+             transition-all duration-300 ease-in-out transform 
+             opacity-0 translate-x-full pointer-events-none"
     >
-      <!-- Top orange section -->
       <div
         class="bg-headerOrange w-full text-white py-6 flex flex-col items-center shadow-md"
       >
@@ -61,44 +57,59 @@ export function Header() {
         <p class="text-3xl mt-2 font-semibold">Menu</p>
       </div>
 
-      <!-- Links -->
-      <div class="flex flex-col items-center justify-center flex-grow space-y-6">
+      <div class="flex flex-col items-center gap-[3rem] justify-center flex-grow space-y-6 mt-[10rem]">
         <a href="../index.html" class="hover:text-white transition-colors">Home</a>
         <a href="../pages/menu.html" class="hover:text-white transition-colors">Menu</a>
         <a href="../pages/contact.html" class="hover:text-white transition-colors">Contact</a>
       </div>
 
-      <!-- Panier -->
-        <button
+      <button
           id = "mobile-btn-panier"
-          class="flex items-center space-x-2 bg-headerOrange text-white font-semibold px-8 py-4 rounded-[30px] hover:bg-black transition-colors"
+          class="flex items-center space-x-2 bg-headerOrange text-white font-semibold px-8 py-4 rounded-[30px] hover:bg-black transition-colors mt-[5rem] mb-8 mx-auto"
         >
           <span>Panier</span>
           <img src="../assets/shopping card.png" alt="shopping card icon">
         </button>
     </div>
-
-`;
+  `;
 }
+
 export function initHeaderMenu() {
   const menuBtn = document.getElementById("menu-btn");
   const mobileMenu = document.getElementById("mobile-menu");
-  if (menuBtn && mobileMenu) {
-    menuBtn.addEventListener("click", () =>
-      mobileMenu.classList.toggle("hidden")
-    );
+
+  if (!menuBtn || !mobileMenu) {
+    return;
   }
-  // close header menu if the user click outside menu
+
+  //  class to open the menu
+  const openMenu = () => {
+    mobileMenu.classList.add("opacity-100", "translate-x-0", "pointer-events-auto");
+    mobileMenu.classList.remove("opacity-0", "translate-x-full", "pointer-events-none");
+  };
+
+  // class to close the menu
+  const closeMenu = () => {
+    mobileMenu.classList.add("opacity-0", "translate-x-full", "pointer-events-none");
+    mobileMenu.classList.remove("opacity-100", "translate-x-0", "pointer-events-auto");
+  };
+
+  menuBtn.addEventListener("click", (e) => {
+    e.stopPropagation(); 
+    const isOpen = mobileMenu.classList.contains("opacity-100");
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
   document.addEventListener("click", (e) => {
     const clickInsideMenu = mobileMenu.contains(e.target);
-    const clickMenuBtn = menuBtn.contains(e.target);
-    // this will be happen only if the user click outside menu & menu btn and menu is open
-    if (
-      !clickInsideMenu &&
-      !clickMenuBtn &&
-      !mobileMenu.classList.contains("hidden")
-    ) {
-      mobileMenu.classList.add("hidden");
+    const isOpen = mobileMenu.classList.contains("opacity-100");
+
+    if (!clickInsideMenu && isOpen) {
+      closeMenu();
     }
   });
 }
