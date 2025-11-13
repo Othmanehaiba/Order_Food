@@ -131,6 +131,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     doc.save(`FoodOrder_Ticket.pdf`);
   });
+
   // button suprimer 
-  
+
+  btn1 = document.getElementById("delete-cmd1");
+  btn2 = document.getElementById("delete-cmd2");
+  btn3 = document.getElementById("delete-cmd3");
+  btn1.addEventListener("click",() =>{
+     const commande = document.getElementById("delete-cmd1");
+     commande.remove();
+  });
+   btn2.addEventListener("click", () => {
+     const commande = document.getElementById("delete-cmd2");
+     commande.remove();
+   });
+    btn3.addEventListener("click", () => {
+      const commande = document.getElementById("delete-cmd3");
+      commande.remove();
+    });
 });
