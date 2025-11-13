@@ -87,38 +87,11 @@ document.addEventListener("DOMContentLoaded", () => {
     doc.text("Total:", 25, y);
     doc.setTextColor(0, 100, 0);
     doc.text(`£${order.total.toFixed(2)}`, 170, y, { align: "right" });
-    //   autre ligne
-    doc.line(20, (y += 10), 190, y);
-
-    //
-    doc.setTextColor(0, 0, 0);
-    doc.setFont("Roboto", "bold");
-    doc.setFontSize(12);
-    doc.text("Ma Carte De Fidalite Contre La Vie Chere", 100, 170, {
-      align: "center",
-    });
-
-    doc.setTextColor(0, 0, 0);
-    doc.setFont("Roboto", "semibold");
-    doc.setFontSize(12);
-    doc.text("Carte De Fidalite : 123 45567 775443 423", 20, 180);
-
-    //  
-    doc.setTextColor(0, 0, 0);
-    doc.setFont("Roboto", "semibold");
-    doc.setFontSize(12);
-    doc.text("Ancienne Sold : 58.90 £", 20, 190);
-    //
-
-     doc.setTextColor(0, 0, 0);
-     doc.setFont("Roboto", "bold");
-     doc.setFontSize(12);
-     doc.text("Nouveau Sold : 58.00 £", 20, 200);
      // autre ligne 
      doc.setTextColor(0, 0, 0);
      doc.setFont("Roboto", "semibold");
      doc.setFontSize(12);
-     doc.text("-------------------------------------------------------------------------------------------------------------------------", 20, 210);
+     doc.text("-------------------------------------------------------------------------------------------------------------------------", 20, 190);
      
 
     // Message final
