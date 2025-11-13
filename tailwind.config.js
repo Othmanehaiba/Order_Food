@@ -10,7 +10,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        oleo: ['Oleo Script', 'cursive'],
+        oleo: ['Oleo Script', 'cursive'], 
         roboto: ["Roboto", "sans-serif"],
         Fredoka: ["Fredoka", "sans-serif"],
       },

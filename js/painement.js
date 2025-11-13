@@ -124,12 +124,52 @@ document.addEventListener("DOMContentLoaded", () => {
     const commande = document.getElementById("delete-cmd1");
     commande.remove();
   });
-  btn2.addEventListener("click", () => {
-    const commande = document.getElementById("delete-cmd2");
-    commande.remove();
-  });
-  btn3.addEventListener("click", () => {
-    const commande = document.getElementById("delete-cmd3");
-    commande.remove();
-  });
+     //   btn2.addEventListener("click", () => {
+     //     const commande = document.getElementById("delete-cmd2");
+     //     commande.remove();
+     //   });     
+//   btn3.addEventListener("click", () => {
+//     const commande = document.getElementById("delete-cmd3");
+//     commande.remove();
+//   });
 });
+
+const params = new URLSearchParams(window.location.search);
+const id = params.get('id');
+const price = params.get('price');
+const quantity = params.get('quantity');
+
+fetch('../data/data.json')
+     .then(res => res.json())
+     .then(data => {
+               const card = data.find(c => c.id == id);
+               const dataContainer = document.getElementById("data");
+               dataContainer.innerHTML = ` <div class="flex items-start justify-between mt-6 pb-4">
+                <!-- Bloc gauche -->
+                <div class="flex items-start gap-4 mt-8">
+
+                  <!-- Badge quantité -->
+                  <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center">
+                    <span class="text-white font-bold text-lg">${quantity}x</span>
+                  </div>
+
+                  <!-- Infos commande -->
+                  <div class="space-y-1">
+                    <p class="text-prixColor font-semibold text-xl">$${price}</p>
+                    <p class="font-bold text-black">${card.name}</p>
+                    <p class="text-black text-sm opacity-80 leading-4">
+                      ${card.category}
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Bouton suppression -->
+                <button id="delete-cmd1" class="opacity-70 hover:opacity-100 mt-6">
+                  <img src="../assets/remove.png" class="w-7">
+                </button>
+
+              </div>`;
+     })
+
+
+
