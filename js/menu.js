@@ -1,46 +1,45 @@
-document.addEventListener('DOMContentLoaded', () => {
-
-  const customSelect = document.querySelector('.block.md\\:hidden');
+document.addEventListener("DOMContentLoaded", () => {
+  const customSelect = document.querySelector(".block.md\\:hidden");
 
   if (customSelect) {
-    const selectTrigger = customSelect.querySelector('.relative.flex.justify-center');
-    const optionsList = customSelect.querySelector('ul');
-    const chevronIcon = selectTrigger.querySelector('i');
-    const options = optionsList.querySelectorAll('li');
+    const selectTrigger = customSelect.querySelector(
+      ".relative.flex.justify-center"
+    );
+    const optionsList = customSelect.querySelector("ul");
+    const chevronIcon = selectTrigger.querySelector("i");
+    const options = optionsList.querySelectorAll("li");
 
-    const triggerTitle = selectTrigger.querySelector('h4');
-    const triggerSubtitle = selectTrigger.querySelector('span');
-
+    const triggerTitle = selectTrigger.querySelector("h4");
+    const triggerSubtitle = selectTrigger.querySelector("span");
 
     let currentTriggerData = {
       title: triggerTitle.textContent,
       subtitle: triggerSubtitle.textContent,
-      categorie: 'all',
-      imgSrc: '',
-      imgAlt: ''
+      categorie: "all",
+      imgSrc: "",
+      imgAlt: "",
     };
 
-    optionsList.classList.add('hidden');
+    optionsList.classList.add("hidden");
 
-    selectTrigger.addEventListener('click', () => {
-      optionsList.classList.toggle('hidden');
-      chevronIcon.classList.toggle('rotate-180');
+    selectTrigger.addEventListener("click", () => {
+      optionsList.classList.toggle("hidden");
+      chevronIcon.classList.toggle("rotate-180");
     });
 
-    options.forEach(option => {
-      option.addEventListener('click', (e) => {
-
-        const optionTitleEl = option.querySelector('h4');
-        const optionSubtitleEl = option.querySelector('span');
-        const optionImageEl = option.querySelector('img');
-        const optionCategorie = option.getAttribute('data-categorie');
+    options.forEach((option) => {
+      option.addEventListener("click", (e) => {
+        const optionTitleEl = option.querySelector("h4");
+        const optionSubtitleEl = option.querySelector("span");
+        const optionImageEl = option.querySelector("img");
+        const optionCategorie = option.getAttribute("data-categorie");
 
         const clickedOptionData = {
           title: optionTitleEl.textContent,
           subtitle: optionSubtitleEl.textContent,
           categorie: optionCategorie,
           imgSrc: optionImageEl.src,
-          imgAlt: optionImageEl.alt
+          imgAlt: optionImageEl.alt,
         };
 
         const oldTriggerData = { ...currentTriggerData };
@@ -51,45 +50,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
         optionSubtitleEl.textContent = oldTriggerData.subtitle;
 
-
-        option.setAttribute('data-categorie', oldTriggerData.categorie);
+        option.setAttribute("data-categorie", oldTriggerData.categorie);
         optionImageEl.src = oldTriggerData.imgSrc;
         optionImageEl.alt = oldTriggerData.imgAlt;
 
         currentTriggerData = clickedOptionData;
 
-        optionsList.classList.add('hidden');
-        chevronIcon.classList.remove('rotate-180');
+        optionsList.classList.add("hidden");
+        chevronIcon.classList.remove("rotate-180");
 
         e.stopPropagation();
       });
     });
 
-    document.addEventListener('click', (e) => {
+    document.addEventListener("click", (e) => {
       if (!customSelect.contains(e.target)) {
-        optionsList.classList.add('hidden');
-        chevronIcon.classList.remove('rotate-180');
+        optionsList.classList.add("hidden");
+        chevronIcon.classList.remove("rotate-180");
       }
     });
-
   }
 });
 
 // variable globale
-let prevnBtn = document.getElementById('prev-page-desktop');
-let nextBtn = document.getElementById('next-page-desktop');
+let prevnBtn = document.getElementById("prev-page-desktop");
+let nextBtn = document.getElementById("next-page-desktop");
 
 let allData = [];
 let currentData = [];
 let cuurentPage = 1;
 let cardInPage = 6;
 
-
 // function saveLOcalstorage(card){
 //   localStorage.setItem('card', JSON.stringify(card));
 // }
 
-fetch('../data/data.json')
+fetch("../data/data.json")
   .then((res) => res.json())
   .then((data) => {
     allData = data;
@@ -97,11 +93,11 @@ fetch('../data/data.json')
     sendData();
     // saveLOcalstorage(data);
   })
-  .catch((err) => console.error('Erreur de serveur: ' + err));
+  .catch((err) => console.error("Erreur de serveur: " + err));
 
 function sendData() {
-  const menuDiv = document.getElementById('menu-div');
-  menuDiv.innerHTML = '';
+  const menuDiv = document.getElementById("menu-div");
+  menuDiv.innerHTML = "";
 
   let start = (cuurentPage - 1) * cardInPage;
   let end = start + cardInPage;
@@ -133,27 +129,46 @@ function sendData() {
     `;
   });
 
-
-  // locale storage de panier 
+  // locale storage de panier
   function addPanierToLocal(id) {
-    const selectedCard = allData.find(card => card.id == id);
+    const selectedCard = allData.find((card) => card.id == id);
     if (selectedCard) {
-      let panierData = JSON.parse(localStorage.getItem('panier')) || [];
+      let panierData = JSON.parse(localStorage.getItem("panier")) || [];
       panierData.push({ ...selectedCard, quantity: 1 });
-      localStorage.setItem('panier', JSON.stringify(panierData));
-
+      localStorage.setItem("panier", JSON.stringify(panierData));
+      console.log("success");
+      
+      // icon success
+      Swal.fire({
+        icon: "success",
+        title: "Added to Panier!",
+        text: `${selectedCard.name} has been added.`,
+        showCancelButton: false,
+        confirmButtonText: "OK",
+        cancelButtonText: "Continue Shopping",
+        confirmButtonColor: "#f3c623",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          // window.location.href = "../pages/menu.html";
+        }
+      });
     }
   }
 
-  // gestion des add to panier 
-  let addpaniers = document.querySelectorAll('.btn-add-panier');
+  // gestion des add to panier
+  let addpaniers = document.querySelectorAll(".btn-add-panier");
   function isProductInPanier(panierData, id) {
-    return panierData.some(item => item.id == id);
+    return panierData.some((item) => item.id == id);
   }
 
   addpaniers.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      if (isProductInPanier(JSON.parse(localStorage.getItem('panier')) || [], e.currentTarget.dataset.id)) {
+    btn.addEventListener("click", (e) => {
+      if (
+        isProductInPanier(
+          JSON.parse(localStorage.getItem("panier")) || [],
+          e.currentTarget.dataset.id
+        )
+      ) {
         Swal.fire({
           icon: "error",
           title: "Failed!",
@@ -162,26 +177,24 @@ function sendData() {
           confirmButtonText: "OK",
           confirmButtonColor: "#e74c3c",
         });
+        console.log("product exist");
 
         return;
       }
 
-
-
       const id = e.currentTarget.dataset.id;
-      const selectedCard = allData.find(card => card.id == id);
+      const selectedCard = allData.find((card) => card.id == id);
 
       if (selectedCard) {
         addPanierToLocal(id);
-        // add card for local to panier 
+        // add card for local to panier
 
         function addPanier() {
-          let panierElement = document.getElementById('panier-cards');
-          const dataa = localStorage.getItem('panier');
+          let panierElement = document.getElementById("panier-cards");
+          const dataa = localStorage.getItem("panier");
           const panierItems = dataa ? JSON.parse(dataa) : [];
 
-
-          panierElement.innerHTML = '';
+          panierElement.innerHTML = "";
           panierItems.forEach((item) => {
             panierElement.innerHTML += `
         <div class="flex items-start justify-between border-t border-black/40  mr-[1rem] ml-[1rem]  pb-4">
@@ -209,7 +222,7 @@ function sendData() {
                 </button>
 
               </div>`;
-          })
+          });
           deleteCard();
           afficherPrice();
         }
@@ -220,43 +233,41 @@ function sendData() {
         }
 
         function deleteCard() {
-          let deleteCards = document.getElementsByClassName('delete-item');
+          let deleteCards = document.getElementsByClassName("delete-item");
           deleteCards = Array.from(deleteCards);
           deleteCards.forEach((btn) => {
-            btn.addEventListener('click', (e) => {
+            btn.addEventListener("click", (e) => {
               const idToDelete = e.currentTarget.dataset.id;
 
-              let panierData = JSON.parse(localStorage.getItem('panier')) || [];
-              panierData = panierData.filter(item => item.id != idToDelete);
-              localStorage.setItem('panier', JSON.stringify(panierData));
+              let panierData = JSON.parse(localStorage.getItem("panier")) || [];
+              panierData = panierData.filter((item) => item.id != idToDelete);
+              localStorage.setItem("panier", JSON.stringify(panierData));
 
               totalAfterDelete();
 
               const cardToDelete = e.currentTarget.parentElement;
               cardToDelete.remove();
             });
-          })
-
+          });
         }
 
         function afficherPrice() {
-          const dataa = localStorage.getItem('panier');
+          const dataa = localStorage.getItem("panier");
           const panierItems = dataa ? JSON.parse(dataa) : [];
 
-          const total1 = document.getElementById('totalPrice');
-          const total2 = document.getElementById('totalPrice2');
+          const total1 = document.getElementById("totalPrice");
+          const total2 = document.getElementById("totalPrice2");
 
           let total = 0;
           if (panierItems.length === 0) {
             total1.innerHTML = `          
           <h2 class="text-[1.5rem] font-bold font-roboto text-white">Total to pay</h2>
-          <span class="font-roboto font-bold text-[1.5rem] text-white">${total}</span>`
+          <span class="font-roboto font-bold text-[1.5rem] text-white">${total}</span>`;
             total2.innerHTML = `          
          <h2 class="font-roboto font-bold text-[1.5rem]">Sub Total: </h2>
-            <span class="font-roboto font-bold text-[1.5rem] text-prixColor">${total}</span>`
+            <span class="font-roboto font-bold text-[1.5rem] text-prixColor">${total}</span>`;
             return;
           }
-
 
           panierItems.forEach((item) => {
             total += parseFloat(item.basePrice);
@@ -266,74 +277,74 @@ function sendData() {
 
           total1.innerHTML = `          
         <h2 class="text-[1.5rem] font-bold font-roboto text-white">Total to pay</h2>
-        <span class="font-roboto font-bold text-[1.5rem] text-white">${total}</span>`
+        <span class="font-roboto font-bold text-[1.5rem] text-white">${total}</span>`;
 
           total2.innerHTML = `          
        <h2 class="font-roboto font-bold text-[1.5rem]">Sub Total: </h2>
-          <span class="font-roboto font-bold text-[1.5rem] text-prixColor">${total}</span>`
-
+          <span class="font-roboto font-bold text-[1.5rem] text-prixColor">${total}</span>`;
         }
-
-
-
-
       }
     });
   });
   // gestion des buttons de pagination
   if (cuurentPage === 1) {
-    prevnBtn.classList.add('none');
+    prevnBtn.classList.add("none");
   }
   nextBtn.disabled = end >= currentData.length;
 }
 
-let nextBtnMobile = document.getElementById('next-page-mobile');
-let prevnBtnMobile = document.getElementById('prev-page-mobile');
-nextBtnMobile.addEventListener('click', () => {
+let nextBtnMobile = document.getElementById("next-page-mobile");
+let prevnBtnMobile = document.getElementById("prev-page-mobile");
+nextBtnMobile.addEventListener("click", () => {
   cuurentPage++;
   sendData();
 });
 
-prevnBtnMobile.addEventListener('click', () => {
+prevnBtnMobile.addEventListener("click", () => {
   cuurentPage++;
   sendData();
 });
 
-nextBtn.addEventListener('click', () => {
+nextBtn.addEventListener("click", () => {
   cuurentPage++;
   sendData();
 });
 
-prevnBtn.addEventListener('click', () => {
+prevnBtn.addEventListener("click", () => {
   if (cuurentPage > 1) {
     cuurentPage--;
   }
   sendData();
 });
 
-const filtre = document.querySelectorAll('[data-categorie]');
+const filtre = document.querySelectorAll("[data-categorie]");
 filtre.forEach((btn) => {
-  btn.addEventListener('click', (e) => {
+  btn.addEventListener("click", (e) => {
     const category = e.currentTarget.dataset.categorie;
-    document.querySelectorAll('[data-categorie]').forEach((button) => {
-      button.classList.remove('shadow-[6px_6px_15px_rgba(0,0,0,0.25)]');
+    document.querySelectorAll("[data-categorie]").forEach((button) => {
+      button.classList.remove("shadow-[6px_6px_15px_rgba(0,0,0,0.25)]");
     });
 
-    e.currentTarget.classList.add('shadow-[6px_6px_15px_rgba(0,0,0,0.25)]', 'p-6', 'rounded-xl', 'duration-300');
+    e.currentTarget.classList.add(
+      "shadow-[6px_6px_15px_rgba(0,0,0,0.25)]",
+      "p-6",
+      "rounded-xl",
+      "duration-300"
+    );
 
     let filteredData;
     switch (category) {
-      case 'all':
+      case "all":
         filteredData = allData;
         break;
-      case 'boissans':
-        filteredData = allData.filter((item) => item.category === 'Boisson');
+      case "boissans":
+        filteredData = allData.filter((item) => item.category === "Boisson");
         break;
-      case 'salade':
-        filteredData = allData.filter((item) => item.category === 'Dessert');
+      case "salade":
+        filteredData = allData.filter((item) => item.category === "Dessert");
         break;
-      case 'repats':
-        filteredData = allData.filter((item) => item.category === 'Plat');
+      case "repats":
+        filteredData = allData.filter((item) => item.category === "Plat");
         break;
       default:
         filteredData = allData;
@@ -345,14 +356,11 @@ filtre.forEach((btn) => {
   });
 });
 
-
-
-
-// recherche 
-const searchInput = document.getElementById('search-bar');
-searchInput.addEventListener('input', (e) => {
+// recherche
+const searchInput = document.getElementById("search-bar");
+searchInput.addEventListener("input", (e) => {
   const searchTerm = e.target.value.toLowerCase();
-  const filteredData = allData.filter(item =>
+  const filteredData = allData.filter((item) =>
     item.name.toLowerCase().includes(searchTerm)
   );
   currentData = filteredData;
@@ -361,11 +369,9 @@ searchInput.addEventListener('input', (e) => {
 });
 
 function savetoPanier(card) {
-  let panier = JSON.parse(localStorage.getItem('panier')) || [];
+  let panier = JSON.parse(localStorage.getItem("panier")) || [];
   panier.push(card);
-  localStorage.setItem('panier', JSON.stringify(panier));
+  localStorage.setItem("panier", JSON.stringify(panier));
 }
 
-
-
-console.log(total)
+console.log(total);
