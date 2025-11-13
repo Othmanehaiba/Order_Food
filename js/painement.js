@@ -1,16 +1,15 @@
-// Declaration Des variables 
+// Declaration Des variables
 
- const Formulaire = {
-    
-     name : document.getElementById("name"),
-     phone : document.getElementById("phone"),
-     email : document.getElementById("email"),
-     adress : document.getElementById("adress"),
-     terms : document.getElementById("terms"),
+const Formulaire = {
+  name: document.getElementById("name"),
+  phone: document.getElementById("phone"),
+  email: document.getElementById("email"),
+  adress: document.getElementById("adress"),
+  terms: document.getElementById("terms"),
 };
 const paybtn = document.getElementById("pay-btn");
 
-// validation regex 
+// validation regex
 
 const regex = {
   name: /^[A-Za-z\s]{3,}$/,
@@ -19,12 +18,85 @@ const regex = {
   adress: /^.{5,}$/, // Min 5 caractères
 };
 
-// Augmenter le prix Total 
+// Telecharger PDF
+document.addEventListener("DOMContentLoaded", () => {
+  const payBtn = document.getElementById("pay-btn");
 
-// Telecharger PDF 
-function generatePDF(){
-     const {jsPDF} = window.jsPDF ; 
-     const doc = new jsPDF();
-     doc.text(100,20,"this maryem");
-     doc.text(10,30,"this mar")
-}
+  payBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    // Exemple de données 
+    const order = {
+      name: "Maryem",
+      email: "maryem@gmail.com",
+      address: "Rue 04 ,Safi",
+      phone: "06 12 34 56 78",
+      items: [
+        { name: "12” Vegetarian Pizza", price: 27.9, quantity: 1 },
+        { name: "Cheese Burger", price: 15.5, quantity: 2 },
+      ],
+      total: 27.9 + 15.5 * 2,
+    };
+
+    // Génération du ticket PDF
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    // couleur 
+    doc.setFillColor(0,0,0,0);
+    doc.rect(0, 0, 210, 297, "F");
+
+    // Logo + titre
+    doc.setTextColor(0, 0, 0);
+    doc.setFontSize(22);
+    doc.setFont("Roboto", "bold");
+    doc.text("FoodOrder+", 105, 30, { align: "center" });
+
+    doc.setFontSize(16);
+    doc.text("Payment a livraison ", 105, 42, { align: "center" });
+
+    // Informations du client
+    doc.setFontSize(12);
+    doc.setTextColor(0, 0, 0);
+    let y = 60;
+    doc.text(`Name: ${order.name}`, 20, y);
+    doc.text(`Email: ${order.email}`, 20, (y += 8));
+    doc.text(`Phone: ${order.phone}`, 20, (y += 8));
+    doc.text(`Address: ${order.address}`, 20, (y += 8));
+
+    // Ligne séparation
+    doc.line(20, (y += 10), 190, y);
+
+    // Commandes
+    doc.setFontSize(14);
+    doc.setFont("Roboto", "bold");
+    doc.text("Your Orders", 20, (y += 15));
+    doc.setFont("Roboto", "normal");
+    doc.setFontSize(12);
+
+    order.items.forEach((item) => {
+      y += 10;
+      doc.text(`${item.quantity}x ${item.name}`, 25, y);
+      doc.text(`£${item.price.toFixed(2)}`, 170, y, { align: "right" });
+    });
+
+    // Total
+    y += 15;
+    doc.setFont("Roboto", "bold");
+    doc.setFontSize(14);
+    doc.text("Total:", 25, y);
+    doc.setTextColor(0, 100, 0);
+    doc.text(`£${order.total.toFixed(2)}`, 170, y, { align: "right" });
+     // 
+    // Message final
+    doc.setTextColor(0, 0, 0);
+    doc.setFont("Roboto", "italic");
+    doc.setFontSize(12);
+    doc.text("Thank you for your order with FoodOrder+ ", 105, 270, {
+      align: "center",
+    });
+
+    // Télécharger le ticket
+    doc.save(`FoodOrder_Ticket.pdf`);
+  });
+});
