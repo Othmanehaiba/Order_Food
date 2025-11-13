@@ -77,9 +77,9 @@ fetch("../data/data.json")
   .catch((err) => console.error(`product not fetch correct ${err}`));
 
 function displayProduct(product) {
-  console.log(product.name);
-  console.log(product.description);
-  console.log(detailsSection);
+  // console.log(product.name);
+  // console.log(product.description);
+  // console.log(detailsSection);
   let generateSizeOptions = () => {
     return product.size.map((size) => `<option>${size}</option>`).join("");
   };
@@ -178,7 +178,7 @@ function displayProduct(product) {
           <img
            src="${product.image}"
             alt="${product.name}"
-            class="w-full max-w-sm md:max-w-md h-auto rounded-lg shadow-md mb-4"
+            class="main-img-js w-full max-w-sm md:max-w-md h-auto rounded-lg shadow-md mb-4"
           />
 
           <!-- Ingredient images -->
@@ -186,19 +186,19 @@ function displayProduct(product) {
             class="flex space-x-2 md:space-x-3 justify-center md:justify-start w-full overflow-hidden mb-4 md:mb-6"
           >
             <img
-              src="../assets/french-fries.jpg"
+              src="../assets/sauce-1.png"
               alt="Ingredient 1"
-              class="h-[90px] md:h-[120px] basis-[22%] md:basis-[20%] rounded-lg object-cover shadow"
+              class="ingre-img-js h-[90px] md:h-[120px] basis-[22%] md:basis-[20%] rounded-lg object-cover shadow"
             />
             <img
-              src="../assets/french-fries.jpg"
+              src="../assets/sauce-2.png"
               alt="Ingredient 2"
-              class="h-[90px] md:h-[120px] basis-[22%] md:basis-[20%] rounded-lg object-cover shadow"
+              class="ingre-img-js h-[90px] md:h-[120px] basis-[22%] md:basis-[20%] rounded-lg object-cover shadow"
             />
             <img
-              src="../assets/french-fries.jpg"
+              src="../assets/sauce-3.png"
               alt="Ingredient 3"
-              class="h-[90px] md:h-[120px] basis-[22%] md:basis-[20%] rounded-lg object-cover shadow"
+              class="ingre-img-js h-[90px] md:h-[120px] basis-[22%] md:basis-[20%] rounded-lg object-cover shadow"
             />
           </div>
 
@@ -290,7 +290,7 @@ function displayProduct(product) {
   const priceEl = document.querySelector(".price-el-js");
   priceEl.textContent = `€${product.price}`;
   console.log(priceEl);
-  
+
   // const priceElMobile = detailsSection.querySelector(".price-el-mobile");
 
   const updatePrice = (quantity) => {
@@ -314,4 +314,21 @@ function displayProduct(product) {
       updatePrice(val);
     });
   });
+
+  // add swap images between main img & ingre imgs
+  const mainImg = document.querySelector(".main-img-js");
+  const ingresImg = document.querySelectorAll(".ingre-img-js");
+  console.log(mainImg);
+  console.log(ingresImg);
+
+  
+  ingresImg.forEach((img)=>{
+    img.addEventListener('click',(e)=>{
+      const temp = img.src;
+      img.src = mainImg.src;
+      mainImg.src = temp;
+
+
+    })
+  })
 }
