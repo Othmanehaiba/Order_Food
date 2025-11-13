@@ -76,12 +76,12 @@ function sendData(direction = 'none') {
         <a href="../pages/details.html?id=${e.id}" class="block bg-white rounded-[1.25rem] shadow-lg hover:shadow-xl transition-shadow duration-300 carousel-card">
             <div data-id="${e.id}" class="w-full h-[29rem] p-[1.5rem] bg-headerYellow rounded-[20px] shadow-[0_4px_20px_rgba(255,122,0,0.7)]">
                 <div class="w-full h-[75%] md:h-[75%]">
-                    <img src="${e.image}" alt="image-test" class="w-full h-full rounded-[20px]">
+                    <img src="${e.images[0]}" alt="image-test" class="w-full h-full rounded-[20px]">
                 </div>
                 <div>
                     <h3 class="font-roboto font-bold text-[1.45rem] ml-[1.5rem] mt-[1rem]">${e.name}</h3>
                     <div class="flex items-center justify-center gap-[7rem] md:gap-[5rem] mt-[0.3rem]">
-                        <span class="font-oleo font-bold text-prixColor text-[2rem] ml-[1rem]">${e.price}$</span>
+                        <span class="font-oleo font-bold text-prixColor text-[2rem] ml-[1rem]">${e.basePrice}$</span>
                         <button class="bg-prixColor w-[9rem] h-[3rem] text-[1.1rem] font-bold font-roboto text-white rounded-[50px]">
                             Add to panier
                         </button>
