@@ -115,7 +115,7 @@ function displayProduct(product) {
         <div class="hidden md:flex ml-6 mt-6 mb-6 space-x-3">
           <label for="quantity-desktop" class="font-semibold">Quantity</label>
           <button class="bg-yellow-400 text-white rounded px-3 text-lg font-bold" aria-label="Decrease quantity">-</button>
-          <input type="number" id="quantity-desktop" name="quantity" value="1" min="1" class="w-12 p-1 text-center rounded-lg border border-yellow-400 bg-transparent outline-none" />
+          <input type="number" readonly id="quantity-desktop" name="quantity" value="1" min="1" class="w-12 p-1 text-center rounded-lg border border-yellow-400 bg-transparent outline-none" />
           <button class="bg-yellow-400 text-white rounded px-3 text-lg font-bold" aria-label="Increase quantity">+</button>
         </div>
       </div>
@@ -154,7 +154,7 @@ function displayProduct(product) {
         <div class="md:hidden flex items-center justify-center mb-6 space-x-3">
           <label for="quantity-mobile" class="font-semibold text-2xl">Quantity</label>
           <button class="bg-yellow-400 text-white rounded px-3 text-lg font-bold" aria-label="Decrease quantity">-</button>
-          <input type="number" id="quantity-mobile" name="quantity-mobile" value="1" min="1" class="w-12 p-1 text-center rounded-lg border border-yellow-400 bg-transparent outline-none"/>
+          <input type="number" id="quantity-mobile" name="quantity-mobile" readonly value="1" min="1" class="w-12 p-1 text-center rounded-lg border border-yellow-400 bg-transparent outline-none"/>
           <button class="bg-yellow-400 text-white rounded px-3 text-lg font-bold" aria-label="Increase quantity">+</button>
         </div>
       </div>
