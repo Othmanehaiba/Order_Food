@@ -8,6 +8,13 @@
       href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Contact/Details</title>
   </head>
   <body class="bg-bodyColor mx-3">
@@ -75,30 +82,30 @@
           <input
             type="text"
             placeholder="Your Name"
-            class="bg-[#F3C623] px-4 py-3 rounded-lg placeholder-black"
+            class="bg-[#F3C623] px-4 py-6 rounded-lg placeholder-black"
           />
 
           <input
             type="tel"
             placeholder="Phone Number"
-            class="bg-[#F3C623] px-4 py-3 rounded-lg placeholder-black"
+            class="bg-[#F3C623] px-4 py-6 rounded-lg placeholder-black"
           />
 
           <input
             type="email"
             placeholder="Your email"
-            class="bg-[#F3C623] px-4 py-3 rounded-lg placeholder-black"
+            class="bg-[#F3C623] px-4 py-6 rounded-lg placeholder-black"
           />
 
           <textarea
             placeholder="Write a message ...."
             rows="5"
-            class="bg-[#F3C623] px-4 py-3 rounded-lg placeholder-black resize-none"
+            class="bg-[#F3C623] px-4 py-6 rounded-lg placeholder-black resize-none"
           ></textarea>
 
           <button
             type="submit"
-            class="text-white bg-[#F39223] px-6 py-3 rounded-full font-bold hover:bg-white hover:text-[#F39223] transition-colors"
+            class="text-white bg-[#F39223] px-6 py-3 rounded-xl font-bold hover:bg-white hover:text-[#F39223] transition-colors w-40"
           >
             Send message
           </button>
@@ -120,39 +127,45 @@
           referrerpolicy="no-referrer-when-downgrade"
           class="rounded-xl"
         ></iframe>
-        <div class="">
-          <img
-            src="/assets/moto.png"
-            alt="moto pic"
-            class="inline-block auto-cols-auto mb-5"
-            width="50"
-          />
-          <span class="font-roboto font-bold text-3xl">Call Us Free:</span>
-          <p class="m-auto">+212 345-890-456</p>
-        </div>
-        <div class="">
-          <img
-            src="/assets/figure_2.png"
-            alt="moto pic"
-            class="inline-block col-[1 / 3]"
-            width="50"
-          />
-          <span class="font-roboto font-bold text-3xl flex justify-start"
-            >Online Food Ordring:</span
-          >
-          <p>Easy Food delivery from the best restaurants.</p>
-        </div>
-        <div class="">
-          <img
-            src="/assets/figure_3.png"
-            alt="moto pic"
-            class="inline-block auto-cols-auto"
-            width="50"
-          />
-          <span class="font-roboto font-bold text-3xl flex justify-start"
-            >100% Healthy Food:</span
-          >
-          <p>Eating a wide variety of nutritious Healthy foods</p>
+
+        <div class="space-y-6">
+          <div class="flex items-start gap-10">
+            <img src="/assets/moto.png" alt="moto pic" class="w-12 h-12" />
+            <div>
+              <h3 class="font-roboto font-bold text-3xl">Call Us Free:</h3>
+              <p class="text-lg">+212 345-890-456</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-10">
+            <img
+              src="/assets/figure_2.png"
+              alt="food ordering icon"
+              class="w-12 h-12"
+            />
+            <div>
+              <h3 class="font-roboto font-bold text-3xl">
+                Online Food Ordering:
+              </h3>
+              <p class="text-base text-gray-700">
+                Easy Food delivery from the best restaurants.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-10">
+            <img
+              src="/assets/figure_3.png"
+              alt="healthy food icon"
+              class="w-12 h-12"
+            />
+            <div>
+              <h3 class="font-roboto font-bold text-3xl">100% Healthy Food:</h3>
+              <p class="text-base text-gray-700">
+                Eating a wide variety of nutritious Healthy foods
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -164,35 +177,90 @@
       </h2>
       <br />
       <div
-        class="bg-[#F39223] w-[40rem] h-16 flex mx-auto rounded-t-2xl border-b-[1px] border-black"
+        class="qst-js bg-[#F39223] w-[40rem] h-16 flex mx-auto rounded-t-2xl border-b-[1px] border-black"
       >
-        <span class="text-white font-roboto text-2xl p-5">Question 1</span>
-
-        <i id="arrow" class="fa-solid fa-angle-down"></i>
+        <span class="text-white font-roboto text-2xl p-5"
+          >Question 1
+          <i id="arrow" class="fa-solid fa-angle-down text-white"></i
+        ></span>
       </div>
+      <div class="answer bg-orange-300 w-[40rem] mx-auto p-5 hidden">
+          <p class="text-white font-roboto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, quam!
+            Suscipit enim numquam voluptate pariatur nesciunt fugit sint,
+            libero, accusamus officia mollitia obcaecati dolores, nemo et.
+            Accusamus, excepturi! Nobis, eaque.
+          </p>
+        </div>
       <div
-        class="bg-[#F39223] w-[40rem] h-16 flex mx-auto border-b-[1px] border-black"
+        class="qst-js bg-[#F39223] w-[40rem] h-16 flex mx-auto border-b-[1px] border-black"
       >
-        <span class="text-white font-roboto text-2xl p-5">Question 2</span>
+        <span class="text-white font-roboto text-2xl p-5"
+          >Question 2<i id="arrow" class="fa-solid fa-angle-down text-white"></i
+        ></span>
       </div>
+      <div class="answer bg-orange-300 w-[40rem] mx-auto p-5 hidden">
+          <p class="text-white font-roboto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, quam!
+            Suscipit enim numquam voluptate pariatur nesciunt fugit sint,
+            libero, accusamus officia mollitia obcaecati dolores, nemo et.
+            Accusamus, excepturi! Nobis, eaque.
+          </p>
+        </div>
       <div
-        class="bg-[#F39223] w-[40rem] h-16 flex mx-auto border-b-[1px] border-black"
+        class="qst-js bg-[#F39223] w-[40rem] h-16 flex mx-auto border-b-[1px] border-black"
       >
-        <span class="text-white font-roboto text-2xl p-5">Question 3</span>
+        <span class="text-white font-roboto text-2xl p-5"
+          >Question 3<i id="arrow" class="fa-solid fa-angle-down text-white"></i
+        ></span>
       </div>
+      <div class="answer bg-orange-300 w-[40rem] mx-auto p-5 hidden">
+          <p class="text-white font-roboto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, quam!
+            Suscipit enim numquam voluptate pariatur nesciunt fugit sint,
+            libero, accusamus officia mollitia obcaecati dolores, nemo et.
+            Accusamus, excepturi! Nobis, eaque.
+          </p>
+        </div>
       <div
-        class="bg-[#F39223] w-[40rem] h-16 flex mx-auto border-b-[1px] border-black"
+        class="qst-js bg-[#F39223] w-[40rem] h-16 flex mx-auto border-b-[1px] border-black"
       >
-        <span class="text-white font-roboto text-2xl p-5">Question 4</span>
+        <span class="text-white font-roboto text-2xl p-5"
+          >Question 4<i id="arrow" class="fa-solid fa-angle-down text-white"></i
+        ></span>
       </div>
-      <div class="bg-[#F39223] w-[40rem] h-16 flex mx-auto rounded-b-2xl">
-        <span class="text-white font-roboto text-2xl p-5">Question 5</span>
+      <div class="answer bg-orange-300 w-[40rem] mx-auto p-5 hidden">
+          <p class="text-white font-roboto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, quam!
+            Suscipit enim numquam voluptate pariatur nesciunt fugit sint,
+            libero, accusamus officia mollitia obcaecati dolores, nemo et.
+            Accusamus, excepturi! Nobis, eaque.
+          </p>
+        </div>
+      <div
+        class="qst-js bg-[#F39223] w-[40rem] h-16 flex mx-auto rounded-b-2xl"
+      >
+        <span class="text-white font-roboto text-2xl p-5"
+          >Question 5<i
+            id="arrow"
+            class="fa-solid fa-angle-down text-white"
+          ></i>
+        </span>
       </div>
+      <div class="answer bg-orange-300 w-[40rem] mx-auto p-5 hidden">
+          <p class="text-white font-roboto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, quam!
+            Suscipit enim numquam voluptate pariatur nesciunt fugit sint,
+            libero, accusamus officia mollitia obcaecati dolores, nemo et.
+            Accusamus, excepturi! Nobis, eaque.
+          </p>
+        </div>
     </section>
     <br /><br /><br /><br /><br />
     <footer id="footer-placeholder"></footer>
     <script type="module" src="../js/global.js">
       // Inject header and footer
     </script>
+    <script src="/js/contact.js"></script>
   </body>
 </html>
