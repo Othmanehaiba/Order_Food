@@ -1505,6 +1505,26 @@ video {
   padding-bottom: 1.5rem;
 }
 
+.py-\[2rem\] {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.py-\[8rem\] {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.py-\[9rem\] {
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+}
+
+.py-\[1\.5rem\] {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .pl-\[1\.7rem\] {
   padding-left: 1.7rem;
 }
@@ -1728,6 +1748,30 @@ video {
 .placeholder-gray-600::placeholder {
   --tw-placeholder-opacity: 1;
   color: rgb(75 85 99 / var(--tw-placeholder-opacity, 1));
+}
+
+.placeholder-\[\]::-moz-placeholder {
+  color: ;
+}
+
+.placeholder-\[\]::placeholder {
+  color: ;
+}
+
+.placeholder-\[2rem\]::-moz-placeholder {
+  color: 2rem;
+}
+
+.placeholder-\[2rem\]::placeholder {
+  color: 2rem;
+}
+
+.placeholder-\[2rme\]::-moz-placeholder {
+  color: 2rme;
+}
+
+.placeholder-\[2rme\]::placeholder {
+  color: 2rme;
 }
 
 .placeholder-opacity-70::-moz-placeholder {
@@ -2287,4 +2331,44 @@ video {
   .lg\:text-\[4\.5rem\] {
     font-size: 4.5rem;
   }
+}
+
+.\[\&\:\:placeholder\]\:text-\[2rem\]::-moz-placeholder {
+  font-size: 2rem;
+}
+
+.\[\&\:\:placeholder\]\:text-\[2rem\]::placeholder {
+  font-size: 2rem;
+}
+
+.\[\&\:\:placeholder\]\:text-\[1\.2rem\]::-moz-placeholder {
+  font-size: 1.2rem;
+}
+
+.\[\&\:\:placeholder\]\:text-\[1\.2rem\]::placeholder {
+  font-size: 1.2rem;
+}
+
+.\[\&\:\:placeholder\]\:text-\[1\.1rem\]::-moz-placeholder {
+  font-size: 1.1rem;
+}
+
+.\[\&\:\:placeholder\]\:text-\[1\.1rem\]::placeholder {
+  font-size: 1.1rem;
+}
+
+.\[\&\:\:placeholder\]\:text-\[1\.5rem\]::-moz-placeholder {
+  font-size: 1.5rem;
+}
+
+.\[\&\:\:placeholder\]\:text-\[1\.5rem\]::placeholder {
+  font-size: 1.5rem;
+}
+
+.\[\&\:\:placeholder\]\:font-bold::-moz-placeholder {
+  font-weight: 700;
+}
+
+.\[\&\:\:placeholder\]\:font-bold::placeholder {
+  font-weight: 700;
 }
