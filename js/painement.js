@@ -1,34 +1,43 @@
-// Declaration Des variables
-const Formulaire = {
-  name: document.getElementById("name"),
-  phone: document.getElementById("phone"),
-  email: document.getElementById("email"),
-  adress: document.getElementById("adress"),
-  terms: document.getElementById("terms"),
-};
-
-// validation regex
-
-const regex = {
-  name: /^[A-Za-z\s]{3,}$/,
-  phone: /^0[6-7]\d{8}$/,
-  email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-  adress: /^.{5,}$/, // Min 5 caractères
-};
-
-// Telecharger PDF
 document.addEventListener("DOMContentLoaded", () => {
+  // Variables
+  const Formulaire = {
+    name: document.getElementById("name"),
+    phone: document.getElementById("phone"),
+    email: document.getElementById("email"),
+    adress: document.getElementById("adress"),
+    terms: document.getElementById("terms"),
+  };
+
+  const regex = {
+    name: /^[A-Za-z\s]{3,}$/,
+    phone: /^0[6-7]\d{8}$/,
+    email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+    adress: /^.{5,}$/,
+  };
+
   const payBtn = document.getElementById("pay-btn");
 
   payBtn.addEventListener("click", (e) => {
     e.preventDefault();
 
-    // Exemple de données
+    // Validation
+    if (!regex.name.test(Formulaire.name.value)) 
+     return alert("Nom invalide,essaiye de saisir un autre nom");
+    if (!regex.phone.test(Formulaire.phone.value))
+      return alert("Téléphone invalide");
+    if (!regex.email.test(Formulaire.email.value))
+      return alert("Email invalide");
+    if (!regex.adress.test(Formulaire.adress.value))
+      return alert("Adresse invalide");
+    if (!Formulaire.terms.checked)
+      return alert("Veuillez accepter les conditions");
+
+    // Génération PDF
     const order = {
-      name: document.getElementById("name"),
-      email: document.getElementById("email"),
-      address: document.getElementById("adress"),
-      phone: document.getElementById("phone"),
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      address: document.getElementById("adress").value,
+      phone: document.getElementById("phone").value,
       items: [
         { name: "12” Vegetarian Pizza", price: 27.9, quantity: 1 },
         { name: "Cheese Burger", price: 15.5, quantity: 2 },
@@ -106,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
     doc.save(`FoodOrder_Ticket.pdf`);
   });
 
-  // button suprimer
+  // Suppression des commandes
 
   btn1 = document.getElementById("delete-cmd1");
   btn2 = document.getElementById("delete-cmd2");
