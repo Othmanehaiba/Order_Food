@@ -13,10 +13,10 @@
 }
 
 #carousel-dots span.active {
-  background-color: #333; /* active slide */
+  background-color: #333; 
 }
 
-/* Carousel Animation Styles */
+
 #carousel {
     transition: opacity 0.3s ease-in-out;
 }
