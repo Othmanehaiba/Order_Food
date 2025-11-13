@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Pizza Margherita",
-    "category": "Main Course",
+    "category": "Plat",
     "description": "A timeless classic. This traditional pizza features a rich tomato sauce base, creamy mozzarella cheese, and a sprinkle of fresh, aromatic basil.",
     "basePrice": 8.99,
     "images": [
@@ -22,7 +22,7 @@
   {
     "id": 2,
     "name": "Pepperoni Pizza",
-    "category": "Main Course",
+    "category": "Plat",
     "description": "A fan favorite! This pizza is generously topped with spicy pepperoni slices over a classic tomato sauce and melted mozzarella cheese.",
     "basePrice": 10.99,
     "images": [
@@ -42,7 +42,7 @@
   {
     "id": 3,
     "name": "Carbonara Pasta",
-    "category": "Main Course",
+    "category": "Plat",
     "description": "An authentic Roman delight. Al dente pasta tossed in a creamy sauce made from fresh eggs, savory guanciale, sharp Pecorino cheese, and a kick of freshly ground black pepper.",
     "basePrice": 12.5,
     "images": [
@@ -75,7 +75,7 @@
   {
     "id": 5,
     "name": "Classic Burger",
-    "category": "Main Course",
+    "category": "Plat",
     "description": "The all-American classic. A juicy beef patty topped with melted cheddar cheese, crisp lettuce, fresh tomato, and onions, served with a side of golden French fries.",
     "basePrice": 11.99,
     "images": [
@@ -105,7 +105,7 @@
   {
     "id": 7,
     "name": "Mineral Water",
-    "category": "Beverage",
+    "category": "Boisson",
     "description": "Pure and refreshing mineral water, sourced from natural springs. Available as either still or sparkling to quench your thirst.",
     "basePrice": 2,
     "images": [
@@ -123,7 +123,7 @@
   {
     "id": 8,
     "name": "Coca-Cola",
-    "category": "Beverage",
+    "category": "Boisson",
     "description": "The iconic and refreshing sparkling soft drink, served chilled for your enjoyment.",
     "basePrice": 2.5,
     "images": [
@@ -141,7 +141,7 @@
   {
     "id": 9,
     "name": "4 Seasons Pizza",
-    "category": "Main Course",
+    "category": "Plat",
     "description": "A pizza for all tastes, representing the four seasons. Topped with savory artichokes, cooked ham, fresh mushrooms, and black olives.",
     "basePrice": 13,
     "images": [
@@ -159,7 +159,7 @@
   {
     "id": 10,
     "name": "Grilled Salmon",
-    "category": "Main Course",
+    "category": "Plat",
     "description": "A healthy and delicious choice. A tender salmon fillet grilled to perfection, served with a medley of fresh, roasted seasonal vegetables.",
     "basePrice": 16.99,
     "images": [
@@ -207,7 +207,7 @@
   {
     "id": 13,
     "name": "Bolognese Pasta",
-    "category": "Main Course",
+    "category": "Plat",
     "description": "A comforting and hearty classic. Your choice of pasta served with a slow-simmered, rich tomato and minced meat sauce.",
     "basePrice": 11.5,
     "images": [
@@ -222,7 +222,7 @@
   {
     "id": 14,
     "name": "Espresso Coffee",
-    "category": "Beverage",
+    "category": "Boisson",
     "description": "The perfect pick-me-up. A short, strong, and intense shot of freshly brewed coffee with a rich crema.",
     "basePrice": 1.8,
     "images": [
@@ -270,7 +270,7 @@
   {
     "id": 17,
     "name": "Steak Frites",
-    "category": "Main Course",
+    "category": "Plat",
     "description": "The ultimate bistro meal. A succulent grilled ribeye steak cooked to your liking, served with a side of crispy French fries and a savory pepper sauce.",
     "basePrice": 18.5,
     "images": [
@@ -285,7 +285,7 @@
   {
     "id": 18,
     "name": "Fresh Squeezed Orange Juice",
-    "category": "Beverage",
+    "category": "Boisson",
     "description": "Pure, natural refreshment. 100% juice from freshly squeezed oranges, with no added sugar. The perfect start to your day.",
     "basePrice": 4.0,
     "images": [
@@ -300,7 +300,7 @@
   {
     "id": 19,
     "name": "Vegetarian Burger",
-    "category": "Main Course",
+    "category": "Plat",
     "description": "A delicious meat-free option. A savory vegetable patty topped with creamy avocado, crisp lettuce, and fresh tomato, served on a toasted bun.",
     "basePrice": 12.0,
     "images": [
