@@ -28,6 +28,8 @@
 
 
 // le select de mobile
+
+
 document.addEventListener('DOMContentLoaded', () => {
 
   const customSelect = document.querySelector('.block.md\\:hidden');
@@ -165,53 +167,138 @@ function sendData() {
     `;
   });
 
-  // locale de panier 
+  // locale storage de panier 
   function addPanierToLocal(id) {
     const selectedCard = allData.find(card => card.id == id);
     if (selectedCard) {
-      let panier = JSON.parse(localStorage.getItem('panier')) || [];
-      panier.push(selectedCard);
-      localStorage.setItem('panier', JSON.stringify(panier));
+      let panierData = JSON.parse(localStorage.getItem('panier')) || [];
+      panierData.push(selectedCard);
+      localStorage.setItem('panier', JSON.stringify(panierData));
     }
   }
 
-
   // gestion des add to panier 
   let addpaniers = document.querySelectorAll('.btn-add-panier');
-  // console.log(addpaniers);
-  let panier = document.getElementById('panier-cards');
 
   addpaniers.forEach((btn) => {
     btn.addEventListener('click', (e) => {
-      e.stopPropagation(); // facultatif pour bloquer les events parents
-
       const id = e.currentTarget.dataset.id;
       const selectedCard = allData.find(card => card.id == id);
 
       if (selectedCard) {
-        // Ajouter dans le localStorage
         addPanierToLocal(id);
+        // ajoute de verification ........
 
-        // Afficher dans le panier
-        panier.innerHTML += `
-        <div class="card flex items-center justify-between mt-[1rem] p-2 border rounded-xl shadow-md bg-white">
-          <div class="flex items-center">
-            <div class="m-[1rem] w-[3rem] bg-headerOrange h-[3rem] flex items-center justify-center rounded-full">
-              <span class="text-[1.5rem] font-extrabold text-white">1x</span>
-            </div>
-            <div>
-              <h2 class="text-[1.2rem] font-semibold text-gray-800">${selectedCard.name}</h2>
-              <p class="text-[1rem] text-prixColor font-bold">${selectedCard.prix || ''} MAD</p>
-            </div>
-          </div>
-          <div class="cursor-pointer delete-item">
-            <img src="../assets/logo corbeille.png" alt="logo-corbeille" class="w-6 h-6">
-          </div>
-        </div>
-        <div class=" h-[0.1rem] bg-black w-[95%] ml-[2%] my-[1rem]"></div>`;
+        // add card for local to panier 
+
+        function addPanier() {
+          let panierElement = document.getElementById('panier-cards');
+          const dataa = localStorage.getItem('panier');
+          const panierItems = dataa ? JSON.parse(dataa) : [];
+
+
+          panierElement.innerHTML = '';
+          panierItems.forEach((item) => {
+            panierElement.innerHTML += `
+        <div class="flex items-start justify-between border-t border-black/40  mr-[1rem] ml-[1rem]  pb-4">
+                <!-- Bloc gauche -->
+                <div class="flex items-start gap-4">
+
+                  <!-- Badge quantité -->
+                  <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mt-[1rem]">
+                    <span class="text-white font-bold text-lg">1x</span>
+                  </div>
+
+                  <!-- Infos commande -->
+                  <div class="space-y-1">
+                    <p class="text-prixColor font-semibold text-xl font-oleo">$${item.price}</p>
+                    <p class="font-bold text-black font-roboto">${item.name}</p>
+                    <p class="text-black text-sm opacity-80 leading-4">
+                      No Mushrooms + green peppers
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Bouton suppression -->
+                <button class="opacity-70 hover:opacity-100 mt-[2rem] delete-item " data-id="${item.id}">
+                  <img src="../assets/logo corbeille.png" class="w-7">
+                </button>
+
+              </div>`;
+          })
+          deleteCard();
+          afficherPrice();
+        }
+        addPanier();
+        
+function totalAfterDelete(){
+  afficherPrice();
+}
+
+function deleteCard(){
+  let deleteCards = document.getElementsByClassName('delete-item');
+    deleteCards = Array.from(deleteCards);
+  deleteCards.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      const idToDelete = e.currentTarget.dataset.id;
+
+      let panierData = JSON.parse(localStorage.getItem('panier')) || [];
+      panierData = panierData.filter(item => item.id != idToDelete);
+      localStorage.setItem('panier', JSON.stringify(panierData));
+
+      totalAfterDelete();
+
+      const cardToDelete = e.currentTarget.parentElement;
+      cardToDelete.remove();
+    });
+  })
+
+}
+
+function afficherPrice() {
+  const dataa = localStorage.getItem('panier');
+  const panierItems = dataa ? JSON.parse(dataa) : [];
+
+  const total1 = document.getElementById('totalPrice');
+  const total2 = document.getElementById('totalPrice2');
+
+  let total = 0;
+    if (panierItems.length === 0){
+    total1.innerHTML = `          
+          <h2 class="text-[1.5rem] font-bold font-roboto text-white">Total to pay</h2>
+          <span class="font-roboto font-bold text-[1.5rem] text-white">${total}</span>`
+    total2.innerHTML = `          
+         <h2 class="font-roboto font-bold text-[1.5rem]">Sub Total: </h2>
+            <span class="font-roboto font-bold text-[1.5rem] text-prixColor">${total}</span>`
+    return;
+  }
+
+
+  panierItems.forEach((item) => {
+    total += parseFloat(item.price);
+  });
+  total += 5;
+  total1.innerHTML = `          
+        <h2 class="text-[1.5rem] font-bold font-roboto text-white">Total to pay</h2>
+        <span class="font-roboto font-bold text-[1.5rem] text-white">${total}</span>`
+
+  total2.innerHTML = `          
+       <h2 class="font-roboto font-bold text-[1.5rem]">Sub Total: </h2>
+          <span class="font-roboto font-bold text-[1.5rem] text-prixColor">${total}</span>`
+          
+}
+        
+
+
+
       }
     });
   });
+
+
+
+
+
 
 
   if (cuurentPage === 1) {
@@ -219,6 +306,8 @@ function sendData() {
   }
   nextBtn.disabled = end >= currentData.length;
 }
+
+
 
 nextBtn.addEventListener('click', () => {
   cuurentPage++;
@@ -287,3 +376,6 @@ function savetoPanier(card) {
   localStorage.setItem('panier', JSON.stringify(panier));
 }
 
+
+
+console.log(total)
