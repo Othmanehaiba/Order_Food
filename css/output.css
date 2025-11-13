@@ -3938,10 +3938,7 @@ video {
 
 #carousel-dots span.active {
   background-color: #333;
-  /* active slide */
 }
-
-/* Carousel Animation Styles */
 
 #carousel {
   transition: opacity 0.3s ease-in-out;

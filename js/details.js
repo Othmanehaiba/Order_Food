@@ -1,6 +1,6 @@
 let reviews = [];
 let currentReview;
-
+let allData = [];
 const authorEl = document.querySelector(".author-el");
 const speechEl = document.querySelector(".speech-el");
 const starsContainer = document.querySelector(".stars-container");
@@ -70,6 +70,7 @@ let priceGlobal = 0;
 fetch("../data/data.json")
   .then((res) => res.json())
   .then((data) => {
+    let allData = data;
     currentProduct = data.find((p) => p.id == id);
     displayProduct(currentProduct);
   })
@@ -114,7 +115,7 @@ function displayProduct(product) {
         <div class="hidden md:flex ml-6 mt-6 mb-6 space-x-3">
           <label for="quantity-desktop" class="font-semibold">Quantity</label>
           <button class="bg-yellow-400 text-white rounded px-3 text-lg font-bold" aria-label="Decrease quantity">-</button>
-          <input type="number" id="quantity-desktop" name="quantity" value="1" min="1" class="w-12 p-1 text-center rounded-lg border border-yellow-400 bg-transparent outline-none" />
+          <input type="number" readonly id="quantity-desktop" name="quantity" value="1" min="1" class="w-12 p-1 text-center rounded-lg border border-yellow-400 bg-transparent outline-none" />
           <button class="bg-yellow-400 text-white rounded px-3 text-lg font-bold" aria-label="Increase quantity">+</button>
         </div>
       </div>
@@ -153,7 +154,7 @@ function displayProduct(product) {
         <div class="md:hidden flex items-center justify-center mb-6 space-x-3">
           <label for="quantity-mobile" class="font-semibold text-2xl">Quantity</label>
           <button class="bg-yellow-400 text-white rounded px-3 text-lg font-bold" aria-label="Decrease quantity">-</button>
-          <input type="number" id="quantity-mobile" name="quantity-mobile" value="1" min="1" class="w-12 p-1 text-center rounded-lg border border-yellow-400 bg-transparent outline-none"/>
+          <input type="number" id="quantity-mobile" name="quantity-mobile" readonly value="1" min="1" class="w-12 p-1 text-center rounded-lg border border-yellow-400 bg-transparent outline-none"/>
           <button class="bg-yellow-400 text-white rounded px-3 text-lg font-bold" aria-label="Increase quantity">+</button>
         </div>
       </div>
@@ -164,7 +165,10 @@ function displayProduct(product) {
 
   const priceEl = document.querySelector(".price-el-js");
 
-  if (priceEl) priceEl.textContent = `${product.basePrice}`;
+  if (priceEl) {
+    priceEl.textContent = `${product.basePrice}`;
+    priceGlobal = product.basePrice;
+  }
   let selectedSizePrice = 0;
 
   const sizeDesktop = detailsSection.querySelector("#size-desktop");
@@ -234,12 +238,41 @@ function displayProduct(product) {
     window.location.href = `painement.html?id=${product.id}&quantity=${quantityGlobal}&price=${priceGlobal}`;
   });
 
-  // add to panier 
+  // add to panier
   const addToPanier = document.querySelector(".add-to-panier-js");
   console.log(addToPanier);
+  function addPanierToLocal(id) {
+    let panierData = JSON.parse(localStorage.getItem("panier")) || [];
+    console.log(panierData);
 
-  addToPanier.addEventListener('click',(e)=>{
-    
-  })
+    panierData.push({
+      ...product,
+      quantity: quantityGlobal,
+      basePrice: priceGlobal,
+    });
+    console.log(panierData);
 
+    localStorage.setItem("panier", JSON.stringify(panierData));
+  }
+  addToPanier.addEventListener("click", (e) => {
+    addPanierToLocal(product.id);
+    console.log("added successfully");
+    Swal.fire({
+      icon: "success",
+      title: "Added to Panier!",
+      text: `${product.name} has been added.`,
+      showCancelButton: false,
+      confirmButtonText: "Go to Menu",
+      cancelButtonText: "Go to Panier",
+      confirmButtonColor: "#f3c623",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.location.href = "../pages/menu.html";
+
+      } else {
+        window.location.href = "../index.html";
+
+      }
+    });
+  });
 }
