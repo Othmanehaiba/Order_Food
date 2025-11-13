@@ -1,7 +1,35 @@
 
+// fetch("../components/header.html")
+//             .then((response) => response.text())
+//             .then((data) => {
+//                 document.getElementById("header-placeholder").innerHTML = data;
+//                 console.log(data);
+//                 const menuBtn = document.getElementById("menu-btn");
+//                 const mobileMenu = document.getElementById("mobile-menu");
+
+//                 if (menuBtn && mobileMenu) {
+//                     menuBtn.addEventListener("click", () => {
+//                         mobileMenu.classList.toggle("hidden");
+//                         console.log("menu toggled");
+//                     });
+//                 } else {
+//                     console.warn("Menu button or mobile menu not found");
+//                 }
+//             })
+//             .catch((error) => console.error("Error loading header:", error));
+    
+//     fetch("../components/footer.html")
+//          .then((response) => response.text())
+//          .then((data) => {
+//              document.getElementById("footer-component").innerHTML = data;
+//              console.log(data);
+//          })
+//          .catch((error) => console.error("Error loading Footer:", error));
+
+
+// le select de mobile
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Kan selectioniw l-elementat
     const customSelect = document.querySelector('.block.md\\:hidden');
 
     if (customSelect) {
@@ -10,36 +38,28 @@ document.addEventListener('DOMContentLoaded', () => {
         const chevronIcon = selectTrigger.querySelector('i');
         const options = optionsList.querySelectorAll('li');
 
-        // Kan selectioniw l-elementat dial trigger (li ghay tbedlo)
         const triggerTitle = selectTrigger.querySelector('h4');
         const triggerSubtitle = selectTrigger.querySelector('span');
 
-        // --- L-POINT L-JADID ---
-        // Kan khzno l-data dial "All" (l-element l-asli) f wa7d l-variable
-        // Had l-variable ghayb9a dima fih l-data dial dakchi li m-affiché f trigger
+
         let currentTriggerData = {
             title: triggerTitle.textContent,
             subtitle: triggerSubtitle.textContent,
-            categorie: 'all', // N3tiwh 'all' b idina 7it ma 3ndoch data-attribute
-            imgSrc: '', // "All" ma 3ndhach image
+            categorie: 'all',
+            imgSrc: '', 
             imgAlt: ''
         };
-        // -------------------------
 
-        // Kan khbiiw l-lista f lowel
         optionsList.classList.add('hidden');
 
-        // Listener 3la trigger (bach n7elo w nsdo l-lista)
         selectTrigger.addEventListener('click', () => {
             optionsList.classList.toggle('hidden');
             chevronIcon.classList.toggle('rotate-180');
         });
 
-        // Listener 3la kol option f l-lista
         options.forEach(option => {
             option.addEventListener('click', (e) => {
 
-                // 1. Nakhdo data l-kamla mn l-option li t-clickat
                 const optionTitleEl = option.querySelector('h4');
                 const optionSubtitleEl = option.querySelector('span');
                 const optionImageEl = option.querySelector('img');
@@ -53,26 +73,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     imgAlt: optionImageEl.alt
                 };
 
-                // 2. Nakhdo l-data l-7alia dial trigger (li khzenaha f currentTriggerData)
-                // Ndiro copy bach ma ybdelch l-original 9bel l-wa9t
                 const oldTriggerData = { ...currentTriggerData };
 
-                // 3. Nbedlo l-trigger (l-button "All") b l-data dial l-option li t-clickat
                 triggerTitle.textContent = clickedOptionData.title;
-                triggerSubtitle.textContent = clickedOptionData.subtitle;
-                // Mola7ada: Trigger ma fihch <img> f l-HTML dialk, dakchi 3lach ma kanbdeloch tswira fih
-
-                // 4. Nbedlo l-option li t-clickat b l-data l-9dima dial trigger
+                
                 optionTitleEl.textContent = oldTriggerData.title;
+
                 optionSubtitleEl.textContent = oldTriggerData.subtitle;
+
+
                 option.setAttribute('data-categorie', oldTriggerData.categorie);
-                optionImageEl.src = oldTriggerData.imgSrc; // Ghay 7et src khawi mli ykon "All"
+                optionImageEl.src = oldTriggerData.imgSrc; 
                 optionImageEl.alt = oldTriggerData.imgAlt;
 
-                // 5. N-Update-iw l-variable b l-data l-jdida dial trigger
                 currentTriggerData = clickedOptionData;
 
-                // 6. Nsdo l-lista w n9ado l-icon
                 optionsList.classList.add('hidden');
                 chevronIcon.classList.remove('rotate-180');
 
@@ -82,7 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // (Bonus) Ila clickina bra dial select, nsedo l-lista
         document.addEventListener('click', (e) => {
             if (!customSelect.contains(e.target)) {
                 optionsList.classList.add('hidden');
@@ -95,28 +109,38 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// variable globale
+let prevnBtn = document.getElementById('prev-page-desktop');
+let nextBtn = document.getElementById('next-page-desktop');
 
-
-let allData = []; 
-let cuurentPage = 1 ;
-let cardInPage = 6
+let allData = [];
+let currentData = [];
+let cuurentPage = 1;
+let cardInPage = 6;
 
 
 fetch('../data/data.json')
-  .then(res => res.json())
-  .then(data => {
-    allData = data; 
-    sendData(allData);
-  })
-  .catch(err => console.error('Erreur de serveur: ' + err));
+	.then((res) => res.json())
+	.then((data) => {
+		allData = data;
+		currentData = data; 
+		sendData();
+	})
+	.catch((err) => console.error('Erreur de serveur: ' + err));
 
-function sendData(data) {
-  const menuDiv = document.getElementById('menu-div');
-  menuDiv.innerHTML = '';
+function sendData() {
+	const menuDiv = document.getElementById('menu-div');
+	menuDiv.innerHTML = '';
 
-  data.forEach(e => {
-    menuDiv.innerHTML += `
-      <div class="w-full h-[29rem] p-[1.5rem] bg-headerYellow rounded-[20px] shadow-[0_4px_20px_rgba(255,122,0,0.7)]">
+	let start = (cuurentPage - 1) * cardInPage;
+	let end = start + cardInPage;
+
+	const CardOn = currentData.slice(start, end);
+
+	CardOn.forEach((e) => {
+		menuDiv.innerHTML += `
+      <a href="details.html?id=${e.id}" class="block bg-white rounded-[1.25rem] shadow-lg hover:shadow-xl transition-shadow duration-300">
+      <div data-id=${e.id} class="w-full h-[29rem] p-[1.5rem] bg-headerYellow rounded-[20px] shadow-[0_4px_20px_rgba(255,122,0,0.7)]">
         <div class="w-full h-[75%] md:h-[75%]">
           <img src="${e.image}" alt="image-test" class="w-full h-full rounded-[20px]">
         </div>
@@ -129,57 +153,69 @@ function sendData(data) {
             </button>
           </div>
         </div>
-      </div>`;
-  });
+      </div>
+    </a>
+    `;
+	});
+
+  if (cuurentPage === 1) {
+      prevnBtn.classList.add('none');
+    }
+	nextBtn.disabled = end >= currentData.length;
 }
 
+nextBtn.addEventListener('click', () => {
+	cuurentPage++;
+	sendData();
+});
+
+prevnBtn.addEventListener('click', () => {
+	if (cuurentPage > 1) {
+		cuurentPage--;
+	}
+	sendData(); 
+});
+
 const filtre = document.querySelectorAll('[data-categorie]');
-filtre.forEach(btn => {
-  btn.addEventListener('click', e => {
-    const category = e.currentTarget.dataset.categorie;
+filtre.forEach((btn) => {
+	btn.addEventListener('click', (e) => {
+		const category = e.currentTarget.dataset.categorie;
 
-    let filteredData;
-    switch (category) {
-      case 'all':
-        filteredData = allData;
-        break;
-      case 'boissans':
-        filteredData = allData.filter(item => item.category === 'Boisson');
-        break;
-      case 'salade':
-        filteredData = allData.filter(item => item.category === 'Dessert');
-        break;
-      case 'repats':
-        filteredData = allData.filter(item => item.category === 'Plat');
-        break;
-      default:
-        filteredData = allData;
-    }
+		let filteredData; 
+		switch (category) {
+			case 'all':
+				filteredData = allData;
+				break;
+			case 'boissans':
+				filteredData = allData.filter((item) => item.category === 'Boisson');
+				break;
+			case 'salade':
+				filteredData = allData.filter((item) => item.category === 'Dessert');
+				break;
+			case 'repats':
+				filteredData = allData.filter((item) => item.category === 'Plat');
+				break;
+			default:
+				filteredData = allData;
+		}
 
-    sendData(filteredData);
-  });
+		currentData = filteredData; 
+		cuurentPage = 1; 
+		sendData(); 
+	});
 });
 
 
-// // Sélectionner tous les éléments qui ont data-categorie
-// const filterItems = document.querySelectorAll('[data-categorie]');
-
-// filterItems.forEach(item => {
-//     item.addEventListener('click', () => {
-//         const fil = item.dataset.categorie;
-
-//         if (fil === "all") {
-//             console.log('All selected');
-//             sendData(data); // envoyer tous les éléments
-//         } else {
-//             // filtrer le tableau data par catégorie
-//             const filteredData = data.filter(el => el.categorie.toLowerCase() === fil.toLowerCase());
-//             console.log(`${fil} selected`, filteredData);
-//             sendData(filteredData);
-//         }
-//     });
-// });
 
 
-
-
+// recherche 
+const searchInput = document.getElementById('search-bar');
+searchInput.addEventListener('input', (e) => {
+  const searchTerm = e.target.value.toLowerCase();
+  const filteredData = allData.filter(item =>
+    item.name.toLowerCase().includes(searchTerm)
+  );
+  currentData = filteredData;
+  cuurentPage = 1; 
+  sendData();
+});
