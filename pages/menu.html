@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="../css/output.css">
 </head>
 
-<body class="bg-bodyColor overflow-x-hidden">
-    <header id="header-placeholder">
-    </header>
-
+<body class="bg-bodyColor overflow-x-hidden ">
+    <div id="header-placeholder">
+    </div>
+    <div id="panier-placeholder"></div>
     <section class="hero-section flex flex-col md:flex-row justify-center items-center pt-8 md:pt-0">
 
         <div class="hero-section-left w-full md:w-[39.0625rem] md:mx-[5rem] p-8 md:p-0 text-center md:text-left">
@@ -45,7 +45,7 @@
 
         <div class="image-sepecial-menu m-4 md:m-16 grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-4 md:gap-20 ">
             <div class="rounded-[50px] md:row-start-1 md:row-end-3 relative group shadow-[0_4px_20px_#FF7A00]">
-                <img class="rounded-[50px] h-[100%] w-[100%] object-cover" src="../assets/Menu-special-jus.png"
+                <img class="rounded-[50px] h-[100%] w-full h-full object-cover " src="../assets/Menu-special-jus.png"
                     alt="special-jus">
                 <div
                     class="rounded-[50px] pl-[1.7rem] w-[90%] h-[23.125rem] absolute md:top-[47%] top-[57%] md:top-[60%] ml-[1.1rem] inset-0 bg-headerYellow bg-opacity-70 text-white opacity-0 opacity-0 translate-y-1/4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
@@ -61,7 +61,8 @@
                 </div>
             </div>
             <div class="rounded-[50px] md:col-start-2 md:col-end-4 relative group shadow-[0_4px_20px_#FF7A00]">
-                <img class="rounded-[50px] w-[100%]" src="../assets/Menu-special-princiales.png" alt="special-jus">
+                <img class="rounded-[50px] w-[100%] h-full object-cover " src="../assets/Menu-special-princiales.png"
+                    alt="special-jus">
                 <div
                     class="rounded-[50px] pl-[1.7rem] w-[90%] md:w-[95%] h-[9.5rem] md:h-[12.5rem] absolute top-[35%] md:top-[53%]  ml-[1.1rem] inset-0 bg-headerYellow bg-opacity-70 text-white opacity-0 opacity-0 translate-y-1/4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
                     <h3 class="font-oleo text-[1.5rem] md:text-[1.9rem] mt-[1rem] ">Strawberry Juice</h3>
@@ -77,7 +78,7 @@
                 </div>
             </div>
             <div class="rounded-[50px] relative group shadow-[0_4px_20px_#FF7A00]">
-                <img class="rounded-[50px] w-[100%] h-[100%] object-cover" src="../assets/Menu-special-desert.png"
+                <img class="rounded-[50px] w-[100%] h-full object-cover" src="../assets/Menu-special-desert.png"
                     alt="special-jus">
                 <div
                     class="rounded-[50px] pl-[1.7rem] w-[90%] h-[15.5rem] md:h-[16.5rem] absolute top-[40%]  md:top-[40%] ml-[1.1rem] inset-0 bg-headerYellow bg-opacity-70 text-white opacity-0 opacity-0 translate-y-1/4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
@@ -92,7 +93,7 @@
                 </div>
             </div>
             <div class="rounded-[50px] relative group shadow-[0_4px_20px_#FF7A00]">
-                <img class="rounded-[50px] w-[100%] h-[100%] object-cover" src="../assets/Menu-special-salade.png"
+                <img class="rounded-[50px] w-[100%] h-full object-cover" src="../assets/Menu-special-salade.png"
                     alt="special-jus">
                 <div
                     class="rounded-[50px] pl-[1.7rem] w-[90%] h-[15.5rem] md:h-[16.5rem] absolute top-[40%]  md:top-[40%] ml-[1.1rem] inset-0 bg-headerYellow bg-opacity-70 text-white opacity-0 opacity-0 translate-y-1/4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
@@ -122,16 +123,21 @@
             <hr class="border-t-[0.3rem] border-headerYellow w-1/4 md:w-[8.6875rem]">
         </div>
         <input
-            class="placeholder-black placeholder-opacity-70 p-[2rem] w-[19rem] md:w-[25rem] h-[4.25rem] bg-headerOrange opacity-80 text-black font-extrabold text-[1.3rem] rounded-[50px] mx-[6rem] md:mx-[34rem] my-[2rem]"
+            id="search-bar" class="placeholder-black placeholder-opacity-70 p-[2rem] w-[19rem] md:w-[25rem] h-[4.25rem] bg-headerOrange opacity-80 text-black font-extrabold text-[1.3rem] rounded-[50px] mx-[6rem] md:mx-[34rem] my-[2rem]"
             type="text" placeholder="Taper le plat ....">
 
-        <div class="block md:hidden w-full max-w-md mx-auto">
+        <div class="block md:hidden w-full max-w-md mx-auto" id="filtre">
             <div
-                class="relative flex justify-center items-center gap-[2rem] mx-auto w-[80%] border-[3px] rounded-[30px] border-black p-[1rem] ">
-                <div class="text-center p-2 cursor-pointer">
-                    <h4 class="text-2xl font-bold text-black font-oleo text-[2.5rem]">All</h4>
-                    <span class="text-sm text-headerYellow font-roboto font-bold text-[1.3rem]">repats , boisons
-                        ...</span>
+                class="hover:bg-headerOrange rounded-t-[30px] transition-all duration-300 ease-in-out relative flex justify-center items-center gap-[2rem] mx-auto w-[80%] border-[3px] rounded-[30px] border-black p-[1rem] ">
+                
+                <div class="flex justify-center items-center space-x-3 p-2 cursor-pointer" data-categorie="all">
+                    <div class="w-[6rem] h-[6rem]">
+                        <img src="../assets/Menu-all-section.webp" alt="All items" class="w-full h-full object-contain">
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-bold text-black font-oleo text-[2.5rem]">All</h4>
+                        <span class="text-sm text-headerYellow font-roboto font-bold text-[1.3rem]">repats , boisons ...</span>
+                    </div>
                 </div>
                 <i class="fa-solid fa-chevron-down absolute bottom-[3rem] left-[20rem]"></i>
             </div>
@@ -150,7 +156,7 @@
                         </div>
                     </div>
                 </li>
-                <li data-categorie="boisons" class="mb-[3px] border-b-[3px] border-black p-[0.7rem]">
+                <li data-categorie="boissans" class="mb-[3px] border-b-[3px] border-black  hover:bg-headerOrange transition-all duration-300 ease-in-out">
                     <div class="flex justify-center items-center space-x-3 cursor-pointer">
                         <div class="w-[6rem] h-[6rem]">
                             <img src="../assets/Menu-section-boissans.png" alt="Menu-section-boissans"
@@ -163,7 +169,7 @@
                         </div>
                     </div>
                 </li>
-                <li data-categorie="salade" class="mb-[3px] p-[0.7rem]">
+                <li data-categorie="salade" class="mb-[3px] p-[0.7rem] hover:bg-headerOrange rounded-b-[30px] transition-all duration-300 ease-in-out">
                     <div class="flex  justify-center items-center space-x-3 p-2 cursor-pointer">
                         <div class="w-12 h-12">
                             <img src="../assets/Menu-section-salad.png" alt="Menu-section-salad"
@@ -179,16 +185,16 @@
             </ul>
         </div>
 
-        <div class="hidden md:flex justify-center items-center w-full max-w-5xl mx-auto my-8 space-x-4 w-full">
+        <div class="hidden md:flex justify-center items-center w-full max-w-5xl mx-auto my-8 space-x-4 w-full" id="filtre" >
 
-            <div class="text-center p-2 cursor-pointer">
+            <div class="text-center p-2 cursor-pointer" data-categorie="all">
                 <h4 class="text-2xl font-bold text-black font-oleo text-[2.5rem]">All</h4>
                 <span class="text-sm text-headerYellow font-roboto font-bold text-[1.3rem]">repats , boisons ...</span>
             </div>
 
             <div class="border-2 border-headerYellow h-[6.5rem]"></div>
 
-            <div class="flex items-center space-x-3 p-2 cursor-pointer">
+            <div class="flex items-center space-x-3 p-2 cursor-pointer" data-categorie="repats">
                 <div class="w-[6rem] h-[6rem]">
                     <img src="../assets/Menu-section-repats.png" alt="Menu-section-repats"
                         class="w-full h-full object-contain">
@@ -201,7 +207,7 @@
 
             <div class="border-2 border-headerYellow h-[6.5rem]"></div>
 
-            <div class="flex items-center space-x-3 cursor-pointer">
+            <div class="flex items-center space-x-3 cursor-pointer" data-categorie="boissans">
                 <div class="w-[6rem] h-[6rem]">
                     <img src="../assets/Menu-section-boissans.png" alt="Menu-section-boissans"
                         class="w-full h-full object-contain">
@@ -215,7 +221,7 @@
 
             <div class="border-2 border-headerYellow h-[6.5rem]"></div>
 
-            <div class="flex items-center space-x-3 p-2 cursor-pointer">
+            <div class="flex items-center space-x-3 p-2 cursor-pointer" data-categorie="salade">
                 <div class="w-12 h-12">
                     <img src="../assets/Menu-section-salad.png" alt="Menu-section-salad"
                         class="w-full h-full object-contain">
@@ -227,98 +233,38 @@
                 </div>
             </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-[2.5rem] px-[2rem] md:px-[7rem] mt-[5rem] ">
-            <div
-                class="w-full h-[29rem] p-[1.5rem] bg-headerYellow rounded-[20px] shadow-[0_4px_20px_rgba(255,122,0,0.7)]">
-                <div class=":w-full  h-[75%] md:h-[75%] ">
-                    <img src="../assets/Menu-test.jpg" alt="image-test" class="w-full h-full rounded-[20px]">
-                </div>
-                <div>
-                    <h3 class="font-roboto font-bold text-[1.7rem] ml-[1.5rem] mt-[1rem]">Kiwi New Zealand</h3>
-                    <div class="flex items-center justify-center gap-[7rem] md:gap-[5rem] mt-[0.3rem] ">
-                        <span class="font-oleo font-bold text-prixColor text-[2rem] ml-[1rem]">$33.00</span>
-                        <button
-                            class="bg-prixColor w-[9rem] h-[3rem] text-[1.1rem] font-bold font-roboto text-white rounded-[50px] ">Add
-                            to panier </button>
-                    </div>
-                </div>
-            </div>
-            <div
-                class="w-full h-[29rem] p-[1.5rem] bg-headerYellow rounded-[20px] shadow-[0_4px_20px_rgba(255,122,0,0.7)]">
-                <div class=":w-full  h-[75%] md:h-[75%] ">
-                    <img src="../assets/Menu-test.jpg" alt="image-test" class="w-full h-full rounded-[20px]">
-                </div>
-                <div>
-                    <h3 class="font-roboto font-bold text-[1.7rem] ml-[1.5rem] mt-[1rem]">Kiwi New Zealand</h3>
-                    <div class="flex items-center justify-center gap-[7rem] md:gap-[5rem] mt-[0.3rem] ">
-                        <span class="font-oleo font-bold text-prixColor text-[2rem] ml-[1rem]">$33.00</span>
-                        <button
-                            class="bg-prixColor w-[9rem] h-[3rem] text-[1.1rem] font-bold font-roboto text-white rounded-[50px] ">Add
-                            to panier </button>
-                    </div>
-                </div>
-            </div>
-            <div
-                class="w-full h-[29rem] p-[1.5rem] bg-headerYellow rounded-[20px] shadow-[0_4px_20px_rgba(255,122,0,0.7)]">
-                <div class=":w-full  h-[75%] md:h-[75%] ">
-                    <img src="../assets/Menu-test.jpg" alt="image-test" class="w-full h-full rounded-[20px]">
-                </div>
-                <div>
-                    <h3 class="font-roboto font-bold text-[1.7rem] ml-[1.5rem] mt-[1rem]">Kiwi New Zealand</h3>
-                    <div class="flex items-center justify-center gap-[7rem] md:gap-[5rem] mt-[0.3rem] ">
-                        <span class="font-oleo font-bold text-prixColor text-[2rem] ml-[1rem]">$33.00</span>
-                        <button
-                            class="bg-prixColor w-[9rem] h-[3rem] text-[1.1rem] font-bold font-roboto text-white rounded-[50px] ">Add
-                            to panier </button>
-                    </div>
-                </div>
-            </div>
-            <div
-                class="hidden md:block w-full h-[29rem] p-[1.5rem] bg-headerYellow rounded-[20px] shadow-[0_4px_20px_rgba(255,122,0,0.7)]">
-                <div class=":w-full  h-[75%] md:h-[75%] ">
-                    <img src="../assets/Menu-test.jpg" alt="image-test" class="w-full h-full rounded-[20px]">
-                </div>
-                <div>
-                    <h3 class="font-roboto font-bold text-[1.7rem] ml-[1.5rem] mt-[1rem]">Kiwi New Zealand</h3>
-                    <div class="flex items-center justify-center gap-[7rem] md:gap-[5rem] mt-[0.3rem] ">
-                        <span class="font-oleo font-bold text-prixColor text-[2rem] ml-[1rem]">$33.00</span>
-                        <button
-                            class="bg-prixColor w-[9rem] h-[3rem] text-[1.1rem] font-bold font-roboto text-white rounded-[50px] ">Add
-                            to panier </button>
-                    </div>
-                </div>
-            </div>
-            <div
-                class="hidden md:block w-full h-[29rem] p-[1.5rem] bg-headerYellow rounded-[20px] shadow-[0_4px_20px_rgba(255,122,0,0.7)]">
-                <div class=":w-full  h-[75%] md:h-[75%] ">
-                    <img src="../assets/Menu-test.jpg" alt="image-test" class="w-full h-full rounded-[20px]">
-                </div>
-                <div>
-                    <h3 class="font-roboto font-bold text-[1.7rem] ml-[1.5rem] mt-[1rem]">Kiwi New Zealand</h3>
-                    <div class="flex items-center justify-center gap-[7rem] md:gap-[5rem] mt-[0.3rem] ">
-                        <span class="font-oleo font-bold text-prixColor text-[2rem] ml-[1rem]">$33.00</span>
-                        <button
-                            class="bg-prixColor w-[9rem] h-[3rem] text-[1.1rem] font-bold font-roboto text-white rounded-[50px] ">Add
-                            to panier </button>
-                    </div>
-                </div>
-            </div>
-            <div
-                class="hidden md:block w-full h-[29rem] p-[1.5rem] bg-headerYellow rounded-[20px] shadow-[0_4px_20px_rgba(255,122,0,0.7)]">
-                <div class=":w-full  h-[75%] md:h-[75%] ">
-                    <img src="../assets/Menu-test.jpg" alt="image-test" class="w-full h-full rounded-[20px]">
-                </div>
-                <div>
-                    <h3 class="font-roboto font-bold text-[1.7rem] ml-[1.5rem] mt-[1rem]">Kiwi New Zealand</h3>
-                    <div class="flex items-center justify-center gap-[7rem] md:gap-[5rem] mt-[0.3rem] ">
-                        <span class="font-oleo font-bold text-prixColor text-[2rem] ml-[1rem]">$33.00</span>
-                        <button
-                            class="bg-prixColor w-[9rem] h-[3rem] text-[1.1rem] font-bold font-roboto text-white rounded-[50px] ">Add
-                            to panier </button>
-                    </div>
-                </div>
-            </div>
+        <div class="relative w-full  mx-auto">
+
+    <button id="prev-page-desktop"
+        class="hidden md:block absolute left-2 md:left-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-headerYellow text-prixColor rounded-full shadow-lg text-2xl hover:bg-opacity-80 transition-all">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-[2.5rem] px-[2rem] md:px-[7rem] mt-[5rem]"
+        id="menu-div">
         </div>
+  
+
+    <button id="next-page-desktop"
+        class="hidden md:block absolute right-2 md:right-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-headerYellow text-prixColor rounded-full shadow-lg text-2xl hover:bg-opacity-80 transition-all">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <div class="flex md:hidden justify-center items-center gap-4 mt-8">
+        
+        <button id="prev-page-mobile"
+            class="w-12 h-12 bg-headerYellow text-prixColor rounded-full shadow-lg text-2xl hover:bg-opacity-80 transition-all">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <button id="next-page-mobile"
+            class="w-12 h-12 bg-headerYellow text-prixColor rounded-full shadow-lg text-2xl hover:bg-opacity-80 transition-all">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </div>
+    
+</div>
+        
     </section>
 
     <!-- nos service section !! -->
@@ -340,7 +286,7 @@
         </div>
     </section>
     <section class="plat-of-month">
-        <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-[3rem] mt-16 md:mt-[10rem]">
+        <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-[3rem] mt-16 md:mt-[10rem] md:mb-[3rem]">
             <hr class="border-t-[0.3rem] border-headerYellow w-1/4 md:w-[8.6875rem]">
             <h2 class="font-oleo text-3xl md:text-[3.75rem] text-headerYellow text-center">Dish of the month</h2>
             <hr class="border-t-[0.3rem] border-headerYellow w-1/4 md:w-[8.6875rem]">
@@ -357,7 +303,8 @@
 
                 <h3 class="font-oleo font-bold text-4xl lg:text-[4.5rem]">Pizza Margherita</h3>
 
-                <p class="mt-4 md:mt-6 font-roboto font-bold text-lg md:text-[1.4rem] mb-4 md:mb-[.5rem] md:mt-[5rem] md:w-[30rem]">
+                <p
+                    class="mt-4 md:mt-6 font-roboto font-bold text-lg md:text-[1.4rem] mb-4 md:mb-[.5rem] md:mt-[5rem] md:w-[30rem]">
                     The Margherita Pizza is a classic Italian recipe made with tomato sauce, melted mozzarella, and
                     fresh basil leaves
                 </p>
@@ -373,10 +320,13 @@
             </div>
         </div>
     </section>
-    <footer id="footer-component">
+    <footer id="footer-placeholder">
 
     </footer>
     <script src="../js/menu.js"></script>
+    <script type="module" src="../js/global.js"></script>
+
+    <script type="module" src="../js/global.js"></script>
 
 </body>
 
