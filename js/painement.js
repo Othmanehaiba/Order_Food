@@ -1,5 +1,4 @@
 // Declaration Des variables
-
 const Formulaire = {
   name: document.getElementById("name"),
   phone: document.getElementById("phone"),
@@ -7,7 +6,6 @@ const Formulaire = {
   adress: document.getElementById("adress"),
   terms: document.getElementById("terms"),
 };
-const paybtn = document.getElementById("pay-btn");
 
 // validation regex
 
@@ -27,10 +25,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Exemple de données
     const order = {
-      name: "Maryem",
-      email: "maryem@gmail.com",
-      address: "Rue 04 ,Safi",
-      phone: "06 12 34 56 78",
+      name: document.getElementById("name"),
+      email: document.getElementById("email"),
+      address: document.getElementById("adress"),
+      phone: document.getElementById("phone"),
       items: [
         { name: "12” Vegetarian Pizza", price: 27.9, quantity: 1 },
         { name: "Cheese Burger", price: 15.5, quantity: 2 },
@@ -87,12 +85,15 @@ document.addEventListener("DOMContentLoaded", () => {
     doc.text("Total:", 25, y);
     doc.setTextColor(0, 100, 0);
     doc.text(`£${order.total.toFixed(2)}`, 170, y, { align: "right" });
-     // autre ligne 
-     doc.setTextColor(0, 0, 0);
-     doc.setFont("Roboto", "semibold");
-     doc.setFontSize(12);
-     doc.text("-------------------------------------------------------------------------------------------------------------------------", 20, 190);
-     
+    // autre ligne
+    doc.setTextColor(0, 0, 0);
+    doc.setFont("Roboto", "semibold");
+    doc.setFontSize(12);
+    doc.text(
+      "-------------------------------------------------------------------------------------------------------------------------",
+      20,
+      190
+    );
 
     // Message final
     doc.setTextColor(0, 0, 0);
@@ -105,21 +106,21 @@ document.addEventListener("DOMContentLoaded", () => {
     doc.save(`FoodOrder_Ticket.pdf`);
   });
 
-  // button suprimer 
+  // button suprimer
 
   btn1 = document.getElementById("delete-cmd1");
   btn2 = document.getElementById("delete-cmd2");
   btn3 = document.getElementById("delete-cmd3");
-  btn1.addEventListener("click",() =>{
-     const commande = document.getElementById("delete-cmd1");
-     commande.remove();
+  btn1.addEventListener("click", () => {
+    const commande = document.getElementById("delete-cmd1");
+    commande.remove();
   });
-   btn2.addEventListener("click", () => {
-     const commande = document.getElementById("delete-cmd2");
-     commande.remove();
-   });
-    btn3.addEventListener("click", () => {
-      const commande = document.getElementById("delete-cmd3");
-      commande.remove();
-    });
+  btn2.addEventListener("click", () => {
+    const commande = document.getElementById("delete-cmd2");
+    commande.remove();
+  });
+  btn3.addEventListener("click", () => {
+    const commande = document.getElementById("delete-cmd3");
+    commande.remove();
+  });
 });
