@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
 
     // Validation
-    if (!regex.name.test(Formulaire.name.value)) 
-     return alert("Nom invalide,essaiye de saisir un autre nom");
+    if (!regex.name.test(Formulaire.name.value))
+      return alert("Nom invalide,essaiye de saisir un autre nom");
     if (!regex.phone.test(Formulaire.phone.value))
       return alert("Téléphone invalide");
     if (!regex.email.test(Formulaire.email.value))
@@ -31,19 +31,35 @@ document.addEventListener("DOMContentLoaded", () => {
       return alert("Adresse invalide");
     if (!Formulaire.terms.checked)
       return alert("Veuillez accepter les conditions");
+    // Récupération dynamique des commandes
+    const cartItems = [...document.querySelectorAll(".commande")].map(
+      (item) => ({
+        name: item.dataset.name,
+        price: Number(item.dataset.price),
+        quantity: Number(item.dataset.quantity),
+      })
+    );
+
+    if (cartItems.length === 0) {
+      alert("Aucun produit dans le panier !");
+      return;
+    }
+
+    // Calcul du total réel
+    const totalOrder = cartItems.reduce(
+      (sum, item) => sum + item.price * item.quantity,
+      0
+    );
 
     // Génération PDF
-     const order = {
+    const order = {
       name: document.getElementById("name").value,
       email: document.getElementById("email").value,
       address: document.getElementById("adress").value,
       phone: document.getElementById("phone").value,
-      items: [
-        { name: "12” Vegetarian Pizza", price: 27.9, quantity: 1 },
-        { name: "Cheese Burger", price: 15.5, quantity: 2 },
-      ],
-      total: 27.9 + 15.5 * 2,
-     };
+      items: cartItems,
+      total: totalOrder,
+    };
 
     // Génération du ticket PDF
     const { jsPDF } = window.jspdf;
@@ -124,66 +140,87 @@ document.addEventListener("DOMContentLoaded", () => {
     const commande = document.getElementById("delete-cmd1");
     commande.remove();
   });
-     //   btn2.addEventListener("click", () => {
-     //     const commande = document.getElementById("delete-cmd2");
-     //     commande.remove();
-     //   });     
-//   btn3.addEventListener("click", () => {
-//     const commande = document.getElementById("delete-cmd3");
-//     commande.remove();
-//   });
+  //   btn2.addEventListener("click", () => {
+  //     const commande = document.getElementById("delete-cmd2");
+  //     commande.remove();
+  //   });
+  //   btn3.addEventListener("click", () => {
+  //     const commande = document.getElementById("delete-cmd3");
+  //     commande.remove();
+  //   });
 });
 
 const params = new URLSearchParams(window.location.search);
-let Id = params.get('id');
-const price = params.get('price');
-const quantity = params.get('quantity');
+let Id = params.get("id");
+const price = params.get("price");
+const quantity = params.get("quantity");
 const total = document.getElementById("total-price");
 total.textContent = `$${price || 0}`;
 
-fetch('../data/data.json')
-     .then(res => res.json())
-     .then(data => {
-          if(Id) {
-                          const card = data.find(c => c.id == Id);
-               const dataContainer = document.getElementById("data");
-               dataContainer.innerHTML = ` <div class="flex items-start justify-between mt-6 pb-4">
-                <!-- Bloc gauche -->
+fetch("../data/data.json")
+  .then((res) => res.json())
+  .then((data) => {
+    if (Id) {
+      const card = data.find((c) => c.id == Id);
+      const dataContainer = document.getElementById("data");
+      dataContainer.innerHTML = `
+       <div class="commande flex items-start justify-between mt-6 pb-4"
+          data-name="${card.name}"
+          data-price="${price}"
+          data-quantity="${quantity}">
+
+        <div class="flex items-start gap-4 mt-8">
+        <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center">
+        <span class="text-white font-bold text-lg">${quantity}x</span>
+        </div>
+
+        <div class="space-y-1">
+        <p class="text-prixColor font-semibold text-xl">$${price}</p>
+        <p class="font-bold text-black">${card.name}</p>
+        <p class="text-black text-sm opacity-80">${card.category}</p>
+        </div>
+       </div>
+
+       <button id="delete-cmd1" class="delete-btn opacity-70 hover:opacity-100 mt-6">
+         <img src="../assets/remove.png" class="w-7">
+       </button>
+       </div>
+     `;
+
+      const btn = document.getElementById("delete-cmd1");
+      btn.addEventListener("click", () => {
+        dataContainer.innerHTML = "";
+        window.location.search = "";
+        total.textContent = `$0`;
+      });
+    }else{
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      let totalGlobal = 0;
+      dataContainer.innerHTML = "";
+       cart.forEach((item) => {
+         dataContainer.innerHTML += `
+            <div class="commande flex items-start justify-between mt-6 pb-4">
+
                 <div class="flex items-start gap-4 mt-8">
+                    <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">${item.quantity}x</span>
+                    </div>
 
-                  <!-- Badge quantité -->
-                  <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center">
-                    <span class="text-white font-bold text-lg">${quantity}x</span>
-                  </div>
-
-                  <!-- Infos commande -->
-                  <div class="space-y-1">
-                    <p class="text-prixColor font-semibold text-xl">$${price}</p>
-                    <p class="font-bold text-black">${card.name}</p>
-                    <p class="text-black text-sm opacity-80 leading-4">
-                      ${card.category}
-                    </p>
-                  </div>
+                    <div class="space-y-1">
+                        <p class="text-prixColor font-semibold text-xl">$${item.price}</p>
+                        <p class="font-bold text-black">${item.name}</p>
+                        <p class="text-black text-sm opacity-80">${item.category}</p>
+                    </div>
                 </div>
 
-                <!-- Bouton suppression -->
-                <button id="delete-cmd1" class="opacity-70 hover:opacity-100 mt-6">
-                  <img src="../assets/remove.png" class="w-7">
+                <button class="delete-ls opacity-70 hover:opacity-100 mt-6">
+                    <img src="../assets/remove.png" class="w-7">
                 </button>
+            </div>
+        `;
 
-              </div>`;
-
-              const btn = document.getElementById("delete-cmd1");
-              btn.addEventListener("click", () => {
-               
-               
-                dataContainer.innerHTML = "";
-                window.location.search = "";
-                total.textContent = `$0`;
-              });
-          }
-    
-
-     })
-
-
+         totalGlobal += item.price * item.quantity;
+       });
+        total.textContent = `$${totalGlobal.toFixed(2)}`;
+    }
+  });
