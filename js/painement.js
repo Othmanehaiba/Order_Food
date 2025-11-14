@@ -173,12 +173,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
+let totalGlobal = 0;
 
 fetch("../data/data.json")
   .then((res) => res.json())
   .then((data) => {
-    let totalGlobal = 0;
+    
     if (Id) {
       const card = data.find((c) => c.id == Id);
       const dataContainer = document.getElementById("data");
@@ -265,7 +265,7 @@ fetch("../data/data.json")
           cardD.remove();
           totalGlobal = 0;
           data.forEach(d => {
-            totalGlobal += d.basePrice; 
+            totalGlobal += d.basePrice * d.quantity; 
           });
 
               if (Id == null) {
