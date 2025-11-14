@@ -6,7 +6,7 @@ export function Header() {
     >
       <div class="flex items-center space-x-3">
         <img
-          src="../assets/food-order-logo.png"
+          src="../public/images/food-order-logo.png"
           alt="foodOrder+ logo"
           class="h-8 sm:h-10 object-contain"
         />
@@ -25,7 +25,7 @@ export function Header() {
           class="flex items-center space-x-2 bg-headerOrange hover:bg-black text-white font-semibold px-4 py-2 rounded-[30px]"
         >
           <span>Panier</span>
-          <img src="../assets/shopping card.png" alt="shopping card icon">
+          <img src="../public/images/shopping card.png" alt="shopping card icon">
         </button>
         </div>
 
@@ -50,7 +50,7 @@ export function Header() {
         class="bg-headerOrange w-full text-white py-6 flex flex-col items-center shadow-md"
       >
         <img
-          src="../assets/food-order-logo.png"
+          src="../public/images/food-order-logo.png"
           alt="foodOrder+ logo"
           class="w-[90%] m-auto"
         />
@@ -68,7 +68,7 @@ export function Header() {
           class="flex items-center space-x-2 bg-headerOrange text-white font-semibold px-8 py-4 rounded-[30px] hover:bg-black transition-colors mt-[5rem] mb-8 mx-auto"
         >
           <span>Panier</span>
-          <img src="../assets/shopping card.png" alt="shopping card icon">
+          <img src="../public/images/shopping card.png" alt="shopping card icon">
         </button>
     </div>
   `;
