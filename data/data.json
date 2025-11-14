@@ -319,10 +319,10 @@
     "description": "An elegant and decadent dessert. A rich, creamy vanilla custard base topped with a contrasting layer of hard, crunchy caramelized sugar.",
     "basePrice": 5.5,
     "images": [
-      "../assets/imageData/Crème Brûlée.jpg",
-      "../assets/imageData/Crème Brûlée-2.jpg",
-      "../assets/imageData/Crème Brûlée-3.jpg",
-      "../assets/imageData/Crème Brûlée-4.jpg"
+      "../assets/imageData/cremebrulee4.jpg",
+      "../assets/imageData/cremebrulee1.jpg",
+      "../assets/imageData/cremebrulee2.jpg",
+      "../assets/imageData/cremebrulee3.png"
     ],
     "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": false
