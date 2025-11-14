@@ -15,7 +15,7 @@ id="panier-div">
 <div class="min-h-screen md:h-screen bg-bodyColor w-full pb-[1.5rem] shadow-lg overflow-y-auto">
 
           <div class="bg-prixColor h-[20vh] flex justify-center items-center gap-[1rem] py-[2.5rem] relative">
-<img src="../assets/logo-panier.png" alt="logo-panier ">
+<img src="../public/images/logo-panier.png" alt="logo-panier ">
 <h2 class="font-oleo text-white text-[2rem]">My Panier</h2>
 
           <button id="close-panier-btn" 
@@ -37,7 +37,7 @@ id="panier-div">
 </div>
 <a href="../pages/painement.html">
 <div class="bg-prixColor w-[90%] rounded-[10px] flex h-[4.5rem] justify-center items-center mx-auto gap-[25px] p-[0.4rem] mt-[2rem]">
-<img src="../assets/logo checkout.png" class="text-[1.5rem] font-bold font-roboto text-white"></img>
+<img src="../public/images/logo checkout.png" class="text-[1.5rem] font-bold font-roboto text-white"></img>
 <span class="font-roboto font-bold text-[1.5rem] text-white">Checkout!</span>
 </div>
 </a>
@@ -111,7 +111,7 @@ S </p>
 </div>
 
 <button class="opacity-70 hover:opacity-100 mt-[2rem] delete-item" data-id="${item.id}">
-<img src="../assets/logo corbeille.png" class="w-7">
+<img src="../public/images/logo corbeille.png" class="w-7">
 </button>
 
 </div>`;
