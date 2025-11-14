@@ -221,5 +221,6 @@ fetch("../data/data.json")
 
          totalGlobal += item.price * item.quantity;
        });
+        total.textContent = `$${totalGlobal.toFixed(2)}`;
     }
   });
