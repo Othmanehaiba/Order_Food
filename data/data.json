@@ -178,10 +178,10 @@
     "description": "A vibrant and fresh appetizer. Toasted artisan bread rubbed with garlic, topped with a delicious mix of diced fresh tomatoes, basil, and a drizzle of olive oil.",
     "basePrice": 5.99,
     "images": [
-      "../assets/imageData/Bruschetta Tomate.jpg",
-      "../assets/imageData/Bruschetta Tomate-2.jpg",
-      "../assets/imageData/Bruschetta Tomate-3.jpg",
-      "../assets/imageData/Bruschetta Tomate-4.jpg"
+      "../assets/imageData/bruschetta.jpg",
+      "../assets/sauce-1.png",
+      "../assets/imageData/bruschetta1.jpg",
+      "../assets/sauce-2.png"
     ],
     "sizes": [
       { "label": "4 pieces", "price": 0 },
@@ -196,10 +196,10 @@
     "description": "A rich and airy delight for chocolate lovers. This light mousse is made from decadent dark chocolate, offering a perfect, indulgent end to your meal.",
     "basePrice": 5.0,
     "images": [
-      "../assets/imageData/Mousse au Chocolat.jpg",
-      "../assets/imageData/Mousse au Chocolat-2.jpg",
-      "../assets/imageData/Mousse au Chocolat-3.jpg",
-      "../assets/imageData/Mousse au Chocolat-4.jpg"
+      "../assets/imageData/choco3.jpg",
+      "../assets/imageData/choco2.jpg",
+      "../assets/imageData/choco1.jpg",
+      "../assets/imageData/choco4.jpg"
     ],
     "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
@@ -211,10 +211,10 @@
     "description": "A comforting and hearty classic. Your choice of pasta served with a slow-simmered, rich tomato and minced meat sauce.",
     "basePrice": 11.5,
     "images": [
-      "../assets/imageData/Pâtes Bolognaise.jpg",
-      "../assets/imageData/Pâtes Bolognaise-2.jpg",
-      "../assets/imageData/Pâtes Bolognaise-3.jpg",
-      "../assets/imageData/Pâtes Bolognaise-4.jpg"
+      "../assets/imageData/spaghetti2.jpg",
+      "../assets/imageData/spaghetti1.jpg",
+      "../assets/imageData/spaghetti.jpg",
+      "../assets/sauce-1.png"
     ],
     "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
@@ -226,10 +226,10 @@
     "description": "The perfect pick-me-up. A short, strong, and intense shot of freshly brewed coffee with a rich crema.",
     "basePrice": 1.8,
     "images": [
-      "../assets/imageData/Café Espresso.jpg",
-      "../assets/imageData/Café Espresso-2.jpg",
-      "../assets/imageData/Café Espresso-3.jpg",
-      "../assets/imageData/Café Espresso-4.jpg"
+      "../assets/imageData/coffep1.jpg",
+      "../assets/imageData/coffep2.jpg",
+      "../assets/imageData/coffep1.jpg",
+      "../assets/imageData/coffep4.jpg"
     ],
     "sizes": [
       { "label": "Single", "price": 0 },
@@ -259,10 +259,10 @@
     "description": "A warming French classic. Rich, slow-cooked onion soup, topped with a crusty piece of bread and melted, bubbly cheese.",
     "basePrice": 7.0,
     "images": [
-      "../assets/imageData/Soupe à l'oignon.jpg",
-      "../assets/imageData/Soupe à l'oignon-2.jpg",
-      "../assets/imageData/Soupe à l'oignon-3.jpg",
-      "../assets/imageData/Soupe à l'oignon-4.jpg"
+      "../assets/imageData/onionSoup.jpg",
+      "../assets/imageData/onionSoup1.jpg",
+      "../assets/imageData/onionSoup.jpg",
+      "../assets/imageData/onionSoup1.jpg"
     ],
     "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
@@ -274,10 +274,10 @@
     "description": "The ultimate bistro meal. A succulent grilled ribeye steak cooked to your liking, served with a side of crispy French fries and a savory pepper sauce.",
     "basePrice": 18.5,
     "images": [
-      "../assets/imageData/Steak Frites.jpg",
-      "../assets/imageData/Steak Frites-2.jpg",
-      "../assets/imageData/Steak Frites-3.jpg",
-      "../assets/imageData/Steak Frites-4.jpg"
+      "../assets/imageData/steak.jpg",
+      "../assets/sauce-1.png",
+      "../assets/imageData/steak1.jpg",
+      "../assets/sauce-2.png"
     ],
     "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
@@ -289,10 +289,10 @@
     "description": "Pure, natural refreshment. 100% juice from freshly squeezed oranges, with no added sugar. The perfect start to your day.",
     "basePrice": 4.0,
     "images": [
-      "../assets/imageData/Jus d'Orange Pressé.jpg",
-      "../assets/imageData/Jus d'Orange Pressé-2.jpg",
-      "../assets/imageData/Jus d'Orange Pressé-3.jpg",
-      "../assets/imageData/Jus d'Orange Pressé-4.jpg"
+      "../assets/imageData/orangejuice.png",
+      "../assets/imageData/orangejuice.png",
+      "../assets/imageData/orangejuice.jpg",
+      "../assets/imageData/orangejuice.jpg"
     ],
     "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
@@ -304,10 +304,10 @@
     "description": "A delicious meat-free option. A savory vegetable patty topped with creamy avocado, crisp lettuce, and fresh tomato, served on a toasted bun.",
     "basePrice": 12.0,
     "images": [
-      "../assets/imageData/Burger Végétarien.jpg",
-      "../assets/imageData/Burger Végétarien-2.jpg",
-      "../assets/imageData/Burger Végétarien-3.jpg",
-      "../assets/imageData/Burger Végétarien-4.jpg"
+      "../assets/imageData/VegetarianBurger2.jpg",
+      "../assets/imageData/VegetarianBurger4.jpg",
+      "../assets/imageData/VegetarianBurger3.png",
+      "../assets/imageData/VegetarianBurger.png"
     ],
     "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
