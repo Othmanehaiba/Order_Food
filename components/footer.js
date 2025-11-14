@@ -5,7 +5,7 @@ export function Footer() {
     <!-- logo Description -->
     <div class="col-span-2 flex flex-col items-start md:items-start">
       <img
-        src="../assets/logo.png"
+        src="../public/images/logo.png"
         alt="FoodOrder+ logo"
         class="w-40 md:w-50 mb-4"
       />
@@ -82,11 +82,11 @@ export function Footer() {
 
       <!-- Social Icons -->
       <div class="flex items-center gap-4 mt-6">
-        <img src="../assets/insta.png" alt="Instagram" class="w-9" />
-        <img src="../assets/youtoupe.png" alt="YouTube" class="w-9" />
-        <img src="../assets/pinteres.png" alt="Pinterest" class="w-9" />
-        <img src="../assets/faicebook.png" alt="Facebook" class="w-9" />
-        <img src="../assets/snapchat.png" alt="Snapchat" class="w-9" />
+        <img src="../public/images/insta.png" alt="Instagram" class="w-9" />
+        <img src="../public/images/youtoupe.png" alt="YouTube" class="w-9" />
+        <img src="../public/images/pinteres.png" alt="Pinterest" class="w-9" />
+        <img src="../public/images/faicebook.png" alt="Facebook" class="w-9" />
+        <img src="../public/images/snapchat.png" alt="Snapchat" class="w-9" />
       </div>
     </div>
 
