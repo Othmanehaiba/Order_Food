@@ -4,20 +4,20 @@
     "author": "Amorin Peter",
     "speech": "Thank you for dinner last night. It was amazing!! I have say it’s the best meal I have had in quite some time. will definitely be seeing more eating next year.",
     "star": 5,
-    "imgUrl": "../assets/review-profile1.png"
+    "imgUrl": "../public/images/review-profile1.png"
   },
   {
     "id": "2",
     "author": "Lina Herna",
     "speech": "Thank you for dinner last night. It was amazing!! I have say it’s the best meal I have had in quite some time. will definitely be seeing more eating next year.",
     "star": 5,
-    "imgUrl": "../assets/review-profile2.png"
+    "imgUrl": "../public/images/review-profile2.png"
   },
   {
     "id": "3",
     "author": "Mari Amorin",
     "speech": "Last night, It was amazing!! I have say it’s the best meal I have had in quite some time. will definitely be seeing more eating next year.",
     "star": 4,
-    "imgUrl": "../assets/review-profile3.png"
+    "imgUrl": "../public/images/review-profile3.png"
   }
 ]
