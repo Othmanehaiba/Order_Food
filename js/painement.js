@@ -140,14 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const commande = document.getElementById("delete-cmd1");
     commande.remove();
   });
-  //   btn2.addEventListener("click", () => {
-  //     const commande = document.getElementById("delete-cmd2");
-  //     commande.remove();
-  //   });
-  //   btn3.addEventListener("click", () => {
-  //     const commande = document.getElementById("delete-cmd3");
-  //     commande.remove();
-  //   });
+ 
 });
 
 const params = new URLSearchParams(window.location.search);
@@ -229,7 +222,7 @@ fetch("../data/data.json")
         total.textContent = `$${totalGlobal.toFixed(2)}`;
         console.log(total.textContent);
       });
-      //
+      // 
       const deletebtns = document.querySelectorAll(".delete-ls");
       deletebtns.forEach((btn) => {
         btn.addEventListener("click", () => {
