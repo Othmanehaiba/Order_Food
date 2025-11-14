@@ -3,21 +3,21 @@
     "name": "Thomas Walim",
     "specialist": "Dessert specialist",
     "specialistColor": "text-pink-600",
-    "image": "../assets/chef1.png",
-    "signature": "../assets/name-chef.png.png"
+    "image": "../public/images/chef1.png",
+    "signature": "../public/images/name-chef.png.png"
   },
   {
     "name": "James Jhonson",
     "specialist": "Chef Master",
     "specialistColor": "text-orange-700",
-    "image": "../assets/chef3.png",
-    "signature": "../assets/name-chef.png.png"
+    "image": "../public/images/chef3.png",
+    "signature": "../public/images/name-chef.png.png"
   },
   {
     "name": "Room Minal",
     "specialist": "Dessert specialist",
     "specialistColor": "text-pink-600",
-    "image": "../assets/chef2.png",
-    "signature": "../assets/name-chef.png.png"
+    "image": "../public/images/chef2.png",
+    "signature": "../public/images/name-chef.png.png"
   }
 ]
