@@ -2844,12 +2844,12 @@ video {
   --tw-bg-opacity: 0.7;
 }
 
-.bg-\[url\(\'\.\.\/assets\/banner5\.1\.png\'\)\] {
-  background-image: url('../assets/banner5.1.png');
+.bg-\[url\(\'\.\.\/public\/images\/banner5\.1\.png\'\)\] {
+  background-image: url('../public/images/banner5.1.png');
 }
 
-.bg-\[url\(\'\.\.\/assets\/banner5\.png\'\)\] {
-  background-image: url('../assets/banner5.png');
+.bg-\[url\(\'\.\.\/public\/images\/banner5\.png\'\)\] {
+  background-image: url('../public/images/banner5.png');
 }
 
 .bg-gradient-to-b {
