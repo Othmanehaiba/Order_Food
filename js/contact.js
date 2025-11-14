@@ -1,7 +1,7 @@
 const qst = document.querySelectorAll(".qst-js");
 
 qst.forEach((f) => {
-  f.addEventListener('mouseover', () => {
+  f.addEventListener('click', () => {
     const ans = f.nextElementSibling;
     ans.style.display = 'block';
   });
