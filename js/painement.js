@@ -140,14 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const commande = document.getElementById("delete-cmd1");
     commande.remove();
   });
-  //   btn2.addEventListener("click", () => {
-  //     const commande = document.getElementById("delete-cmd2");
-  //     commande.remove();
-  //   });
-  //   btn3.addEventListener("click", () => {
-  //     const commande = document.getElementById("delete-cmd3");
-  //     commande.remove();
-  //   });
+ 
 });
 
 const params = new URLSearchParams(window.location.search);
@@ -221,25 +214,8 @@ fetch("../data/data.json")
             </div>
         `;
 
-        totalGlobal += item.basePrice * item.quantity;
-        console.log(item.basePrice);
-        
-        console.log(totalGlobal);
-        
+         totalGlobal += item.price * item.quantity;
+       });
         total.textContent = `$${totalGlobal.toFixed(2)}`;
-        console.log(total.textContent);
-      });
-      //
-        const deletebtns = document.querySelectorAll(".delete-ls");
-        deletebtns.forEach((btn) => {
-          btn.addEventListener("click", () => {
-            const deletedId = btn.dataset.id;
-            let data = JSON.parse(localStorage.getItem("panier") || []);
-            console.log(data);
-
-            data = data.filter((item) => item.id != deletedId);
-            localStorage.setItem("panier", JSON.stringify(data));
-          });
-        });
     }
   });
