@@ -3,24 +3,24 @@
         "name": "Cheese Burger",
         "description": "A delicious grilled burger with cheese, lettuce, and special sauce.",
         "prix": 12,
-        "image": "../assets/pexels-valeriya-1199957.jpg"
+        "image": "../public/images/pexels-valeriya-1199957.jpg"
     },
     {
         "name": "pancake",
         "description": "golden-brown, fluffy, and perfectly crisp",
         "prix": 18,
-        "image": "../assets/pexels-ash-craig-122861-376464.jpg"
+        "image": "../public/images/pexels-ash-craig-122861-376464.jpg"
     },
     {
         "name": "Chicken Sandwich",
         "description": "A lemon-herb marinated boneless breast of chicken, grilled for a tender and juicy backyard-smoky taste,",
         "prix": 22,
-        "image": "../assets/pexels-rajesh-tp-749235-1633525.jpg"
+        "image": "../public/images/pexels-rajesh-tp-749235-1633525.jpg"
     },
     {
         "name": "Juice",
         "description": "fresh, healthy, and naturally derived from fruits and vegetables",
         "prix": 10,
-        "image": "../assets/pexels-bella-white-201200-1289256.jpg"
+        "image": "../public/images/pexels-bella-white-201200-1289256.jpg"
     }
 ]
