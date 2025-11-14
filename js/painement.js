@@ -1,3 +1,5 @@
+
+let cart = JSON.parse(localStorage.getItem("panier")) || [];
 document.addEventListener("DOMContentLoaded", () => {
   // Variables
   const Formulaire = {
@@ -37,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
         name: item.dataset.name,
         price: Number(item.dataset.price),
         quantity: Number(item.dataset.quantity),
+        Price: basePrice,
       })
     );
 
@@ -90,17 +93,18 @@ document.addEventListener("DOMContentLoaded", () => {
     // Ligne séparation
     doc.line(20, (y += 10), 190, y);
 
-    // Commandes
+    // informations de Commandes
     doc.setFontSize(14);
     doc.setFont("Roboto", "bold");
     doc.text("Your Orders", 20, (y += 15));
     doc.setFont("Roboto", "normal");
     doc.setFontSize(12);
 
+
     order.items.forEach((item) => {
       y += 10;
       doc.text(`${item.quantity}x ${item.name}`, 25, y);
-      doc.text(`£${item.price.toFixed(2)}`, 170, y, { align: "right" });
+      doc.text(`£${item.price.toFixed(2)}` || `${item.Price.toFixed(2)}`, 170, y, { align: "right" });
     });
 
     // Total
@@ -140,14 +144,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const commande = document.getElementById("delete-cmd1");
     commande.remove();
   });
-  //   btn2.addEventListener("click", () => {
-  //     const commande = document.getElementById("delete-cmd2");
-  //     commande.remove();
-  //   });
-  //   btn3.addEventListener("click", () => {
-  //     const commande = document.getElementById("delete-cmd3");
-  //     commande.remove();
-  //   });
 });
 
 const params = new URLSearchParams(window.location.search);
@@ -160,6 +156,7 @@ total.textContent = `$${price || 0}`;
 fetch("../data/data.json")
   .then((res) => res.json())
   .then((data) => {
+    let totalGlobal = 0;
     if (Id) {
       const card = data.find((c) => c.id == Id);
       const dataContainer = document.getElementById("data");
@@ -193,13 +190,15 @@ fetch("../data/data.json")
         window.location.search = "";
         total.textContent = `$0`;
       });
-    }else{
-      let cart = JSON.parse(localStorage.getItem("cart")) || [];
-      let totalGlobal = 0;
+    } else {
+      const dataContainer = document.getElementById("data");
+      
+
+      
       dataContainer.innerHTML = "";
-       cart.forEach((item) => {
-         dataContainer.innerHTML += `
-            <div class="commande flex items-start justify-between mt-6 pb-4">
+      cart.forEach((item) => {
+        dataContainer.innerHTML += `
+            <div class="commande flex items-start justify-between mt-6 pb-4" >
 
                 <div class="flex items-start gap-4 mt-8">
                     <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center">
@@ -207,20 +206,45 @@ fetch("../data/data.json")
                     </div>
 
                     <div class="space-y-1">
-                        <p class="text-prixColor font-semibold text-xl">$${item.price}</p>
+                        <p class="text-prixColor font-semibold text-xl">$${item.basePrice}</p>
                         <p class="font-bold text-black">${item.name}</p>
                         <p class="text-black text-sm opacity-80">${item.category}</p>
                     </div>
                 </div>
 
-                <button class="delete-ls opacity-70 hover:opacity-100 mt-6">
+                <button class="delete-ls opacity-70 hover:opacity-100 mt-6" data-id=${item.id}>
                     <img src="../assets/remove.png" class="w-7">
                 </button>
             </div>
         `;
 
-         totalGlobal += item.price * item.quantity;
-       });
+        totalGlobal += item.basePrice * item.quantity;
+        console.log(item.basePrice);
+
+        console.log(totalGlobal);
+
         total.textContent = `$${totalGlobal.toFixed(2)}`;
+        console.log(total.textContent);
+
+
+      });
+      //
+      const deletebtns = document.querySelectorAll(".delete-ls");
+      deletebtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const deletedId = btn.dataset.id;
+          let data = JSON.parse(localStorage.getItem("panier") || []);
+          console.log(data);
+
+          data = data.filter((item) => item.id != deletedId);
+          localStorage.setItem("panier", JSON.stringify(data));
+          let cardD = btn.parentElement;
+          cardD.remove();
+          totalGlobal = totalGlobal - data.basePrice
+          total.textContent = `$${totalGlobal.toFixed(2)}`;
+
+
+        });
+      });
     }
   });
