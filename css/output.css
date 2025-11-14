@@ -4401,6 +4401,10 @@ video {
     margin-top: 1rem;
   }
 
+  .md\:mt-\[3rem\] {
+    margin-top: 3rem;
+  }
+
   .md\:mt-\[4rem\] {
     margin-top: 4rem;
   }
@@ -4681,6 +4685,18 @@ video {
 
   .md\:pt-0 {
     padding-top: 0px;
+  }
+
+  .md\:pb-6 {
+    padding-bottom: 1.5rem;
+  }
+
+  .md\:pb-\[\] {
+    padding-bottom: ;
+  }
+
+  .md\:pb-\[6rem\] {
+    padding-bottom: 6rem;
   }
 
   .md\:text-left {
