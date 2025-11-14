@@ -193,12 +193,14 @@ fetch("../data/data.json")
         window.location.search = "";
         total.textContent = `$0`;
       });
-    }else{
-      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    } else {
+      const dataContainer = document.getElementById("data");
+      let cart = JSON.parse(localStorage.getItem("panier")) || [];
+
       let totalGlobal = 0;
       dataContainer.innerHTML = "";
-       cart.forEach((item) => {
-         dataContainer.innerHTML += `
+      cart.forEach((item) => {
+        dataContainer.innerHTML += `
             <div class="commande flex items-start justify-between mt-6 pb-4">
 
                 <div class="flex items-start gap-4 mt-8">
@@ -207,20 +209,37 @@ fetch("../data/data.json")
                     </div>
 
                     <div class="space-y-1">
-                        <p class="text-prixColor font-semibold text-xl">$${item.price}</p>
+                        <p class="text-prixColor font-semibold text-xl">$${item.basePrice}</p>
                         <p class="font-bold text-black">${item.name}</p>
                         <p class="text-black text-sm opacity-80">${item.category}</p>
                     </div>
                 </div>
 
-                <button class="delete-ls opacity-70 hover:opacity-100 mt-6">
+                <button class="delete-ls opacity-70 hover:opacity-100 mt-6" data-id=${item.id}>
                     <img src="../assets/remove.png" class="w-7">
                 </button>
             </div>
         `;
 
-         totalGlobal += item.price * item.quantity;
-       });
+        totalGlobal += item.basePrice * item.quantity;
+        console.log(item.basePrice);
+        
+        console.log(totalGlobal);
+        
         total.textContent = `$${totalGlobal.toFixed(2)}`;
+        console.log(total.textContent);
+      });
+      //
+        const deletebtns = document.querySelectorAll(".delete-ls");
+        deletebtns.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const deletedId = btn.dataset.id;
+            let data = JSON.parse(localStorage.getItem("panier") || []);
+            console.log(data);
+
+            data = data.filter((item) => item.id != deletedId);
+            localStorage.setItem("panier", JSON.stringify(data));
+          });
+        });
     }
   });
