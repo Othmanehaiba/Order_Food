@@ -1,5 +1,23 @@
 
 let cart = JSON.parse(localStorage.getItem("panier")) || [];
+let basePrice = 0;
+let totalLocalItems = 0;
+
+console.log(cart);
+cart.forEach((c) => {
+  basePrice = c.basePrice;
+  totalLocalItems+= c.basePrice;
+});
+
+
+const params = new URLSearchParams(window.location.search);
+let Id = params.get("id");
+const price = params.get("price");
+const quantity = params.get("quantity");
+const total = document.getElementById("total-price");
+total.textContent = `$${price || 0}`;
+
+
 document.addEventListener("DOMContentLoaded", () => {
   // Variables
   const Formulaire = {
@@ -39,7 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
         name: item.dataset.name,
         price: Number(item.dataset.price),
         quantity: Number(item.dataset.quantity),
-        Price: basePrice,
       })
     );
 
@@ -60,8 +77,9 @@ document.addEventListener("DOMContentLoaded", () => {
       email: document.getElementById("email").value,
       address: document.getElementById("adress").value,
       phone: document.getElementById("phone").value,
-      items: cartItems,
-      total: totalOrder,
+      items: cartItems || cartLocalItems,
+      // localItems: basePrice,
+      total: totalOrder || totalLocalItems,
     };
 
     // Génération du ticket PDF
@@ -100,12 +118,21 @@ document.addEventListener("DOMContentLoaded", () => {
     doc.setFont("Roboto", "normal");
     doc.setFontSize(12);
 
-
-    order.items.forEach((item) => {
-      y += 10;
-      doc.text(`${item.quantity}x ${item.name}`, 25, y);
-      doc.text(`£${item.price.toFixed(2)}` || `${item.Price.toFixed(2)}`, 170, y, { align: "right" });
-    });
+ 
+    if (Id == null) {
+      cart.forEach(c => {
+        y += 10;
+        doc.text(`${c.quantity}x ${c.name}`, 25, y);
+        doc.text(`£${c.basePrice.toFixed(2)}`, 170, y, { align: "right" });
+      });
+    } else {
+      // console.log("hello");
+      order.items.forEach((item) => {
+        y += 10;
+        doc.text(`${item.quantity}x ${item.name}`, 25, y);
+        doc.text(`£${item.price.toFixed(2)}`, 170, y, { align: "right" });
+      });
+    }
 
     // Total
     y += 15;
@@ -146,12 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-const params = new URLSearchParams(window.location.search);
-let Id = params.get("id");
-const price = params.get("price");
-const quantity = params.get("quantity");
-const total = document.getElementById("total-price");
-total.textContent = `$${price || 0}`;
+
 
 fetch("../data/data.json")
   .then((res) => res.json())
@@ -232,15 +254,41 @@ fetch("../data/data.json")
       const deletebtns = document.querySelectorAll(".delete-ls");
       deletebtns.forEach((btn) => {
         btn.addEventListener("click", () => {
+
           const deletedId = btn.dataset.id;
-          let data = JSON.parse(localStorage.getItem("panier") || []);
+          let data = JSON.parse(localStorage.getItem("panier"));
           console.log(data);
 
           data = data.filter((item) => item.id != deletedId);
           localStorage.setItem("panier", JSON.stringify(data));
           let cardD = btn.parentElement;
           cardD.remove();
-          totalGlobal = totalGlobal - data.basePrice
+          totalGlobal = 0;
+          data.forEach(d => {
+            totalGlobal += d.basePrice; 
+          });
+
+              if (Id == null) {
+                cart.forEach((c) => {
+                  y += 10;
+                  doc.text(`${c.quantity}x ${c.name}`, 25, y);
+                  doc.text(`£${c.basePrice.toFixed(2)}`, 170, y, {
+                    align: "right",
+                  });
+                });
+              } else {
+                // console.log("hello");
+                order.items.forEach((item) => {
+                  y += 10;
+                  doc.text(`${item.quantity}x ${item.name}`, 25, y);
+                  doc.text(`£${item.price.toFixed(2)}`, 170, y, {
+                    align: "right",
+                  });
+                });
+              }
+
+          
+          // totalGlobal = totalGlobal - data.basePrice;
           total.textContent = `$${totalGlobal.toFixed(2)}`;
 
 
