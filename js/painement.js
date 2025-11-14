@@ -235,7 +235,7 @@ fetch("../data/data.json")
                 </div>
 
                 <button class="delete-ls opacity-70 hover:opacity-100 mt-6" data-id=${item.id}>
-                    <img src="../assets/remove.png" class="w-7">
+                    <img src="../public/images/remove.png" class="w-7">
                 </button>
             </div>
         `;
