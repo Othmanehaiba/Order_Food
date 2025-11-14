@@ -60,5 +60,3 @@ const contactForm = document.querySelector('form');
         contactForm.reset();
       }
     });
-
-    
