@@ -10,7 +10,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        oleo: ['Oleo Script', 'cursive'],
+        oleo: ['Oleo Script', 'cursive'], 
         roboto: ["Roboto", "sans-serif"],
         Fredoka: ["Fredoka", "sans-serif"],
       },
@@ -21,8 +21,6 @@ module.exports = {
         headerOrange: "#f39223",
         homePrice: '#F3274C',
       },
-
-      // 👇 Add your custom keyframes and animations
       keyframes: {
         'slide-left': {
           '0%': { opacity: '0', transform: 'translateX(50%)' },
@@ -38,6 +36,8 @@ module.exports = {
         'slide-right': 'slide-right 0.8s ease-in-out',
       },
     },
-  },
   plugins: [],
 }
+}
+
+

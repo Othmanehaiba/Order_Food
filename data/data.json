@@ -7,9 +7,9 @@
     "basePrice": 8.99,
     "images": [
       "../assets/imageData/Margarita-pizza.jpg",
-      "../assets/imageData/Margarita-pizza-2.jpg",
-      "../assets/imageData/Margarita-pizza-3.jpg",
-      "../assets/imageData/Margarita-pizza-4.jpg"
+      "../assets/sauce-3.png",
+      "../assets/sauce-2.png",
+      "../assets/sauce-1.png"
     ],
     "sizes": [
       { "label": "S", "price": 0 },
@@ -27,9 +27,9 @@
     "basePrice": 10.99,
     "images": [
       "../assets/imageData/Peperoni-pizza.jpg",
-      "../assets/imageData/Peperoni-pizza-2.jpg",
-      "../assets/imageData/Peperoni-pizza-3.jpg",
-      "../assets/imageData/Peperoni-pizza-4.jpg"
+      "../assets/sauce-3.png",
+      "../assets/sauce-2.png",
+      "../assets/sauce-1.png"
     ],
     "sizes": [
       { "label": "S", "price": 0 },
@@ -47,9 +47,9 @@
     "basePrice": 12.5,
     "images": [
       "../assets/imageData/Pâtes Carbonara.jpg",
-      "../assets/imageData/Pâtes Carbonara-2.jpg",
-      "../assets/imageData/Pâtes Carbonara-3.jpg",
-      "../assets/imageData/Pâtes Carbonara-4.jpg"
+      "../assets/imageData/pexels-enginakyurt-1487511 (1).jpg",
+      "../assets/imageData/pexels-enginakyurt-1438672.jpg",
+      "../assets/imageData/pexels-shameel-mukkath-3421394-14930724.jpg"
     ],
     "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
@@ -62,9 +62,9 @@
     "basePrice": 7.5,
     "images": [
       "../assets/imageData/Salade César.jpg",
-      "../assets/imageData/Salade César-2.jpg",
-      "../assets/imageData/Salade César-3.jpg",
-      "../assets/imageData/Salade César-4.jpg"
+      "../assets/imageData/pexels-julieaagaard-2097090.jpg",
+      "../assets/imageData/pexels-undo-kim-2153633398-34699472.jpg",
+      "../assets/imageData/pexels-nay-nyo-727253247-27603332.jpg"
     ],
     "sizes": [
       { "label": "Small", "price": 0 },
@@ -80,9 +80,9 @@
     "basePrice": 11.99,
     "images": [
       "../assets/imageData/Burger Classique.jpg",
-      "../assets/imageData/Burger Classique-2.jpg",
-      "../assets/imageData/Burger Classique-3.jpg",
-      "../assets/imageData/Burger Classique-4.jpg"
+      "../assets/sauce-1.png",
+      "../assets/sauce-2.png",
+      "../assets/sauce-3.png"
     ],
     "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": false
@@ -95,9 +95,9 @@
     "basePrice": 6.5,
     "images": [
       "../assets/imageData/Tiramisu.jpg",
-      "../assets/imageData/Tiramisu-2.jpg",
-      "../assets/imageData/Tiramisu-3.jpg",
-      "../assets/imageData/Tiramisu-4.jpg"
+      "../assets/imageData/pexels-nati-87264186-33522479.jpg",
+      "../assets/imageData/pexels-evgeniya-davydova-35773675-16400921.jpg",
+      "../assets/imageData/pexels-franki-frank-30372662.jpg"
     ],
     "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
@@ -109,10 +109,10 @@
     "description": "Pure and refreshing mineral water, sourced from natural springs. Available as either still or sparkling to quench your thirst.",
     "basePrice": 2,
     "images": [
-      "../assets/imageData/Eau Minérale.jpg",
-      "../assets/imageData/Eau Minérale-2.jpg",
-      "../assets/imageData/Eau Minérale-3.jpg",
-      "../assets/imageData/Eau Minérale-4.jpg"
+      "../assets/imageData/istockphoto-172391327-612x612.jpg",
+      "../assets/imageData/1042462.avif",
+      "../assets/imageData/f220a1f9-206c-4d47-94e2-96e74f5cb6b1.324c4d822203606ca8dc0077a6d72b68.webp",
+      "../assets/imageData/image 3.png"
     ],
     "sizes": [
       { "label": "50cl", "price": 0 },
@@ -128,9 +128,9 @@
     "basePrice": 2.5,
     "images": [
       "../assets/imageData/Coca-Cola.jpg",
-      "../assets/imageData/Coca-Cola-2.jpg",
-      "../assets/imageData/Coca-Cola-3.jpg",
-      "../assets/imageData/Coca-Cola-4.jpg"
+      "../assets/imageData/COCA_DETAIL_SABBSHM.format-jpeg.jpegquality-75_4ytrMl4.jpg",
+      "../assets/imageData/f4dae7732213491da3952f853c48f6dc_1176x840.jpg",
+      "../assets/imageData/774ff1de-eb16-42e6-8997-8dfaf0d91ed3.ecafe1f68c1e5c4d99cd462044e81515.webp"
     ],
     "sizes": [
       { "label": "33cl", "price": 0 },
@@ -146,9 +146,9 @@
     "basePrice": 13,
     "images": [
       "../assets/imageData/Pizza 4 Saisons.jpg",
-      "../assets/imageData/Pizza 4 Saisons-2.jpg",
-      "../assets/imageData/Pizza 4 Saisons-3.jpg",
-      "../assets/imageData/Pizza 4 Saisons-4.jpg"
+      "../assets/sauce-3.png",
+      "../assets/sauce-2.png",
+      "../assets/sauce-1.png"
     ],
     "sizes": [
       { "label": "M", "price": 0 },
@@ -164,9 +164,9 @@
     "basePrice": 16.99,
     "images": [
       "../assets/imageData/Saumon Grillé.jpg",
-      "../assets/imageData/Saumon Grillé-2.jpg",
-      "../assets/imageData/Saumon Grillé-3.jpg",
-      "../assets/imageData/Saumon Grillé-4.jpg"
+      "../assets/imageData/pexels-daniela-elena-tentis-118658-262959.jpg",
+      "../assets/imageData/pexels-vanmalidate-842142.jpg",
+      "../assets/imageData/pexels-nano-erdozain-120534369-29149765.jpg"
     ],
     "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
@@ -178,10 +178,10 @@
     "description": "A vibrant and fresh appetizer. Toasted artisan bread rubbed with garlic, topped with a delicious mix of diced fresh tomatoes, basil, and a drizzle of olive oil.",
     "basePrice": 5.99,
     "images": [
-      "../assets/imageData/Bruschetta Tomate.jpg",
-      "../assets/imageData/Bruschetta Tomate-2.jpg",
-      "../assets/imageData/Bruschetta Tomate-3.jpg",
-      "../assets/imageData/Bruschetta Tomate-4.jpg"
+      "../assets/imageData/bruschetta.jpg",
+      "../assets/sauce-1.png",
+      "../assets/imageData/bruschetta1.jpg",
+      "../assets/sauce-2.png"
     ],
     "sizes": [
       { "label": "4 pieces", "price": 0 },
@@ -196,10 +196,10 @@
     "description": "A rich and airy delight for chocolate lovers. This light mousse is made from decadent dark chocolate, offering a perfect, indulgent end to your meal.",
     "basePrice": 5.0,
     "images": [
-      "../assets/imageData/Mousse au Chocolat.jpg",
-      "../assets/imageData/Mousse au Chocolat-2.jpg",
-      "../assets/imageData/Mousse au Chocolat-3.jpg",
-      "../assets/imageData/Mousse au Chocolat-4.jpg"
+      "../assets/imageData/choco3.jpg",
+      "../assets/imageData/choco2.jpg",
+      "../assets/imageData/choco1.jpg",
+      "../assets/imageData/choco4.jpg"
     ],
     "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
@@ -211,10 +211,10 @@
     "description": "A comforting and hearty classic. Your choice of pasta served with a slow-simmered, rich tomato and minced meat sauce.",
     "basePrice": 11.5,
     "images": [
-      "../assets/imageData/Pâtes Bolognaise.jpg",
-      "../assets/imageData/Pâtes Bolognaise-2.jpg",
-      "../assets/imageData/Pâtes Bolognaise-3.jpg",
-      "../assets/imageData/Pâtes Bolognaise-4.jpg"
+      "../assets/imageData/spaghetti2.jpg",
+      "../assets/imageData/spaghetti1.jpg",
+      "../assets/imageData/spaghetti.jpg",
+      "../assets/sauce-1.png"
     ],
     "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
@@ -226,10 +226,10 @@
     "description": "The perfect pick-me-up. A short, strong, and intense shot of freshly brewed coffee with a rich crema.",
     "basePrice": 1.8,
     "images": [
-      "../assets/imageData/Café Espresso.jpg",
-      "../assets/imageData/Café Espresso-2.jpg",
-      "../assets/imageData/Café Espresso-3.jpg",
-      "../assets/imageData/Café Espresso-4.jpg"
+      "../assets/imageData/coffep1.jpg",
+      "../assets/imageData/coffep2.jpg",
+      "../assets/imageData/coffep1.jpg",
+      "../assets/imageData/coffep4.jpg"
     ],
     "sizes": [
       { "label": "Single", "price": 0 },
@@ -245,9 +245,9 @@
     "basePrice": 6.0,
     "images": [
       "../assets/imageData/Tarte au Citron Meringuée.jpg",
-      "../assets/imageData/Tarte au Citron Meringuée-2.jpg",
-      "../assets/imageData/Tarte au Citron Meringuée-3.jpg",
-      "../assets/imageData/Tarte au Citron Meringuée-4.jpg"
+      "../assets/imageData/pie-lemon1.jpg",
+      "../assets/imageData/pie-lemon2.jpg",
+      "../assets/imageData/pie-lemon3.jpg"
     ],
     "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
@@ -259,10 +259,10 @@
     "description": "A warming French classic. Rich, slow-cooked onion soup, topped with a crusty piece of bread and melted, bubbly cheese.",
     "basePrice": 7.0,
     "images": [
-      "../assets/imageData/Soupe à l'oignon.jpg",
-      "../assets/imageData/Soupe à l'oignon-2.jpg",
-      "../assets/imageData/Soupe à l'oignon-3.jpg",
-      "../assets/imageData/Soupe à l'oignon-4.jpg"
+      "../assets/imageData/onionSoup.jpg",
+      "../assets/imageData/onionSoup1.jpg",
+      "../assets/imageData/onionSoup.jpg",
+      "../assets/imageData/onionSoup1.jpg"
     ],
     "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
@@ -274,10 +274,10 @@
     "description": "The ultimate bistro meal. A succulent grilled ribeye steak cooked to your liking, served with a side of crispy French fries and a savory pepper sauce.",
     "basePrice": 18.5,
     "images": [
-      "../assets/imageData/Steak Frites.jpg",
-      "../assets/imageData/Steak Frites-2.jpg",
-      "../assets/imageData/Steak Frites-3.jpg",
-      "../assets/imageData/Steak Frites-4.jpg"
+      "../assets/imageData/steak.jpg",
+      "../assets/sauce-1.png",
+      "../assets/imageData/steak1.jpg",
+      "../assets/sauce-2.png"
     ],
     "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
@@ -289,10 +289,10 @@
     "description": "Pure, natural refreshment. 100% juice from freshly squeezed oranges, with no added sugar. The perfect start to your day.",
     "basePrice": 4.0,
     "images": [
-      "../assets/imageData/Jus d'Orange Pressé.jpg",
-      "../assets/imageData/Jus d'Orange Pressé-2.jpg",
-      "../assets/imageData/Jus d'Orange Pressé-3.jpg",
-      "../assets/imageData/Jus d'Orange Pressé-4.jpg"
+      "../assets/imageData/orangejuice.png",
+      "../assets/imageData/orangejuice.png",
+      "../assets/imageData/orangejuice.jpg",
+      "../assets/imageData/orangejuice.jpg"
     ],
     "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
@@ -304,10 +304,10 @@
     "description": "A delicious meat-free option. A savory vegetable patty topped with creamy avocado, crisp lettuce, and fresh tomato, served on a toasted bun.",
     "basePrice": 12.0,
     "images": [
-      "../assets/imageData/Burger Végétarien.jpg",
-      "../assets/imageData/Burger Végétarien-2.jpg",
-      "../assets/imageData/Burger Végétarien-3.jpg",
-      "../assets/imageData/Burger Végétarien-4.jpg"
+      "../assets/imageData/VegetarianBurger2.jpg",
+      "../assets/imageData/VegetarianBurger4.jpg",
+      "../assets/imageData/VegetarianBurger3.png",
+      "../assets/imageData/VegetarianBurger.png"
     ],
     "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
