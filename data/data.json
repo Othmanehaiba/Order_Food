@@ -6,10 +6,10 @@
     "description": "A timeless classic. This traditional pizza features a rich tomato sauce base, creamy mozzarella cheese, and a sprinkle of fresh, aromatic basil.",
     "basePrice": 8.99,
     "images": [
-      "../assets/imageData/Margarita-pizza.jpg",
-      "../assets/sauce-3.png",
-      "../assets/sauce-2.png",
-      "../assets/sauce-1.png"
+      "../public/images/imageData/Margarita-pizza.jpg",
+      "../public/images/sauce-3.png",
+      "../public/images/sauce-2.png",
+      "../public/images/sauce-1.png"
     ],
     "sizes": [
       { "label": "S", "price": 0 },
@@ -26,10 +26,10 @@
     "description": "A fan favorite! This pizza is generously topped with spicy pepperoni slices over a classic tomato sauce and melted mozzarella cheese.",
     "basePrice": 10.99,
     "images": [
-      "../assets/imageData/Peperoni-pizza.jpg",
-      "../assets/sauce-3.png",
-      "../assets/sauce-2.png",
-      "../assets/sauce-1.png"
+      "../public/images/imageData/Peperoni-pizza.jpg",
+      "../public/images/sauce-3.png",
+      "../public/images/sauce-2.png",
+      "../public/images/sauce-1.png"
     ],
     "sizes": [
       { "label": "S", "price": 0 },
@@ -46,10 +46,10 @@
     "description": "An authentic Roman delight. Al dente pasta tossed in a creamy sauce made from fresh eggs, savory guanciale, sharp Pecorino cheese, and a kick of freshly ground black pepper.",
     "basePrice": 12.5,
     "images": [
-      "../assets/imageData/Pâtes Carbonara.jpg",
-      "../assets/imageData/pexels-enginakyurt-1487511 (1).jpg",
-      "../assets/imageData/pexels-enginakyurt-1438672.jpg",
-      "../assets/imageData/pexels-shameel-mukkath-3421394-14930724.jpg"
+      "../public/images/imageData/Pâtes Carbonara.jpg",
+      "../public/images/imageData/pexels-enginakyurt-1487511 (1).jpg",
+      "../public/images/imageData/pexels-enginakyurt-1438672.jpg",
+      "../public/images/imageData/pexels-shameel-mukkath-3421394-14930724.jpg"
     ],
     "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
@@ -61,10 +61,10 @@
     "description": "Crisp romaine lettuce tossed with crunchy garlic croutons, savory Parmesan cheese, and our signature creamy Caesar dressing. A perfect light meal or starter.",
     "basePrice": 7.5,
     "images": [
-      "../assets/imageData/Salade César.jpg",
-      "../assets/imageData/pexels-julieaagaard-2097090.jpg",
-      "../assets/imageData/pexels-undo-kim-2153633398-34699472.jpg",
-      "../assets/imageData/pexels-nay-nyo-727253247-27603332.jpg"
+      "../public/images/imageData/Salade César.jpg",
+      "../public/images/imageData/pexels-julieaagaard-2097090.jpg",
+      "../public/images/imageData/pexels-undo-kim-2153633398-34699472.jpg",
+      "../public/images/imageData/pexels-nay-nyo-727253247-27603332.jpg"
     ],
     "sizes": [
       { "label": "Small", "price": 0 },
@@ -79,10 +79,10 @@
     "description": "The all-American classic. A juicy beef patty topped with melted cheddar cheese, crisp lettuce, fresh tomato, and onions, served with a side of golden French fries.",
     "basePrice": 11.99,
     "images": [
-      "../assets/imageData/Burger Classique.jpg",
-      "../assets/sauce-1.png",
-      "../assets/sauce-2.png",
-      "../assets/sauce-3.png"
+      "../public/images/imageData/Burger Classique.jpg",
+      "../public/images/sauce-1.png",
+      "../public/images/sauce-2.png",
+      "../public/images/sauce-3.png"
     ],
     "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": false
@@ -94,10 +94,10 @@
     "description": "A heavenly Italian classic. Layers of coffee-soaked ladyfingers and rich, creamy mascarpone, dusted with a fine layer of cocoa powder.",
     "basePrice": 6.5,
     "images": [
-      "../assets/imageData/Tiramisu.jpg",
-      "../assets/imageData/pexels-nati-87264186-33522479.jpg",
-      "../assets/imageData/pexels-evgeniya-davydova-35773675-16400921.jpg",
-      "../assets/imageData/pexels-franki-frank-30372662.jpg"
+      "../public/images/imageData/Tiramisu.jpg",
+      "../public/images/imageData/pexels-nati-87264186-33522479.jpg",
+      "../public/images/imageData/pexels-evgeniya-davydova-35773675-16400921.jpg",
+      "../public/images/imageData/pexels-franki-frank-30372662.jpg"
     ],
     "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
@@ -109,10 +109,10 @@
     "description": "Pure and refreshing mineral water, sourced from natural springs. Available as either still or sparkling to quench your thirst.",
     "basePrice": 2,
     "images": [
-      "../assets/imageData/istockphoto-172391327-612x612.jpg",
-      "../assets/imageData/1042462.avif",
-      "../assets/imageData/f220a1f9-206c-4d47-94e2-96e74f5cb6b1.324c4d822203606ca8dc0077a6d72b68.webp",
-      "../assets/imageData/image 3.png"
+      "../public/images/imageData/istockphoto-172391327-612x612.jpg",
+      "../public/images/imageData/1042462.avif",
+      "../public/images/imageData/f220a1f9-206c-4d47-94e2-96e74f5cb6b1.324c4d822203606ca8dc0077a6d72b68.webp",
+      "../public/images/imageData/image 3.png"
     ],
     "sizes": [
       { "label": "50cl", "price": 0 },
@@ -127,10 +127,10 @@
     "description": "The iconic and refreshing sparkling soft drink, served chilled for your enjoyment.",
     "basePrice": 2.5,
     "images": [
-      "../assets/imageData/Coca-Cola.jpg",
-      "../assets/imageData/COCA_DETAIL_SABBSHM.format-jpeg.jpegquality-75_4ytrMl4.jpg",
-      "../assets/imageData/f4dae7732213491da3952f853c48f6dc_1176x840.jpg",
-      "../assets/imageData/774ff1de-eb16-42e6-8997-8dfaf0d91ed3.ecafe1f68c1e5c4d99cd462044e81515.webp"
+      "../public/images/imageData/Coca-Cola.jpg",
+      "../public/images/imageData/COCA_DETAIL_SABBSHM.format-jpeg.jpegquality-75_4ytrMl4.jpg",
+      "../public/images/imageData/f4dae7732213491da3952f853c48f6dc_1176x840.jpg",
+      "../public/images/imageData/774ff1de-eb16-42e6-8997-8dfaf0d91ed3.ecafe1f68c1e5c4d99cd462044e81515.webp"
     ],
     "sizes": [
       { "label": "33cl", "price": 0 },
@@ -145,10 +145,10 @@
     "description": "A pizza for all tastes, representing the four seasons. Topped with savory artichokes, cooked ham, fresh mushrooms, and black olives.",
     "basePrice": 13,
     "images": [
-      "../assets/imageData/Pizza 4 Saisons.jpg",
-      "../assets/sauce-3.png",
-      "../assets/sauce-2.png",
-      "../assets/sauce-1.png"
+      "../public/images/imageData/Pizza 4 Saisons.jpg",
+      "../public/images/sauce-3.png",
+      "../public/images/sauce-2.png",
+      "../public/images/sauce-1.png"
     ],
     "sizes": [
       { "label": "M", "price": 0 },
@@ -163,10 +163,10 @@
     "description": "A healthy and delicious choice. A tender salmon fillet grilled to perfection, served with a medley of fresh, roasted seasonal vegetables.",
     "basePrice": 16.99,
     "images": [
-      "../assets/imageData/Saumon Grillé.jpg",
-      "../assets/imageData/pexels-daniela-elena-tentis-118658-262959.jpg",
-      "../assets/imageData/pexels-vanmalidate-842142.jpg",
-      "../assets/imageData/pexels-nano-erdozain-120534369-29149765.jpg"
+      "../public/images/imageData/Saumon Grillé.jpg",
+      "../public/images/imageData/pexels-daniela-elena-tentis-118658-262959.jpg",
+      "../public/images/imageData/pexels-vanmalidate-842142.jpg",
+      "../public/images/imageData/pexels-nano-erdozain-120534369-29149765.jpg"
     ],
     "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
@@ -178,10 +178,10 @@
     "description": "A vibrant and fresh appetizer. Toasted artisan bread rubbed with garlic, topped with a delicious mix of diced fresh tomatoes, basil, and a drizzle of olive oil.",
     "basePrice": 5.99,
     "images": [
-      "../assets/imageData/bruschetta.jpg",
-      "../assets/sauce-1.png",
-      "../assets/imageData/bruschetta1.jpg",
-      "../assets/sauce-2.png"
+      "../public/images/imageData/bruschetta.jpg",
+      "../public/images/sauce-1.png",
+      "../public/images/imageData/bruschetta1.jpg",
+      "../public/images/sauce-2.png"
     ],
     "sizes": [
       { "label": "4 pieces", "price": 0 },
@@ -196,10 +196,10 @@
     "description": "A rich and airy delight for chocolate lovers. This light mousse is made from decadent dark chocolate, offering a perfect, indulgent end to your meal.",
     "basePrice": 5.0,
     "images": [
-      "../assets/imageData/choco3.jpg",
-      "../assets/imageData/choco2.jpg",
-      "../assets/imageData/choco1.jpg",
-      "../assets/imageData/choco4.jpg"
+      "../public/images/imageData/choco3.jpg",
+      "../public/images/imageData/choco2.jpg",
+      "../public/images/imageData/choco1.jpg",
+      "../public/images/imageData/choco4.jpg"
     ],
     "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
@@ -211,10 +211,10 @@
     "description": "A comforting and hearty classic. Your choice of pasta served with a slow-simmered, rich tomato and minced meat sauce.",
     "basePrice": 11.5,
     "images": [
-      "../assets/imageData/spaghetti2.jpg",
-      "../assets/imageData/spaghetti1.jpg",
-      "../assets/imageData/spaghetti.jpg",
-      "../assets/sauce-1.png"
+      "../public/images/imageData/spaghetti2.jpg",
+      "../public/images/imageData/spaghetti1.jpg",
+      "../public/images/imageData/spaghetti.jpg",
+      "../public/images/sauce-1.png"
     ],
     "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
@@ -226,10 +226,10 @@
     "description": "The perfect pick-me-up. A short, strong, and intense shot of freshly brewed coffee with a rich crema.",
     "basePrice": 1.8,
     "images": [
-      "../assets/imageData/coffep1.jpg",
-      "../assets/imageData/coffep2.jpg",
-      "../assets/imageData/coffep1.jpg",
-      "../assets/imageData/coffep4.jpg"
+      "../public/images/imageData/coffep1.jpg",
+      "../public/images/imageData/coffep2.jpg",
+      "../public/images/imageData/coffep1.jpg",
+      "../public/images/imageData/coffep4.jpg"
     ],
     "sizes": [
       { "label": "Single", "price": 0 },
@@ -244,10 +244,10 @@
     "description": "A zesty and sweet masterpiece. A buttery shortcrust pastry filled with tangy lemon cream and topped with a fluffy, sweet meringue.",
     "basePrice": 6.0,
     "images": [
-      "../assets/imageData/Tarte au Citron Meringuée.jpg",
-      "../assets/imageData/pie-lemon1.jpg",
-      "../assets/imageData/pie-lemon2.jpg",
-      "../assets/imageData/pie-lemon3.jpg"
+      "../public/images/imageData/Tarte au Citron Meringuée.jpg",
+      "../public/images/imageData/pie-lemon1.jpg",
+      "../public/images/imageData/pie-lemon2.jpg",
+      "../public/images/imageData/pie-lemon3.jpg"
     ],
     "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
@@ -259,10 +259,10 @@
     "description": "A warming French classic. Rich, slow-cooked onion soup, topped with a crusty piece of bread and melted, bubbly cheese.",
     "basePrice": 7.0,
     "images": [
-      "../assets/imageData/onionSoup.jpg",
-      "../assets/imageData/onionSoup1.jpg",
-      "../assets/imageData/onionSoup.jpg",
-      "../assets/imageData/onionSoup1.jpg"
+      "../public/images/imageData/onionSoup.jpg",
+      "../public/images/imageData/onionSoup1.jpg",
+      "../public/images/imageData/onionSoup.jpg",
+      "../public/images/imageData/onionSoup1.jpg"
     ],
     "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
@@ -274,10 +274,10 @@
     "description": "The ultimate bistro meal. A succulent grilled ribeye steak cooked to your liking, served with a side of crispy French fries and a savory pepper sauce.",
     "basePrice": 18.5,
     "images": [
-      "../assets/imageData/steak.jpg",
-      "../assets/sauce-1.png",
-      "../assets/imageData/steak1.jpg",
-      "../assets/sauce-2.png"
+      "../public/images/imageData/steak.jpg",
+      "../public/images/sauce-1.png",
+      "../public/images/imageData/steak1.jpg",
+      "../public/images/sauce-2.png"
     ],
     "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
@@ -289,10 +289,10 @@
     "description": "Pure, natural refreshment. 100% juice from freshly squeezed oranges, with no added sugar. The perfect start to your day.",
     "basePrice": 4.0,
     "images": [
-      "../assets/imageData/orangejuice.png",
-      "../assets/imageData/orangejuice.png",
-      "../assets/imageData/orangejuice.jpg",
-      "../assets/imageData/orangejuice.jpg"
+      "../public/images/imageData/orangejuice.png",
+      "../public/images/imageData/orangejuice.png",
+      "../public/images/imageData/orangejuice.jpg",
+      "../public/images/imageData/orangejuice.jpg"
     ],
     "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
@@ -304,10 +304,10 @@
     "description": "A delicious meat-free option. A savory vegetable patty topped with creamy avocado, crisp lettuce, and fresh tomato, served on a toasted bun.",
     "basePrice": 12.0,
     "images": [
-      "../assets/imageData/VegetarianBurger2.jpg",
-      "../assets/imageData/VegetarianBurger4.jpg",
-      "../assets/imageData/VegetarianBurger3.png",
-      "../assets/imageData/VegetarianBurger.png"
+      "../public/images/imageData/VegetarianBurger2.jpg",
+      "../public/images/imageData/VegetarianBurger4.jpg",
+      "../public/images/imageData/VegetarianBurger3.png",
+      "../public/images/imageData/VegetarianBurger.png"
     ],
     "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
@@ -319,10 +319,10 @@
     "description": "An elegant and decadent dessert. A rich, creamy vanilla custard base topped with a contrasting layer of hard, crunchy caramelized sugar.",
     "basePrice": 5.5,
     "images": [
-      "../assets/imageData/cremebrulee4.jpg",
-      "../assets/imageData/cremebrulee1.jpg",
-      "../assets/imageData/cremebrulee2.jpg",
-      "../assets/imageData/cremebrulee3.png"
+      "../public/images/imageData/cremebrulee4.jpg",
+      "../public/images/imageData/cremebrulee1.jpg",
+      "../public/images/imageData/cremebrulee2.jpg",
+      "../public/images/imageData/cremebrulee3.png"
     ],
     "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": false
