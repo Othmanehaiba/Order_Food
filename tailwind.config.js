@@ -21,8 +21,6 @@ module.exports = {
         headerOrange: "#f39223",
         homePrice: '#F3274C',
       },
-
-      // 👇 Add your custom keyframes and animations
       keyframes: {
         'slide-left': {
           '0%': { opacity: '0', transform: 'translateX(50%)' },
