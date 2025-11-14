@@ -3,16 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/output.css">
-    <script src="../tailwind.config.js"></script>
-    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap"
+      rel="stylesheet"
+      />
+      <link rel="stylesheet" href="/css/output.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <script src="../tailwind.config.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+      <title>Document</title>
+      <!-- Telecharger facture comme pdf -->
   </head>
 
   <body
-    class="bg-cover bg-center"
-    style="background-image: url('../assets/bg2.jpg')"
+    class="bg-cover bg-center w-full relative min-h-screen "
+    style="background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/bg2.jpg')"
   >
+    
     <section class="bg-[#F3C623]/95 rounded-3xl max-w-5xl mx-auto p-6 mt-6">
       <!-- La partie Top -->
       <div
@@ -26,69 +32,84 @@
         </button>
         <img src="../assets/logo.png" class="w-40 md:mx-auto" />
       </div>
-      <h1 class="text-center text-white font-oleo text-4xl font-bold mb-16 ">Checkout</h1>
+      <h1 class="text-center text-white font-oleo text-4xl font-bold mb-16">
+        Checkout
+      </h1>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
         <!-- block de titre et formulaire  -->
-        <div class="mt-6 space-y-3">
-          <h2 class="text-lg font-semibold text-gray-600">Payment details</h2>
+        <div class="mt-6 space-y-3 ">
+          <h2 class="text-lg font-semibold text-yellow-900">Payment details</h2>
 
           <div class="flex space-x-6">
             <input
-              type="text"
+              type="text" id="name"
               placeholder="Nom complet"
               class="w-full bg-[#E6E3D9] text-gray-800 px-4 py-3 rounded-sm focus:outline-none"
             />
 
             <input
-              type="text"
+              type="text" id="phone"
               placeholder="06 12 34 56 78"
               class="w-full bg-[#E6E3D9] text-gray-800 px-4 py-3 rounded-sm focus:outline-none"
             />
           </div>
 
           <input
-            type="email"
+            type="email" id="email"
             placeholder="example@gmail.com"
             class="w-full bg-[#E6E3D9] text-gray-800 px-4 py-3 rounded-sm focus:outline-none"
           />
           <input
-            type="text"
+            type="text" id="adress"
             placeholder="Adresse de livraison"
             class="w-full bg-[#E6E3D9] text-gray-800 px-4 py-3 rounded-sm focus:outline-none"
           />
           <label class="flex items-center gap-2 text-xs text-black font-bold">
-            <input type="checkbox" class="accent-black" />
+            <input type="checkbox" class="accent-black" id="terms" />
             Terms of Service and Privacy Policy
           </label>
           <button
-            class="w-full bg-orange-500 text-black py-3 rounded-sm font-bold text-lg hover:bg-white transition active:scale-[0.98]" 
-            id="pay-btn">
+            class="w-full bg-orange-500 text-black py-3 rounded-sm font-bold text-lg hover:bg-white transition active:scale-[0.98]"
+            id="pay-btn" onclick="generatePDF()"
+          >
             Pay $250
           </button>
         </div>
 
         <!-- block de listes de commandes  -->
-        
-        <div class=" p-4 rounded-lg">
-            <h2 class="text-lg font-semibold text-gray-600">Your orders</h2>
 
-            <!-- Liste des éléments du panier (sera remplie dynamiquement) -->
-            <div id="cart-items" class="space-y-3">
-                <p class="text-black text-sm opacity-70 text-center py-4">
-                Aucun produit dans le panier...
-                </p>
+        <div class="mt-6 space-y-3">
+          <h2 class="text-lg font-semibold text-yellow-900">Your orders</h2>
+
+            <!-- La liste de produit -->
+          <div id="cart-items" class="mt-6 space-y-3">
+
+            <div class="space-y-6" id="data">
+              
+              <!-- Élément du panier -->
+                 
+
             </div>
 
             <!--  Total -->
-            <div class="flex justify-between items-center border-t border-black/40 pt-4 mt-4">
-                <h3 class="text-lg font-bold text-black">Total :</h3>
-                <p id="total-price" class="text-lg font-bold text-prixColor">
-                £0.00
+              <div
+                class="flex justify-between items-center border-t border-black/40 pt-4 mb-10"
+              >
+                <h3 class="text-xl font-bold text-black">Total :</h3>
+                <p id="total-price" class="text-xl font-bold text-prixColor">
+                  
                 </p>
-            </div>
+              </div>
+          </div> 
         </div>
+      <div>
+        <img src="../assets/logo.png" class="w-40 md:mx-auto mt-6" />
       </div>
     </section>
+    <script src="../js/painement.js"></script>
+    <script>
+      
+    </script>
   </body>
 </html>
