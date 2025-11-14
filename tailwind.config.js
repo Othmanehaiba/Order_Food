@@ -36,6 +36,6 @@ module.exports = {
         'slide-right': 'slide-right 0.8s ease-in-out',
       },
     },
-  },
   plugins: [],
+}
 }

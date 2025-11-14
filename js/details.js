@@ -85,6 +85,7 @@ function displayProduct(product) {
       .join("");
 
   function generateSectionDetails(product) {
+    document.title = `${product.name} | FoodOrder+`;
     return `
       <!-- LEFT: Text content -->
       <div class="md:w-1/2 order-2 md:order-1 flex flex-col">
@@ -98,7 +99,7 @@ function displayProduct(product) {
         <p class="hidden md:block md:text-center text-gray-700 font-light mb-1">Base price</p>
         <p class="hidden md:block md:text-center text-4xl font-semibold text-yellow-500 mb-8">${
           product.basePrice
-        }</p>
+        }$</p>
         <h2 class="hidden md:block text-3xl font-normal mb-6">Customization Options</h2>
 
         ${
@@ -142,7 +143,7 @@ function displayProduct(product) {
         <p class="md:hidden text-xl text-gray-700 font-light mb-1 text-center">Base price</p>
         <p class="md:hidden text-4xl font-semibold text-yellow-500 mb-6 text-center">${
           product.basePrice
-        }</p>
+        }$</p>
         ${
           product.sizes
             ? `<div class="flex md:hidden ml-6 mb-6 space-x-6 gap-4">
@@ -166,7 +167,7 @@ function displayProduct(product) {
   const priceEl = document.querySelector(".price-el-js");
 
   if (priceEl) {
-    priceEl.textContent = `${product.basePrice}`;
+    priceEl.textContent = `${product.basePrice}$`;
     priceGlobal = product.basePrice;
   }
   let selectedSizePrice = 0;
@@ -181,8 +182,8 @@ function displayProduct(product) {
       2
     );
     priceGlobal = total;
-    if (priceEl) priceEl.textContent = `€${total}`;
-    if (priceElMobile) priceElMobile.textContent = `€${total}`;
+    if (priceEl) priceEl.textContent = `${total}$`;
+    if (priceElMobile) priceElMobile.textContent = `${total}$`;
   };
 
   //  size selects
