@@ -14,7 +14,9 @@ function renderStars(starCount) {
   for (let i = 0; i < 5; i++) {
     const span = document.createElement("span");
     span.classList.add("rounded-3xl");
-    span.innerHTML = `<img src="../assets/stars.svg" alt="star" />`;
+    
+    span.innerHTML = `<img src="../public/images/stars.svg" alt="star" />`;
+    console.log(span)
     if (i < starCount) span.classList.add("bg-headerYellow");
     starsContainer.appendChild(span);
   }
@@ -70,7 +72,7 @@ let priceGlobal = 0;
 fetch("../data/data.json")
   .then((res) => res.json())
   .then((data) => {
-    let allData = data;
+    allData = data;
     currentProduct = data.find((p) => p.id == id);
     displayProduct(currentProduct);
   })
