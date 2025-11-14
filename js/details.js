@@ -134,8 +134,8 @@ function displayProduct(product) {
     }" class="main-img-js w-full max-w-sm md:max-w-md h-auto rounded-lg shadow-md mb-4"/>
         <div class="ingre-img-js flex space-x-2 md:space-x-3 justify-center md:justify-start w-full overflow-hidden mb-4 md:mb-6">
           <img src="${product.images[1]? product.images[1] : "../assets/sauce-2.png"}" alt = ingredient 1 class="h-[90px] md:h-[120px] basis-[22%] md:basis-[20%] rounded-lg object-cover shadow"/>
-          <img src="${product.images[2]? product.images[2] : "../assets/sauce-2.png"}" alt="Ingredient 2" class="h-[90px] md:h-[120px] basis-[22%] md:basis-[20%] rounded-lg object-cover shadow"/>
-          <img src="${product.images[3]? product.images[3] : "../assets/sauce-2.png"}" alt="Ingredient 3" class="h-[90px] md:h-[120px] basis-[22%] md:basis-[20%] rounded-lg object-cover shadow"/>
+          <img src="${product.images[2]? product.images[2] : "../assets/sauce-1.png"}" alt="Ingredient 2" class="h-[90px] md:h-[120px] basis-[22%] md:basis-[20%] rounded-lg object-cover shadow"/>
+          <img src="${product.images[3]? product.images[3] : "../assets/sauce-3.png"}" alt="Ingredient 3" class="h-[90px] md:h-[120px] basis-[22%] md:basis-[20%] rounded-lg object-cover shadow"/>
         </div>
         <p class="md:hidden text-sm text-gray-700 mb-6 text-center max-w-md leading-relaxed">${
           product.description
