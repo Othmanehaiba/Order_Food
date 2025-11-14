@@ -330,7 +330,7 @@ function renderStars(starCount) {
   for (let i = 0; i < 5; i++) {
     const span = document.createElement("span");
     span.classList.add("rounded-3xl");
-    span.innerHTML = `<img src="../assets/stars.svg" alt="star" />`;
+    span.innerHTML = `<img src="./public/images/stars.svg" alt="star" />`;
     if (i < starCount) span.classList.add("bg-headerYellow");
     starsContainer.appendChild(span);
   }
