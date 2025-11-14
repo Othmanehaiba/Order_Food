@@ -98,7 +98,7 @@ function addPanier() {
 <div class="flex items-start gap-4">
 
 <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mt-[1rem]">
-<span class="text-white font-bold text-lg">1x</span>
+<span class="text-white font-bold text-lg">${item.quantity}x</span>
 </div>
 
 <div class="space-y-1">
