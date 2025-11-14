@@ -1,13 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tailwind Test</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Aclonica&family=Fredoka:wght@300..700&family=Koulen&family=Oleo+Script:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
+  <title>Food Order+</title>
   <link href="./css/output.css" rel="stylesheet">
 </head>
-<body class="">
-  <h1 class="text-[10rem] font-bold text-blue-600">Tailwind is Working! 🎉</h1>
-  <p class="text-red-700 text-4xl font-bold">ddd</p>
+
+<body class="bg-bodyColor font-roboto">
+
+  <!-- Header -->
+  <div id="header-placeholder"></div>
+  <div id="panier-placeholder"></div>
+
+  <!-- hero section-->
+  <section class="w-full grid md:grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 p-4 md:p-8">
+
+    <!-- Left column -->
+    <div class="grid grid-rows-2 md:grid-rows-[1.5fr_1fr] gap-4 md:gap-6 md:col-span-1 h-[90vh]">
+      <!-- Burger -->
+      <div class="relative group overflow-hidden rounded-3xl shadow-md h-full" id="burger">
+        
+      </div>
+
+      <!-- Pancakes -->
+      <div class="relative overflow-hidden group rounded-3xl shadow-md h-full" id="pancake">
+      </div>
+    </div>
+
+    <!-- Middle -->
+    <div class="md:col-span-2 relative group rounded-3xl shadow-md overflow-hidden h-[90vh]" id="Chicken Sandwich">
+    </div>
+
+    </div>
+
+    <!-- Right  -->
+    <div class="md:col-span-1 relative group rounded-3xl shadow-md overflow-hidden h-[90vh]" id="Juice">
+
+    </div>
+
+  </section>
+
+  <section class="py-16 px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+      <!-- LEFT -->
+      <div class="md:grid grid-cols-2 gap-4 hidden">
+        <!-- Larger top left image -->
+        <div class="overflow-hidden shadow-md">
+          <img src="./assets/about-1 1.png" alt="Restaurant interior"
+            class="h-64 md:h-80 object-cover flex   transition-transform duration-300 hover:scale-105">
+        </div>
+
+        <!-- Smaller top right image -->
+        <div class="overflow-hidden self-end">
+          <img src="./assets/about-2 1.png" alt="Restaurant interior"
+            class=" h-52 md:h-64 object-cover  transition-transform duration-300 hover:scale-105">
+        </div>
+
+        <!-- Smaller bottom left image -->
+        <div class="overflow-hidden flex self-start justify-end">
+          <img src="./assets/about-3 1.png" alt="Salad"
+            class="h-52 md:h-64 object-cover transition-transform duration-300 hover:scale-105">
+        </div>
+
+        <!-- Larger bottom right image -->
+        <div class="overflow-hidden shadow-md">
+          <img src="./assets/about-4 1.png" alt="Food platter"
+            class="h-64 md:h-80 object-cover transition-transform duration-300 hover:scale-105">
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div>
+        <h3 class="text-headerYellow font-oleo text-4xl mb-2 flex items-center gap-7">
+          <span class="h-1 w-20 bg-headerYellow"></span> About Us
+          <span class="h-1 w-20 bg-headerYellow"></span>
+        </h3>
+
+        <h2 class="text-3xl font-roboto md:text-4xl font-extrabold mb-5 mt-5">
+          Welcome to FoodOrder+
+        </h2>
+
+        <p class="mb-4 font-bold">
+          Tempor erat elit rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos erat ipsum et lorem et
+          sit, sed stet lorem sit.
+        </p>
+        <p class="mb-6 font-bold">
+          Tempor erat elit rebum at clita. Diam dolor diam ipsum sit. Clita erat ipsum et lorem et sit, sed stet lorem
+          sit clita duo justo magna dolore.
+        </p>
+
+        <div class="hidden md:flex items-center gap-10 mb-8">
+          <div class="border-l-4 border-headerYellow flex mx-5">
+            <p class="p-2 text-5xl font-extrabold text-headerOrange mx-3">15</p>
+            <div class="flex flex-col self-center">
+              <p class="font-bold text-gray-500 text-sm -mt-1">Years of</p>
+              <p class="font-bold text-sm -mt-1">Experience</p>
+            </div>
+          </div>
+          <div class="border-l-4 border-headerYellow flex">
+            <p class="p-2 text-5xl font-extrabold text-headerOrange mx-3">50</p>
+            <div class="flex flex-col self-center">
+              <p class="font-bold text-gray-500 text-sm -mt-1">Popular</p>
+              <p class="font-bold text-sm -mt-">Master Chefs</p>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="bg-headerOrange text-white hover:bg-white hover:text-headerOrange font-semibold py-4 px-14 rounded-3xl transition">
+          <a href="./pages/contact.html">Read More</a>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="my-16">
+    <h3 class="font-oleo text-center text-6xl">Discover Menu</h3>
+    <div class="h-2 w-64 bg-headerYellow mx-auto text-center rounded my-1"></div>
+  </div>
+
+
+  <!-- Discover Menu -->
+  <section class="flex flex-col md:flex-row md:gap-6 p-5 md:p-8">
+
+    <!--Right Menu -->
+    <div
+      class=" relative bg-[url('../assets/banner5.png')] bg-cover bg-center h-64 md:h-96 w-full rounded-2xl mb-10 md:mb-0">
+      <div class="flex flex-col md:self-center mt-10 ml-6">
+        <h3 class="font-Fredoka font-bold text-3xl md:text-6xl text-white">Steaks & BBQ</h3>
+        <p class="text-white mt-3 md:text-[1.4rem]">canonical classics to obscure <br> tiki drinks</p>
+      </div>
+      <div class="absolute -bottom-7 left-14">
+        <button
+          class="text-homePrice bg-headerYellow rounded-full w-24 h-24 text-3xl md:w-36 md:h-36 md:text-5xl font-Fredoka font-bold">
+          $40
+        </button>
+      </div>
+    </div>
+
+    <!-- Left Menu -->
+    <div
+      class="relative bg-[url('../assets/banner5.1.png')] bg-cover bg-center h-64 md:h-96 w-full rounded-2xl mb-6 md:mb-0">
+      <div class="flex flex-col md:self-center mt-10 ml-6">
+        <h3 class="font-Fredoka font-bold text-3xl md:text-6xl text-white">Cocktails</h3>
+        <p class="text-white mt-3 md:text-[1.4rem]">canonical classics to obscure <br> tiki drinks</p>
+      </div>
+      <div class="absolute -bottom-7 left-14">
+        <button
+          class="text-homePrice bg-headerYellow rounded-full w-24 h-24 md:w-36 md:h-36 text-3xl md:text-5xl font-Fredoka font-bold">
+          $20
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <div class="my-20">
+    <h3 class="font-oleo text-center text-6xl">Featured Dishes</h3>
+    <div class="h-2 w-64 bg-headerYellow mx-auto text-center rounded my-1"></div>
+  </div>
+
+
+  <div class="relative w-full mx-auto overflow-hidden group">
+
+    <!-- Desktop Prev Button -->
+    <button id="prev-page-desktop"
+        class="hidden md:block absolute left-2 md:left-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-headerYellow text-prixColor rounded-full shadow-lg text-2xl hover:bg-opacity-80 transition-all">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <!-- Carousel Grid -->
+    <div id="carousel" class="grid grid-cols-1 md:grid-cols-3 gap-10 px-8 md:px-28 mt-20">
+      <!-- Cards will be injected here -->
+    </div>
+
+    <!-- Desktop Next Button -->
+    <button id="next-page-desktop"
+        class="hidden md:block absolute right-2 md:right-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-headerYellow text-prixColor rounded-full shadow-lg text-2xl hover:bg-opacity-80 transition-all">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <!-- Mobile Navigation -->
+    <div class="flex md:hidden justify-center items-center gap-4 mt-8">
+        <button id="prev-page-mobile"
+            class="w-12 h-12 bg-headerYellow text-prixColor rounded-full shadow-lg text-2xl hover:bg-opacity-80 transition-all">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <button id="next-page-mobile"
+            class="w-12 h-12 bg-headerYellow text-prixColor rounded-full shadow-lg text-2xl hover:bg-opacity-80 transition-all">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </div>
+  </div>
+
+  <div class="my-20">
+    <h3 class="font-oleo text-center text-6xl">Meet Our Experts</h3>
+    <div class="h-2 w-64 bg-headerYellow mx-auto text-center rounded my-1"></div>
+  </div>
+   
+  <!-- Chef Container -->
+  <div id="chefsContainer" class="flex flex-col md:flex-row items-center justify-center gap-12"></div>
+  
+
+  <!-- Review section -->
+      <section class="py-16 text-center">
+      <h2 class="text-2xl md:text-4xl font-bold mb-4">Customer Reviews</h2>
+      <div class="flex justify-center mb-4">
+        <div class="w-32 h-1 bg-headerYellow rounded"></div>
+      </div>
+      <h3 class="author-el text-2xl md:text-3xl font-bold mb-6"></h3>
+      <p
+        class="speech-el max-w-xl mx-auto text-[#212121] font-bold leading-relaxed mb-5"
+      ></p>
+      <!-- Star rating -->
+      <div class="stars-container flex justify-center mb-6 gap-1"></div>
+      <!-- Reviewer profiles images -->
+      <div class="profile-images flex justify-center items-center space-x-5">
+        <img
+          src="../assets/review-profile2.png"
+          alt="Reviewer 1"
+          class="w-16 h-auto rounded-lg object-cover cursor-pointer"
+        />
+        <img
+          src="../assets/review-profile1.png"
+          alt="Reviewer 2"
+          class="w-16 h-auto rounded-lg py-5 object-cover bg-yellow-400 cursor-pointer"
+        />
+        <img
+          src="../assets/review-profile3.png"
+          alt="Reviewer 3"
+          class="w-16 h-auto rounded-lg object-cover cursor-pointer"
+        />
+      </div>
+    </section>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+  
+  <script src="./js/index.js"></script>
+  <script type="module" src="../js/global.js"></script>
 </body>
+
 </html>
+

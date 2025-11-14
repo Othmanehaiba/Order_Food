@@ -3,200 +3,328 @@
     "id": 1,
     "name": "Pizza Margherita",
     "category": "Plat",
-    "description": "Pizza traditionnelle avec sauce tomate, mozzarella et basilic frais.",
-    "price": 8.99,
-    "image": "https://example.com/images/pizza-margherita.jpg",
-    "size": ["S", "M", "L", "XL"],
+    "description": "A timeless classic. This traditional pizza features a rich tomato sauce base, creamy mozzarella cheese, and a sprinkle of fresh, aromatic basil.",
+    "basePrice": 8.99,
+    "images": [
+      "../assets/imageData/Margarita-pizza.jpg",
+      "../assets/imageData/Margarita-pizza-2.jpg",
+      "../assets/imageData/Margarita-pizza-3.jpg",
+      "../assets/imageData/Margarita-pizza-4.jpg"
+    ],
+    "sizes": [
+      { "label": "S", "price": 0 },
+      { "label": "M", "price": 2 },
+      { "label": "L", "price": 4 },
+      { "label": "XL", "price": 6 }
+    ],
     "availability": true
   },
   {
     "id": 2,
-    "name": "Pizza Pepperoni",
+    "name": "Pepperoni Pizza",
     "category": "Plat",
-    "description": "Pizza avec sauce tomate, mozzarella et pepperoni épicé.",
-    "price": 10.99,
-    "image": "https://example.com/images/pizza-pepperoni.jpg",
-    "size": ["S", "M", "L", "XL"],
+    "description": "A fan favorite! This pizza is generously topped with spicy pepperoni slices over a classic tomato sauce and melted mozzarella cheese.",
+    "basePrice": 10.99,
+    "images": [
+      "../assets/imageData/Peperoni-pizza.jpg",
+      "../assets/imageData/Peperoni-pizza-2.jpg",
+      "../assets/imageData/Peperoni-pizza-3.jpg",
+      "../assets/imageData/Peperoni-pizza-4.jpg"
+    ],
+    "sizes": [
+      { "label": "S", "price": 0 },
+      { "label": "M", "price": 2 },
+      { "label": "L", "price": 4 },
+      { "label": "XL", "price": 6 }
+    ],
     "availability": true
   },
   {
     "id": 3,
-    "name": "Pâtes Carbonara",
+    "name": "Carbonara Pasta",
     "category": "Plat",
-    "description": "Pâtes avec guanciale, œufs, pecorino et poivre noir.",
-    "price": 12.50,
-    "image": "https://example.com/images/pates-carbonara.jpg",
-    "size": null,
+    "description": "An authentic Roman delight. Al dente pasta tossed in a creamy sauce made from fresh eggs, savory guanciale, sharp Pecorino cheese, and a kick of freshly ground black pepper.",
+    "basePrice": 12.5,
+    "images": [
+      "../assets/imageData/Pâtes Carbonara.jpg",
+      "../assets/imageData/Pâtes Carbonara-2.jpg",
+      "../assets/imageData/Pâtes Carbonara-3.jpg",
+      "../assets/imageData/Pâtes Carbonara-4.jpg"
+    ],
+    "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
   },
   {
     "id": 4,
-    "name": "Salade César",
-    "category": "Entrée",
-    "description": "Laitue romaine, croûtons, parmesan et sauce César.",
-    "price": 7.50,
-    "image": "https://example.com/images/salade-cesar.jpg",
-    "size": ["Petite", "Grande"],
+    "name": "Caesar Salad",
+    "category": "Salad",
+    "description": "Crisp romaine lettuce tossed with crunchy garlic croutons, savory Parmesan cheese, and our signature creamy Caesar dressing. A perfect light meal or starter.",
+    "basePrice": 7.5,
+    "images": [
+      "../assets/imageData/Salade César.jpg",
+      "../assets/imageData/Salade César-2.jpg",
+      "../assets/imageData/Salade César-3.jpg",
+      "../assets/imageData/Salade César-4.jpg"
+    ],
+    "sizes": [
+      { "label": "Small", "price": 0 },
+      { "label": "Large", "price": 2 }
+    ],
     "availability": true
   },
   {
     "id": 5,
-    "name": "Burger Classique",
+    "name": "Classic Burger",
     "category": "Plat",
-    "description": "Bœuf, cheddar, laitue, tomate, oignons et frites.",
-    "price": 11.99,
-    "image": "https://example.com/images/burger-classique.jpg",
-    "size": null,
+    "description": "The all-American classic. A juicy beef patty topped with melted cheddar cheese, crisp lettuce, fresh tomato, and onions, served with a side of golden French fries.",
+    "basePrice": 11.99,
+    "images": [
+      "../assets/imageData/Burger Classique.jpg",
+      "../assets/imageData/Burger Classique-2.jpg",
+      "../assets/imageData/Burger Classique-3.jpg",
+      "../assets/imageData/Burger Classique-4.jpg"
+    ],
+    "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": false
   },
   {
     "id": 6,
     "name": "Tiramisu",
     "category": "Dessert",
-    "description": "Dessert italien classique au café, mascarpone et cacao.",
-    "price": 6.50,
-    "image": "https://example.com/images/tiramisu.jpg",
-    "size": null,
+    "description": "A heavenly Italian classic. Layers of coffee-soaked ladyfingers and rich, creamy mascarpone, dusted with a fine layer of cocoa powder.",
+    "basePrice": 6.5,
+    "images": [
+      "../assets/imageData/Tiramisu.jpg",
+      "../assets/imageData/Tiramisu-2.jpg",
+      "../assets/imageData/Tiramisu-3.jpg",
+      "../assets/imageData/Tiramisu-4.jpg"
+    ],
+    "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
   },
   {
     "id": 7,
-    "name": "Eau Minérale",
+    "name": "Mineral Water",
     "category": "Boisson",
-    "description": "Eau minérale plate ou gazeuse.",
-    "price": 2.00,
-    "image": "https://example.com/images/eau-minerale.jpg",
-    "size": ["50cl", "1L"],
+    "description": "Pure and refreshing mineral water, sourced from natural springs. Available as either still or sparkling to quench your thirst.",
+    "basePrice": 2,
+    "images": [
+      "../assets/imageData/Eau Minérale.jpg",
+      "../assets/imageData/Eau Minérale-2.jpg",
+      "../assets/imageData/Eau Minérale-3.jpg",
+      "../assets/imageData/Eau Minérale-4.jpg"
+    ],
+    "sizes": [
+      { "label": "50cl", "price": 0 },
+      { "label": "1L", "price": 1 }
+    ],
     "availability": true
   },
   {
     "id": 8,
     "name": "Coca-Cola",
     "category": "Boisson",
-    "description": "Boisson gazeuse rafraîchissante.",
-    "price": 2.50,
-    "image": "https://example.com/images/coca-cola.jpg",
-    "size": ["33cl", "50cl"],
+    "description": "The iconic and refreshing sparkling soft drink, served chilled for your enjoyment.",
+    "basePrice": 2.5,
+    "images": [
+      "../assets/imageData/Coca-Cola.jpg",
+      "../assets/imageData/Coca-Cola-2.jpg",
+      "../assets/imageData/Coca-Cola-3.jpg",
+      "../assets/imageData/Coca-Cola-4.jpg"
+    ],
+    "sizes": [
+      { "label": "33cl", "price": 0 },
+      { "label": "50cl", "price": 0.5 }
+    ],
     "availability": true
   },
   {
     "id": 9,
-    "name": "Pizza 4 Saisons",
+    "name": "4 Seasons Pizza",
     "category": "Plat",
-    "description": "Artichauts, jambon, champignons et olives.",
-    "price": 13.00,
-    "image": "https://example.com/images/pizza-4-saisons.jpg",
-    "size": ["M", "L"],
+    "description": "A pizza for all tastes, representing the four seasons. Topped with savory artichokes, cooked ham, fresh mushrooms, and black olives.",
+    "basePrice": 13,
+    "images": [
+      "../assets/imageData/Pizza 4 Saisons.jpg",
+      "../assets/imageData/Pizza 4 Saisons-2.jpg",
+      "../assets/imageData/Pizza 4 Saisons-3.jpg",
+      "../assets/imageData/Pizza 4 Saisons-4.jpg"
+    ],
+    "sizes": [
+      { "label": "M", "price": 0 },
+      { "label": "L", "price": 2 }
+    ],
     "availability": true
   },
   {
     "id": 10,
-    "name": "Saumon Grillé",
+    "name": "Grilled Salmon",
     "category": "Plat",
-    "description": "Filet de saumon grillé avec légumes de saison.",
-    "price": 16.99,
-    "image": "https://example.com/images/saumon-grille.jpg",
-    "size": null,
+    "description": "A healthy and delicious choice. A tender salmon fillet grilled to perfection, served with a medley of fresh, roasted seasonal vegetables.",
+    "basePrice": 16.99,
+    "images": [
+      "../assets/imageData/Saumon Grillé.jpg",
+      "../assets/imageData/Saumon Grillé-2.jpg",
+      "../assets/imageData/Saumon Grillé-3.jpg",
+      "../assets/imageData/Saumon Grillé-4.jpg"
+    ],
+    "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
   },
   {
     "id": 11,
-    "name": "Bruschetta Tomate",
-    "category": "Entrée",
-    "description": "Pain grillé frotté à l'ail, tomates fraîches et basilic.",
-    "price": 5.99,
-    "image": "https://example.com/images/bruschetta.jpg",
-    "size": ["4 pièces", "6 pièces"],
+    "name": "Tomato Bruschetta",
+    "category": "Appetizer",
+    "description": "A vibrant and fresh appetizer. Toasted artisan bread rubbed with garlic, topped with a delicious mix of diced fresh tomatoes, basil, and a drizzle of olive oil.",
+    "basePrice": 5.99,
+    "images": [
+      "../assets/imageData/Bruschetta Tomate.jpg",
+      "../assets/imageData/Bruschetta Tomate-2.jpg",
+      "../assets/imageData/Bruschetta Tomate-3.jpg",
+      "../assets/imageData/Bruschetta Tomate-4.jpg"
+    ],
+    "sizes": [
+      { "label": "4 pieces", "price": 0 },
+      { "label": "6 pieces", "price": 1.5 }
+    ],
     "availability": true
   },
   {
     "id": 12,
-    "name": "Mousse au Chocolat",
+    "name": "Chocolate Mousse",
     "category": "Dessert",
-    "description": "Mousse légère au chocolat noir.",
-    "price": 5.00,
-    "image": "https://example.com/images/mousse-chocolat.jpg",
-    "size": null,
+    "description": "A rich and airy delight for chocolate lovers. This light mousse is made from decadent dark chocolate, offering a perfect, indulgent end to your meal.",
+    "basePrice": 5.0,
+    "images": [
+      "../assets/imageData/Mousse au Chocolat.jpg",
+      "../assets/imageData/Mousse au Chocolat-2.jpg",
+      "../assets/imageData/Mousse au Chocolat-3.jpg",
+      "../assets/imageData/Mousse au Chocolat-4.jpg"
+    ],
+    "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
   },
   {
     "id": 13,
-    "name": "Pâtes Bolognaise",
+    "name": "Bolognese Pasta",
     "category": "Plat",
-    "description": "Pâtes avec une riche sauce à la viande hachée.",
-    "price": 11.50,
-    "image": "https://example.com/images/pates-bolognaise.jpg",
-    "size": null,
+    "description": "A comforting and hearty classic. Your choice of pasta served with a slow-simmered, rich tomato and minced meat sauce.",
+    "basePrice": 11.5,
+    "images": [
+      "../assets/imageData/Pâtes Bolognaise.jpg",
+      "../assets/imageData/Pâtes Bolognaise-2.jpg",
+      "../assets/imageData/Pâtes Bolognaise-3.jpg",
+      "../assets/imageData/Pâtes Bolognaise-4.jpg"
+    ],
+    "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
   },
   {
     "id": 14,
-    "name": "Café Espresso",
+    "name": "Espresso Coffee",
     "category": "Boisson",
-    "description": "Café court et intense.",
-    "price": 1.80,
-    "image": "https://example.com/images/espresso.jpg",
-    "size": ["Simple", "Double"],
+    "description": "The perfect pick-me-up. A short, strong, and intense shot of freshly brewed coffee with a rich crema.",
+    "basePrice": 1.8,
+    "images": [
+      "../assets/imageData/Café Espresso.jpg",
+      "../assets/imageData/Café Espresso-2.jpg",
+      "../assets/imageData/Café Espresso-3.jpg",
+      "../assets/imageData/Café Espresso-4.jpg"
+    ],
+    "sizes": [
+      { "label": "Single", "price": 0 },
+      { "label": "Double", "price": 1 }
+    ],
     "availability": true
   },
   {
     "id": 15,
-    "name": "Tarte au Citron Meringuée",
+    "name": "Lemon Meringue Pie",
     "category": "Dessert",
-    "description": "Pâte sablée, crème au citron et meringue.",
-    "price": 6.00,
-    "image": "https://example.com/images/tarte-citron.jpg",
-    "size": null,
+    "description": "A zesty and sweet masterpiece. A buttery shortcrust pastry filled with tangy lemon cream and topped with a fluffy, sweet meringue.",
+    "basePrice": 6.0,
+    "images": [
+      "../assets/imageData/Tarte au Citron Meringuée.jpg",
+      "../assets/imageData/Tarte au Citron Meringuée-2.jpg",
+      "../assets/imageData/Tarte au Citron Meringuée-3.jpg",
+      "../assets/imageData/Tarte au Citron Meringuée-4.jpg"
+    ],
+    "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
   },
   {
     "id": 16,
-    "name": "Soupe à l'oignon",
-    "category": "Entrée",
-    "description": "Soupe traditionnelle gratinée au fromage.",
-    "price": 7.00,
-    "image": "https://example.com/images/soupe-oignon.jpg",
-    "size": null,
+    "name": "Onion Soup",
+    "category": "Appetizer",
+    "description": "A warming French classic. Rich, slow-cooked onion soup, topped with a crusty piece of bread and melted, bubbly cheese.",
+    "basePrice": 7.0,
+    "images": [
+      "../assets/imageData/Soupe à l'oignon.jpg",
+      "../assets/imageData/Soupe à l'oignon-2.jpg",
+      "../assets/imageData/Soupe à l'oignon-3.jpg",
+      "../assets/imageData/Soupe à l'oignon-4.jpg"
+    ],
+    "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
   },
   {
     "id": 17,
     "name": "Steak Frites",
     "category": "Plat",
-    "description": "Entrecôte grillée servie avec frites et sauce au poivre.",
-    "price": 18.50,
-    "image": "https://example.com/images/steak-frites.jpg",
-    "size": null,
+    "description": "The ultimate bistro meal. A succulent grilled ribeye steak cooked to your liking, served with a side of crispy French fries and a savory pepper sauce.",
+    "basePrice": 18.5,
+    "images": [
+      "../assets/imageData/Steak Frites.jpg",
+      "../assets/imageData/Steak Frites-2.jpg",
+      "../assets/imageData/Steak Frites-3.jpg",
+      "../assets/imageData/Steak Frites-4.jpg"
+    ],
+    "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
   },
   {
     "id": 18,
-    "name": "Jus d'Orange Pressé",
+    "name": "Fresh Squeezed Orange Juice",
     "category": "Boisson",
-    "description": "Jus d'oranges fraîches pressées.",
-    "price": 4.00,
-    "image": "https://example.com/images/jus-orange.jpg",
-    "size": ["Standard"],
+    "description": "Pure, natural refreshment. 100% juice from freshly squeezed oranges, with no added sugar. The perfect start to your day.",
+    "basePrice": 4.0,
+    "images": [
+      "../assets/imageData/Jus d'Orange Pressé.jpg",
+      "../assets/imageData/Jus d'Orange Pressé-2.jpg",
+      "../assets/imageData/Jus d'Orange Pressé-3.jpg",
+      "../assets/imageData/Jus d'Orange Pressé-4.jpg"
+    ],
+    "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
   },
   {
     "id": 19,
-    "name": "Burger Végétarien",
+    "name": "Vegetarian Burger",
     "category": "Plat",
-    "description": "Galette de légumes, avocat, laitue et tomate.",
-    "price": 12.00,
-    "image": "https://example.com/images/burger-vegetarien.jpg",
-    "size": null,
+    "description": "A delicious meat-free option. A savory vegetable patty topped with creamy avocado, crisp lettuce, and fresh tomato, served on a toasted bun.",
+    "basePrice": 12.0,
+    "images": [
+      "../assets/imageData/Burger Végétarien.jpg",
+      "../assets/imageData/Burger Végétarien-2.jpg",
+      "../assets/imageData/Burger Végétarien-3.jpg",
+      "../assets/imageData/Burger Végétarien-4.jpg"
+    ],
+    "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": true
   },
   {
     "id": 20,
     "name": "Crème Brûlée",
     "category": "Dessert",
-    "description": "Crème à la vanille avec une couche de caramel croquant.",
-    "price": 5.50,
-    "image": "https://example.com/images/creme-brulee.jpg",
-    "size": null,
+    "description": "An elegant and decadent dessert. A rich, creamy vanilla custard base topped with a contrasting layer of hard, crunchy caramelized sugar.",
+    "basePrice": 5.5,
+    "images": [
+      "../assets/imageData/cremebrulee4.jpg",
+      "../assets/imageData/cremebrulee1.jpg",
+      "../assets/imageData/cremebrulee2.jpg",
+      "../assets/imageData/cremebrulee3.png"
+    ],
+    "sizes": [{ "label": "Standard", "price": 0 }],
     "availability": false
   }
 ]

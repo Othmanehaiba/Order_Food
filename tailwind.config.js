@@ -1,9 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./**/*.html", // Scans all HTML files in your project directory and subdirectories
-    // Add other paths here if you use JS or other template languages:
-    // "./src/**/*.{js,jsx,ts,tsx}",
+    "./**/*.js", 
+    "./**/*.html", 
     "./index.html",
     "./pages/**/*.html",
     "./components/**/*.html",
@@ -11,16 +10,34 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        oleo: ["Oleo Script", "cursive"],
+        oleo: ['Oleo Script', 'cursive'],
         roboto: ["Roboto", "sans-serif"],
+        Fredoka: ["Fredoka", "sans-serif"],
       },
       colors: {
-        prixColor: "#007A4B",
-        bodyColor: "#FFEEB1",
+        prixColor: '#007A4B',
+        bodyColor: '#FFEEB1',
         headerYellow: "#f3c623",
         headerOrange: "#f39223",
+        homePrice: '#F3274C',
+      },
+
+      // 👇 Add your custom keyframes and animations
+      keyframes: {
+        'slide-left': {
+          '0%': { opacity: '0', transform: 'translateX(50%)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        'slide-right': {
+          '0%': { opacity: '0', transform: 'translateX(-50%)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+      },
+      animation: {
+        'slide-left': 'slide-left 0.8s ease-in-out',
+        'slide-right': 'slide-right 0.8s ease-in-out',
       },
     },
   },
   plugins: [],
-};
+}
